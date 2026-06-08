@@ -111,6 +111,7 @@
             overflow: hidden;
             border: 1px solid var(--card-border);
             transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+            scroll-margin-top: 100px; /* Évite que l'en-tête masque le haut de la carte au défilement */
         }
 
         /* Amélioration de la navigation à la souris sur PC */
@@ -232,7 +233,7 @@
         .construction-table td:first-child {
             font-weight: bold;
             color: var(--primary);
-            width: 100px;
+            width: 110px;
         }
 
         /* Boîte d'alertes */
@@ -281,6 +282,55 @@
             padding-left: 4px;
         }
 
+        /* Références Croisées / Connexions */
+        .connections-container {
+            margin-top: 20px;
+            padding-top: 5px;
+            border-top: 1px dashed var(--card-border);
+        }
+
+        .connection-group {
+            margin-bottom: 14px;
+        }
+
+        .connection-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .connection-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .connection-link {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.1s;
+        }
+
+        .connection-link:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .connection-desc {
+            font-size: 14px;
+            color: var(--text-main);
+            margin: 0 0 8px 4px;
+            line-height: 1.4;
+        }
+
         /* Tags */
         .tags-container {
             display: flex;
@@ -317,6 +367,35 @@
                 displayCards(grammarData);
             });
 
+        // Fonction d'aide pour obtenir le titre d'un point à partir de son ID
+        function getTitleById(id) {
+            const found = grammarData.find(item => item.id === id);
+            return found ? found.title : id;
+        }
+
+        // Système de navigation dynamique entre fiches via les ID
+        function navigateToCard(targetId) {
+            const searchInput = document.getElementById('search');
+            
+            // Si le point ciblé n'est actuellement pas affiché à cause de la recherche, on réinitialise la vue
+            if (searchInput.value !== '') {
+                searchInput.value = '';
+                displayCards(grammarData);
+            }
+            
+            const targetElement = document.getElementById(`card-${targetId}`);
+            if (targetElement) {
+                targetElement.open = true; // Déplie la carte automatiquement
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' }); // Centre l'affichage sur le point ciblé
+                
+                // Petit effet de flash pour guider le regard de l'utilisateur
+                targetElement.style.borderColor = 'var(--primary)';
+                setTimeout(() => {
+                    targetElement.style.borderColor = '';
+                }, 1000);
+            }
+        }
+
         function displayCards(cards) {
             const container = document.getElementById('results');
             if (cards.length === 0) {
@@ -325,11 +404,12 @@
             }
 
             container.innerHTML = cards.map(card => {
+                // Table de construction mise à jour avec les clés japonaises demandées
                 let constructionRows = '';
-                if(card.construction.verb) constructionRows += `<tr><td>Verbe</td><td>${card.construction.verb}</td></tr>`;
-                if(card.construction.i_adj) constructionRows += `<tr><td>Adj. -i</td><td>${card.construction.i_adj}</td></tr>`;
-                if(card.construction.na_adj) constructionRows += `<tr><td>Adj. -na</td><td>${card.construction.na_adj}</td></tr>`;
-                if(card.construction.noun) constructionRows += `<tr><td>Nom</td><td>${card.construction.noun}</td></tr>`;
+                if(card.construction['動詞']) constructionRows += `<tr><td>動詞</td><td>${card.construction['動詞']}</td></tr>`;
+                if(card.construction['い形容詞']) constructionRows += `<tr><td>い形容詞</td><td>${card.construction['い形容詞']}</td></tr>`;
+                if(card.construction['な形容詞']) constructionRows += `<tr><td>な形容詞</td><td>${card.construction['な形容詞']}</td></tr>`;
+                if(card.construction['名詞']) constructionRows += `<tr><td>名詞</td><td>${card.construction['名詞']}</td></tr>`;
 
                 const warningsHTML = card.warnings && card.warnings.length > 0 
                     ? `<div class="warning-box"><ul>${card.warnings.map(w => `<li>${w}</li>`).join('')}</ul></div>`
@@ -342,10 +422,50 @@
                     </div>
                 `).join('');
 
+                // Génération de la section des Liens Références Croisées (connections)
+                let connectionsHTML = '';
+                if (card.connections) {
+                    let confusionsHTML = '';
+                    if (card.connections.confusions && card.connections.confusions.length > 0) {
+                        confusionsHTML = `
+                            <div class="connection-group">
+                                <div class="connection-label">⚠️ À ne pas confondre avec :</div>
+                                ${card.connections.confusions.map(c => `
+                                    <button class="connection-link" onclick="navigateToCard('${c.target_id}')">${getTitleById(c.target_id)}</button>
+                                    <p class="connection-desc">${c.explanation}</p>
+                                `).join('')}
+                            </div>
+                        `;
+                    }
+
+                    let synonymsHTML = '';
+                    if (card.connections.synonyms && card.connections.synonyms.length > 0) {
+                        synonymsHTML = `
+                            <div class="connection-group">
+                                <div class="connection-label">🔄 Dans le même style :</div>
+                                ${card.connections.synonyms.map(s => `
+                                    <button class="connection-link" onclick="navigateToCard('${s.target_id}')">${getTitleById(s.target_id)}</button>
+                                    <p class="connection-desc">${s.explanation}</p>
+                                `).join('')}
+                            </div>
+                        `;
+                    }
+
+                    if (confusionsHTML || synonymsHTML) {
+                        connectionsHTML = `
+                            <div class="connections-container">
+                                <h4>Liens & Comparaisons</h4>
+                                ${confusionsHTML}
+                                ${synonymsHTML}
+                            </div>
+                        `;
+                    }
+                }
+
                 const tagsHTML = card.tags.map(tag => `<span class="tag">#${tag}</span>`).join('');
 
                 return `
-                    <details class="grammar-card">
+                    <details class="grammar-card" id="card-${card.id}">
                         <summary>
                             <div class="card-header-top">
                                 <span class="grammar-title">${card.title}</span>
@@ -364,6 +484,8 @@
                             
                             <h4>Exemples</h4>
                             <div class="examples-container">${examplesHTML}</div>
+
+                            ${connectionsHTML}
                             
                             <div class="tags-container">${tagsHTML}</div>
                         </div>

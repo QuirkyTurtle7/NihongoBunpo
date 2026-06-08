@@ -3,12 +3,12 @@
     "id": "uchi-ni-a",
     "title": "～うちに (A)",
     "level": "N3",
-    "meaning": "Pendant que / Tant que (avant qu'un changement ne se produise)",
+    "meaning": "Tant que / Avant que (pour une action volontaire)",
     "construction": {
-      "verb": "Forme dictionnaire / Forme en -te iru / Forme négative -nai + うちに",
-      "i_adj": "Adjectif en -i + うちに",
-      "na_adj": "Adjectif en -na + なうちに",
-      "noun": "Nom + のうちに"
+      "動詞": "辞書形 / ている形 / ない形 + うちに",
+      "い形容詞": "い形容詞 + うちに",
+      "な形容詞": "な形容詞 + なうちに",
+      "名詞": "名詞 + のうちに"
     },
     "nuance": "Indique qu'il faut accomplir une action volontaire pendant qu'une situation actuelle dure, car il sera trop tard ou difficile de le faire une fois que cette situation aura changé.",
     "warnings": [
@@ -21,31 +21,50 @@
         "translation": "Tant que je suis au Japon, j'aimerais essayer de gravir le mont Fuji une fois."
       },
       {
-        "japanese": "アイスクリーム、溶けないうちに早く食べてくださいね。",
-        "translation": "Mangez vite la glace avant qu'elle ne fonde (pendant qu'elle ne fond pas)."
+        "japanese": "はい、アイスクリーム。溶けないうちに早く食べてくださいね。",
+        "translation": "Tenez, la glace. Mangez-la vite avant qu'elle ne fonde."
       },
       {
         "japanese": "明るいうちに庭の掃除をしてしまおう。",
         "translation": "Profitons qu'il fasse encore jour pour finir de nettoyer le jardin."
       }
     ],
-    "tags": ["temps", "limite temporelle", "opportunité", "volontaire"]
+    "tags": [
+      "temps",
+      "limite",
+      "opportunité",
+      "volontaire"
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "aida-ni",
+          "explanation": "« Aida ni » s'utilise pour une période de temps définie, alors que « Uchi ni » insiste sur la limite de l'opportunité (avant qu'il ne soit trop tard)."
+        }
+      ],
+      "synonyms": [
+        {
+          "target_id": "uchi-ni-b",
+          "explanation": "Partage la même structure, mais la nuance (B) implique un changement involontaire et progressif, sans intention du locuteur."
+        }
+      ]
+    }
   },
   {
     "id": "uchi-ni-b",
     "title": "～うちに (B)",
     "level": "N3",
-    "meaning": "Pendant que / Au fur et à mesure (un changement progressif se produit)",
+    "meaning": "Pendant que / Au fur et à mesure (changement progressif)",
     "construction": {
-      "verb": "Forme dictionnaire / Forme en -te iru / Forme négative -nai + うちに",
-      "i_adj": "",
-      "na_adj": "",
-      "noun": ""
+      "動詞": "辞書形 / ている形 / ない形 + うちに",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": ""
     },
     "nuance": "Pendant qu'un processus ou une action continue se déroule, un changement non intentionnel et indépendant de la volonté du locuteur se produit.",
     "warnings": [
       "La proposition principale ne contient pas d'expression de la volonté ou de l'intention du locuteur.",
-      "Mets l'accent sur le fait que le locuteur ne s'est pas rendu compte immédiatement du changement qui s'opérait."
+      "Met l'accent sur un changement d'état qui s'opère naturellement sans qu'on s'en rende compte."
     ],
     "examples": [
       {
@@ -61,7 +80,20 @@
         "translation": "Sans que je m'en aperçoive, la nuit était tombée dehors."
       }
     ],
-    "tags": ["temps", "changement-spontané", "non-volontaire"]
+    "tags": [
+      "temps",
+      "changement progressif",
+      "involontaire"
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": [
+        {
+          "target_id": "uchi-ni-a",
+          "explanation": "Même structure, mais la version (A) implique une action volontaire faite avant un changement d'état."
+        }
+      ]
+    }
   },
   {
     "id": "aida-ni",
@@ -69,15 +101,15 @@
     "level": "N3",
     "meaning": "Pendant que / Durant",
     "construction": {
-      "verb": "Forme dictionnaire / Forme en -te iru + 間 / 間に",
-      "i_adj": "",
-      "na_adj": "",
-      "noun": "Nom + の間 / の間に"
+      "動詞": "辞書形 / ている形 / ない形 + 間 / 間に",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": "名詞 + の間 / の間に"
     },
     "nuance": "« 間 » s'utilise lorsque deux actions continues se déroulent simultanément sur la même durée. « 間に » s'utilise lorsqu'une action ponctuelle se produit à un moment précis pendant qu'une autre situation continue a lieu.",
     "warnings": [
-      "Avec « 間 », les actions des deux propositions doivent couvrir exactement la même période continue.",
-      "Avec « 間に », l'action principale est courte et ponctuelle, s'insérant dans la durée de la première situation."
+      "Avec « 間 », les actions des deux propositions couvrent exactement la même période continue.",
+      "Avec « 間に », l'action principale est courte ou ponctuelle, et s'insère dans la durée de la première situation."
     ],
     "examples": [
       {
@@ -97,23 +129,36 @@
         "translation": "Pendant que j'étais parti en voyage, beaucoup de mauvaises herbes ont poussé dans le jardin."
       }
     ],
-    "tags": ["temps", "durée", "simultanéité", "ponctuel"]
+    "tags": [
+      "temps",
+      "durée",
+      "simultanéité",
+      "ponctuel"
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "uchi-ni-a",
+          "explanation": "Contrairement à « Uchi ni », « Aida (ni) » indique une simple période de temps définie, sans idée d'urgence ou d'opportunité à saisir avant un changement d'état."
+        }
+      ],
+      "synonyms": []
+    }
   },
   {
-    "id": "te-kara-nai-to-te-kara-de-nakareba",
+    "id": "te-kara-denaito",
     "title": "～てからでないと・～てからでなければ",
     "level": "N3",
-    "meaning": "À moins de... / Tant que... n'est pas fait (impossible de...)",
+    "meaning": "À moins de... / Tant que... n'est pas fait",
     "construction": {
-      "verb": "Forme en -te + からでないと / からでなければ",
-      "i_adj": "",
-      "na_adj": "",
-      "noun": ""
+      "動詞": "て形 + からでないと / からでなければ",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": ""
     },
-    "nuance": "Indique qu'une action ou une condition préalable est absolument indispensable. Tant que cette condition n'est pas remplie, la proposition suivante (souvent négative ou exprimant l'impossibilité) ne peut pas se réaliser.",
+    "nuance": "Indique qu'une condition ou action préalable est absolument indispensable. Tant qu'elle n'est pas remplie, l'action suivante ne peut pas se réaliser.",
     "warnings": [
-      "La proposition principale qui suit est presque toujours de forme négative ou exprime une impossibilité, une interdiction (ex: ～てはいけない, ～無理だ).",
-      "Ne pas confondre avec une simple succession temporelle (～てから)."
+      "La proposition principale qui suit est presque toujours de forme négative ou exprime une impossibilité / une interdiction (ex: ～てはいけない, ～無理だ)."
     ],
     "examples": [
       {
@@ -125,23 +170,31 @@
         "translation": "À moins d'être complètement guéri de sa maladie, le sport intensif est impossible."
       }
     ],
-    "tags": ["condition", "nécessité", "négation"]
+    "tags": [
+      "condition",
+      "nécessité",
+      "négation"
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    }
   },
   {
-    "id": "tokoro-da-tokoro",
+    "id": "tokoro-da",
     "title": "～ところだ・～ところ (+助詞)",
     "level": "N3",
-    "meaning": "Être sur le point de / Être en train de / Venir tout juste de",
+    "meaning": "Être sur le point de / En train de / Venir tout juste de",
     "construction": {
-      "verb": "Forme dictionnaire + ところ (Sur le point de) / Forme -te iru + ところ (En train de) / Forme -ta + ところ (Venir de faire)",
-      "i_adj": "",
-      "na_adj": "",
-      "noun": ""
+      "動詞": "辞書形 / ている形 / た形 + ところだ / ところ (+助詞)",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": ""
     },
-    "nuance": "Sert à préciser un moment extrêmement précis ou une phase spécifique du déroulement d'une action. La particule qui suit (を, へ, に, で) dépend du verbe principal de la phrase.",
+    "nuance": "Précise un moment extrêmement spécifique du déroulement d'une action. La particule qui suit (を, へ, に, で) s'adapte à la construction syntaxique de la phrase et au verbe principal.",
     "warnings": [
-      "La particule associée change selon le rôle syntaxique dans la phrase (ex: ところだ en fin de phrase, ところを capturé en plein acte, ところへ mouvement vers la situation).",
-      "La forme « ～たところ » exprime une immédiateté bien plus forte que « ～たばかり »."
+      "La particule associée (を, へ, に, で) change selon le rôle du bloc dans la phrase (mouvement, observation, etc.).",
+      "« ～たところ » exprime une immédiateté temporelle bien plus forte et précise que « ～たばかり »."
     ],
     "examples": [
       {
@@ -150,7 +203,7 @@
       },
       {
         "japanese": "試験中、となりの人の答えを見ているところを先生に注意された。",
-        "translation": "Pendant l'examen, je me suis fait réprimander par le professeur alors que j'étais en train de regarder la réponse de mon voisin."
+        "translation": "Pendant l'examen, je me suis fait réprimander par le professeur au moment où j'étais en train de regarder la réponse de mon voisin."
       },
       {
         "japanese": "楽しみにしていたテレビドラマが始まったところへ電話が鳴った。",
@@ -161,6 +214,14 @@
         "translation": "Les enfants sont rentrés pile au moment où le gâteau venait d'être prêt."
       }
     ],
-    "tags": ["temps", "aspect", "immédiateté"]
+    "tags": [
+      "temps",
+      "aspect",
+      "immédiateté"
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    }
   }
 ]
