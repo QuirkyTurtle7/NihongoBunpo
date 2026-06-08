@@ -1,42 +1,166 @@
 [
   {
-    "id": "wake-de-wa-nai",
-    "title": "わけではない",
+    "id": "uchi-ni-a",
+    "title": "～うちに (A)",
     "level": "N3",
-    "meaning": "Cela ne veut pas dire que / Ce n'est pas que...",
+    "meaning": "Pendant que / Tant que (avant qu'un changement ne se produise)",
     "construction": {
-      "verb": "Forme courte + わけではない",
-      "i_adj": "〜い + わけではない",
-      "na_adj": "〜な + わけではない",
-      "noun": "〜という + わけではない"
+      "verb": "Forme dictionnaire / Forme en -te iru / Forme négative -nai + うちに",
+      "i_adj": "Adjectif en -i + うちに",
+      "na_adj": "Adjectif en -na + なうちに",
+      "noun": "Nom + のうちに"
     },
-    "nuance": "Utilisé pour nuancer une affirmation. Ce n'est pas une négation totale.",
-    "warnings": ["Souvent précédé de からといって"],
+    "nuance": "Indique qu'il faut accomplir une action volontaire pendant qu'une situation actuelle dure, car il sera trop tard ou difficile de le faire une fois que cette situation aura changé.",
+    "warnings": [
+      "Exprime une action intentionnelle ou volontaire du locuteur dans la proposition principale.",
+      "Ne s'utilise pas si le changement de situation dépend de la volonté du locuteur."
+    ],
     "examples": [
       {
-        "japanese": "日本人がみんなアニメが好きだというわけではない。",
-        "translation": "Cela ne veut pas dire que tous les Japonais aiment les animés."
+        "japanese": "日本にいるうちに一度富士山に登ってみたい。",
+        "translation": "Tant que je suis au Japon, j'aimerais essayer de gravir le mont Fuji une fois."
+      },
+      {
+        "japanese": "アイスクリーム、溶けないうちに早く食べてくださいね。",
+        "translation": "Mangez vite la glace avant qu'elle ne fonde (pendant qu'elle ne fond pas)."
+      },
+      {
+        "japanese": "明るいうちに庭の掃除をしてしまおう。",
+        "translation": "Profitons qu'il fasse encore jour pour finir de nettoyer le jardin."
       }
     ],
-    "tags": ["négation", "nuance"]
+    "tags": ["temps", "limite temporelle", "opportunité", "volontaire"]
   },
   {
-    "id": "tame-ni",
-    "title": "ために",
+    "id": "uchi-ni-b",
+    "title": "～うちに (B)",
     "level": "N3",
-    "meaning": "Dans le but de / À cause de",
+    "meaning": "Pendant que / Au fur et à mesure (un changement progressif se produit)",
     "construction": {
-      "verb": "Dictionnaire + ために",
-      "noun": "Nom + の + ために"
+      "verb": "Forme dictionnaire / Forme en -te iru / Forme négative -nai + うちに",
+      "i_adj": "",
+      "na_adj": "",
+      "noun": ""
     },
-    "nuance": "Indique un but clair avec une volonté forte, ou une cause objective.",
-    "warnings": ["Le sujet doit être le même avant et après ために pour le but."],
+    "nuance": "Pendant qu'un processus ou une action continue se déroule, un changement non intentionnel et indépendant de la volonté du locuteur se produit.",
+    "warnings": [
+      "La proposition principale ne contient pas d'expression de la volonté ou de l'intention du locuteur.",
+      "Mets l'accent sur le fait que le locuteur ne s'est pas rendu compte immédiatement du changement qui s'opérait."
+    ],
     "examples": [
       {
-        "japanese": "留学のために、貯金しています。",
-        "translation": "Je mets de l'argent de côté dans le but d'étudier à l'étranger."
+        "japanese": "音楽を聞いているうちに眠ってしまった。",
+        "translation": "Je me suis endormi sans m'en rendre compte pendant que j'écoutais de la musique."
+      },
+      {
+        "japanese": "少し難しい曲でも、練習を重ねるうちに弾けるようになりますよ。",
+        "translation": "Même s'il s'agit d'un morceau un peu difficile, à force de s'entraîner, on finit par arriver à le jouer."
+      },
+      {
+        "japanese": "気がつかないうちに外は暗くなっていた。",
+        "translation": "Sans que je m'en aperçoive, la nuit était tombée dehors."
       }
     ],
-    "tags": ["but", "cause"]
+    "tags": ["temps", "changement-spontané", "non-volontaire"]
+  },
+  {
+    "id": "aida-ni",
+    "title": "～間・～間に",
+    "level": "N3",
+    "meaning": "Pendant que / Durant",
+    "construction": {
+      "verb": "Forme dictionnaire / Forme en -te iru + 間 / 間に",
+      "i_adj": "",
+      "na_adj": "",
+      "noun": "Nom + の間 / の間に"
+    },
+    "nuance": "« 間 » s'utilise lorsque deux actions continues se déroulent simultanément sur la même durée. « 間に » s'utilise lorsqu'une action ponctuelle se produit à un moment précis pendant qu'une autre situation continue a lieu.",
+    "warnings": [
+      "Avec « 間 », les actions des deux propositions doivent couvrir exactement la même période continue.",
+      "Avec « 間に », l'action principale est courte et ponctuelle, s'insérant dans la durée de la première situation."
+    ],
+    "examples": [
+      {
+        "japanese": "お母さんが昼寝をしている間、子どもたちはテレビを見ていた。",
+        "translation": "Pendant que la mère faisait la sieste, les enfants regardaient la télévision (simultanéité totale)."
+      },
+      {
+        "japanese": "わたしが旅行で留守の間、うちの犬の世話をお願いできないでしょうか。",
+        "translation": "Pourrais-tu t'occuper de mon chien pendant toute la durée de mon voyage ?"
+      },
+      {
+        "japanese": "お母さんが昼寝をしている間に、子どもたちは遊びに出かけた。",
+        "translation": "Pendant que la mère faisait la sieste, les enfants sont sortis jouer (action ponctuelle)."
+      },
+      {
+        "japanese": "わたしが旅行で留守の間に、庭に草がたくさん生えてしまった。",
+        "translation": "Pendant que j'étais parti en voyage, beaucoup de mauvaises herbes ont poussé dans le jardin."
+      }
+    ],
+    "tags": ["temps", "durée", "simultanéité", "ponctuel"]
+  },
+  {
+    "id": "te-kara-nai-to-te-kara-de-nakareba",
+    "title": "～てからでないと・～てからでなければ",
+    "level": "N3",
+    "meaning": "À moins de... / Tant que... n'est pas fait (impossible de...)",
+    "construction": {
+      "verb": "Forme en -te + からでないと / からでなければ",
+      "i_adj": "",
+      "na_adj": "",
+      "noun": ""
+    },
+    "nuance": "Indique qu'une action ou une condition préalable est absolument indispensable. Tant que cette condition n'est pas remplie, la proposition suivante (souvent négative ou exprimant l'impossibilité) ne peut pas se réaliser.",
+    "warnings": [
+      "La proposition principale qui suit est presque toujours de forme négative ou exprime une impossibilité, une interdiction (ex: ～てはいけない, ～無理だ).",
+      "Ne pas confondre avec une simple succession temporelle (～てから)."
+    ],
+    "examples": [
+      {
+        "japanese": "運転免許を取ってからでなければ車を運転してはいけない。",
+        "translation": "Tant que l'on n'a pas obtenu son permis de conduire, on ne doit pas conduire de voiture."
+      },
+      {
+        "japanese": "病気が治ってからでないと激しい運動は無理だ。",
+        "translation": "À moins d'être complètement guéri de sa maladie, le sport intensif est impossible."
+      }
+    ],
+    "tags": ["condition", "nécessité", "négation"]
+  },
+  {
+    "id": "tokoro-da-tokoro",
+    "title": "～ところだ・～ところ (+助詞)",
+    "level": "N3",
+    "meaning": "Être sur le point de / Être en train de / Venir tout juste de",
+    "construction": {
+      "verb": "Forme dictionnaire + ところ (Sur le point de) / Forme -te iru + ところ (En train de) / Forme -ta + ところ (Venir de faire)",
+      "i_adj": "",
+      "na_adj": "",
+      "noun": ""
+    },
+    "nuance": "Sert à préciser un moment extrêmement précis ou une phase spécifique du déroulement d'une action. La particule qui suit (を, へ, に, で) dépend du verbe principal de la phrase.",
+    "warnings": [
+      "La particule associée change selon le rôle syntaxique dans la phrase (ex: ところだ en fin de phrase, ところを capturé en plein acte, ところへ mouvement vers la situation).",
+      "La forme « ～たところ » exprime une immédiateté bien plus forte que « ～たばかり »."
+    ],
+    "examples": [
+      {
+        "japanese": "ロケットは間もなく飛び立つところです。緊張の瞬間です。",
+        "translation": "La fusée est sur le point de décoller. C'est un moment de grande tension."
+      },
+      {
+        "japanese": "試験中、となりの人の答えを見ているところを先生に注意された。",
+        "translation": "Pendant l'examen, je me suis fait réprimander par le professeur alors que j'étais en train de regarder la réponse de mon voisin."
+      },
+      {
+        "japanese": "楽しみにしていたテレビドラマが始まったところへ電話が鳴った。",
+        "translation": "La série télévisée que j'attendais avec impatience venait tout juste de commencer quand le téléphone a sonné."
+      },
+      {
+        "japanese": "ケーキができ上がったところへ子どもたちが帰ってきた。",
+        "translation": "Les enfants sont rentrés pile au moment où le gâteau venait d'être prêt."
+      }
+    ],
+    "tags": ["temps", "aspect", "immédiateté"]
   }
 ]
