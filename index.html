@@ -2,55 +2,385 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Dico de Grammaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Grammaire N3</title>
     <style>
-        body { font-family: sans-serif; padding: 20px; background: #f5f5f5; max-width: 600px; margin: 0 auto; }
-        input { width: 100%; padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; margin-bottom: 20px; }
-        .card { background: white; padding: 15px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .title { font-size: 20px; font-weight: bold; color: #333; margin: 0 0 5px 0; }
-        .level { background: #e0f2fe; color: #0369a1; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: bold; }
-        .meaning { font-style: italic; color: #555; margin: 8px 0; }
-        .japanese { background: #fef08a; padding: 5px; display: inline-block; border-radius: 4px; margin-top: 5px; }
+        /* Variables de thèmes (Mode Clair par défaut) */
+        :root {
+            --bg-color: #f8fafc;
+            --header-bg: rgba(255, 255, 255, 0.9);
+            --card-bg: #ffffff;
+            --card-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-title: #0f172a;
+            --text-muted: #64748b;
+            --primary: #0284c7;
+            --primary-light: #e0f2fe;
+            --warning-bg: #fef2f2;
+            --warning-border: #fca5a5;
+            --warning-text: #991b1b;
+            --jp-bg: #fef08a;
+            --jp-text: #1e293b;
+            --nuance-bg: #f1f5f9;
+            --tag-bg: #e2e8f0;
+            --tag-text: #475569;
+        }
+
+        /* Détection automatique du Mode Sombre */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0f172a;
+                --header-bg: rgba(15, 23, 42, 0.9);
+                --card-bg: #1e293b;
+                --card-border: #334155;
+                --text-main: #cbd5e1;
+                --text-title: #f8fafc;
+                --text-muted: #94a3b8;
+                --primary: #38bdf8;
+                --primary-light: #0369a1;
+                --warning-bg: #451a03;
+                --warning-border: #b45309;
+                --warning-text: #fef3c7;
+                --jp-bg: #ca8a04;
+                --jp-text: #ffffff;
+                --nuance-bg: #334155;
+                --tag-bg: #334155;
+                --tag-text: #cbd5e1;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* En-tête fixe (Flou esthétique sur PC/Mobile) */
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--header-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            width: 100%;
+            max-width: 800px; /* Élargi pour le confort sur PC */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 10;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        input#search {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 16px;
+            background-color: var(--card-bg);
+            color: var(--text-title);
+            border: 2px solid var(--card-border);
+            border-radius: 12px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+        }
+
+        input#search:focus {
+            border-color: var(--primary);
+        }
+
+        /* Zone principale adaptée PC (Centrée et plus large) */
+        main {
+            width: 100%;
+            max-width: 800px; 
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Style de la carte repliable */
+        details.grammar-card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+            transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+        }
+
+        /* Amélioration de la navigation à la souris sur PC */
+        @media (hover: hover) {
+            details.grammar-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgb(0 0 0 / 0.08);
+                border-color: var(--primary);
+            }
+        }
+
+        details.grammar-card[open] {
+            box-shadow: 0 4px 12px rgb(0 0 0 / 0.12);
+            transform: none !important;
+        }
+
+        summary {
+            padding: 18px;
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            position: relative;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .card-header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .grammar-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-title);
+        }
+
+        .level-badge {
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .grammar-meaning {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin: 0;
+            padding-right: 30px;
+        }
+
+        summary::after {
+            content: "➔";
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            color: var(--text-muted);
+            font-size: 14px;
+            transition: transform 0.2s;
+        }
+
+        details[open] summary::after {
+            transform: translateY(-50%) rotate(-90deg);
+        }
+
+        /* Contenu interne de la carte */
+        .card-content {
+            padding: 0 20px 20px 20px;
+            border-top: 1px dashed var(--card-border);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        h4 {
+            margin: 20px 0 10px 0;
+            color: var(--text-title);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            opacity: 0.8;
+        }
+
+        .nuance-text {
+            color: var(--text-main);
+            background: var(--nuance-bg);
+            padding: 14px;
+            border-radius: 8px;
+            margin: 0 0 20px 0;
+        }
+
+        /* Tableau de construction */
+        .construction-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background: var(--bg-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .construction-table td {
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--card-border);
+            font-size: 15px;
+        }
+
+        .construction-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .construction-table td:first-child {
+            font-weight: bold;
+            color: var(--primary);
+            width: 100px;
+        }
+
+        /* Boîte d'alertes */
+        .warning-box {
+            background: var(--warning-bg);
+            border-left: 4px solid var(--warning-border);
+            color: var(--warning-text);
+            padding: 14px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+        }
+
+        .warning-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        /* Structure des exemples */
+        .example-item {
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .example-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .jp-sentence {
+            background: var(--jp-bg);
+            color: var(--jp-text);
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-weight: 500;
+            display: inline-block;
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+
+        .fr-sentence {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin: 0;
+            padding-left: 4px;
+        }
+
+        /* Tags */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
     </style>
 </head>
 <body>
 
-    <input type="text" id="search" placeholder="Rechercher un point de grammaire (ex: N3, tame, わけ)...">
-    <div id="results"></div>
+    <header>
+        <input type="text" id="search" placeholder="Rechercher un point de grammaire, sens, tag..." autofocus>
+    </header>
+
+    <main id="results"></main>
 
     <script>
         let grammarData = [];
 
-        // 1. Charger le fichier JSON
+        // Charger le fichier JSON
         fetch('grammar.json')
             .then(response => response.json())
             .then(data => {
                 grammarData = data;
-                displayCards(grammarData); // Afficher tout au début
+                displayCards(grammarData);
             });
 
-        // 2. Fonction pour afficher les cartes
         function displayCards(cards) {
             const container = document.getElementById('results');
-            container.innerHTML = cards.map(card => `
-                <div class="card">
-                    <span class="level">${card.level}</span>
-                    <p class="title">${card.title}</p>
-                    <p class="meaning"><strong>Sens :</strong> ${card.meaning}</p>
-                    <p><strong>Exemple :</strong><br><span class="japanese">${card.examples[0].japanese}</span><br><small>${card.examples[0].translation}</small></p>
-                </div>
-            `).join('');
+            if (cards.length === 0) {
+                container.innerHTML = `<p style="text-align:center; color:var(--text-muted); margin-top: 40px;">Aucun point de grammaire trouvé.</p>`;
+                return;
+            }
+
+            container.innerHTML = cards.map(card => {
+                let constructionRows = '';
+                if(card.construction.verb) constructionRows += `<tr><td>Verbe</td><td>${card.construction.verb}</td></tr>`;
+                if(card.construction.i_adj) constructionRows += `<tr><td>Adj. -i</td><td>${card.construction.i_adj}</td></tr>`;
+                if(card.construction.na_adj) constructionRows += `<tr><td>Adj. -na</td><td>${card.construction.na_adj}</td></tr>`;
+                if(card.construction.noun) constructionRows += `<tr><td>Nom</td><td>${card.construction.noun}</td></tr>`;
+
+                const warningsHTML = card.warnings && card.warnings.length > 0 
+                    ? `<div class="warning-box"><ul>${card.warnings.map(w => `<li>${w}</li>`).join('')}</ul></div>`
+                    : '';
+
+                const examplesHTML = card.examples.map(ex => `
+                    <div class="example-item">
+                        <div class="jp-sentence">${ex.japanese}</div>
+                        <p class="fr-sentence">${ex.translation}</p>
+                    </div>
+                `).join('');
+
+                const tagsHTML = card.tags.map(tag => `<span class="tag">#${tag}</span>`).join('');
+
+                return `
+                    <details class="grammar-card">
+                        <summary>
+                            <div class="card-header-top">
+                                <span class="grammar-title">${card.title}</span>
+                                <span class="level-badge">${card.level}</span>
+                            </div>
+                            <p class="grammar-meaning">${card.meaning}</p>
+                        </summary>
+                        <div class="card-content">
+                            <h4>Nuance</h4>
+                            <p class="nuance-text">${card.nuance}</p>
+                            
+                            <h4>Construction</h4>
+                            <table class="construction-table">${constructionRows}</table>
+                            
+                            ${warningsHTML}
+                            
+                            <h4>Exemples</h4>
+                            <div class="examples-container">${examplesHTML}</div>
+                            
+                            <div class="tags-container">${tagsHTML}</div>
+                        </div>
+                    </details>
+                `;
+            }).join('');
         }
 
-        // 3. Système de recherche en temps réel
+        // Système de recherche globale
         document.getElementById('search').addEventListener('input', (e) => {
-            const searchContext = e.target.value.toLowerCase();
+            const query = e.target.value.toLowerCase().trim();
             const filtered = grammarData.filter(card => 
-                card.title.toLowerCase().includes(searchContext) || 
-                card.meaning.toLowerCase().includes(searchContext) ||
-                card.level.toLowerCase().includes(searchContext) ||
-                card.tags.some(tag => tag.toLowerCase().includes(searchContext))
+                card.title.toLowerCase().includes(query) || 
+                card.meaning.toLowerCase().includes(query) ||
+                card.level.toLowerCase().includes(query) ||
+                card.id.toLowerCase().includes(query) ||
+                card.tags.some(tag => tag.toLowerCase().includes(query))
             );
             displayCards(filtered);
         });
