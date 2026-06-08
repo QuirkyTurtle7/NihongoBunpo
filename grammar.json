@@ -223,5 +223,132 @@
       "confusions": [],
       "synonyms": []
     }
-  }
+  },
+  {
+      "id": "youni-but",
+      "title": "ように",
+      "level": "N4",
+      "meaning": "Afin de / de sorte que / pour que",
+      "construction": {
+        "動詞": "Forme dictionnaire (verbe non-volontaire / potentiel) + ように / Forme ない + ように",
+        "い形容詞": "",
+        "な形容詞": "",
+        "名詞": ""
+      },
+      "nuance": "Cette structure indique que l'action principale (V2) est effectuée dans le but d'atteindre un état ou une situation cible (V1). Le verbe précédant ように doit obligatoirement être non-volontaire (comme un potentiel ou un verbe d'état) ou être conjugué à la forme négative.",
+      "warnings": [
+        "Le verbe à l'affirmatif devant ように ne doit pas exprimer une intention ou une volonté directe sous le contrôle immédiat du sujet.",
+        "Pour exprimer un but lié à une action volontaire contrôlée à l'affirmatif, on emploie la structure 〜ために."
+      ],
+      "examples": [
+        {
+          "japanese": "速く泳げるように、毎日練習しています。",
+          "translation": "Je m'entraîne tous les jours pour pouvoir nager vite."
+        },
+        {
+          "japanese": "忘れないように、メモしてください。",
+          "translation": "Prenez des notes pour ne pas oublier."
+        }
+      ],
+      "connections": {
+        "confusions": [
+          {
+            "target_id": "tameni",
+            "explanation": "ために s'utilise lorsque le sujet effectue une action volontaire qu'il contrôle totalement à la forme affirmative, tandis que ように s'emploie pour un objectif dépendant d'une capacité ou d'une situation non-volontaire."
+          }
+        ],
+        "synonyms": []
+      },
+      "tags": ["but", "objectif", "potentiel", "negation"]
+    },
+    {
+      "id": "youni-narimasu",
+      "title": "ようになります",
+      "level": "N4",
+      "meaning": "Devenir capable de / prendre l'habitude de",
+      "construction": {
+        "動詞": "Forme dictionnaire (verbe potentiel / d'état / de volonté) + ようになります",
+        "い形容詞": "",
+        "な形容詞": "",
+        "名詞": ""
+      },
+      "nuance": "Indique un changement d'état progressif ou une transition. Utilisé avec un verbe potentiel ou d'état, il montre qu'une action auparavant impossible est devenue possible. Utilisé avec un verbe de volonté, il indique l'acquisition d'une nouvelle habitude qui n'existait pas auparavant.",
+      "warnings": [
+        "Pour répondre négativement à une question formulée en 〜ようになりましたか, on utilise la structure 'いいえ、まだ + verbe potentiel négatif' au lieu d'une forme passée négative.",
+        "Ne confondez pas le changement d'état constaté (なります) avec l'effort délibéré du sujet (します)."
+      ],
+      "examples": [
+        {
+          "japanese": "毎日練習すれば、泳げるようになります。",
+          "translation": "Si vous vous entraînez tous les jours, vous arriverez à pouvoir nager."
+        },
+        {
+          "japanese": "やっと自転車に乗れるようになりました。",
+          "translation": "J'ai enfin réussi à monter à vélo."
+        },
+        {
+          "japanese": "日本人は100年ぐらいまえから牛肉や豚肉を食べるようになりました。",
+          "translation": "Les Japonais ont pris l'habitude de manger du bœuf et du porc il y a environ cent ans."
+        }
+      ],
+      "connections": {
+        "confusions": [
+          {
+            "target_id": "youni-shimasu",
+            "explanation": "ようになります traduit une évolution ou une transition d'état constatée, tandis que ようにします montre un effort actif et volontaire pour instaurer une habitude."
+          }
+        ],
+        "synonyms": []
+      },
+      "tags": ["changement", "capacite", "habitude", "evolution"]
+    },
+    {
+      "id": "youni-shimasu",
+      "title": "ようにします",
+      "level": "N4",
+      "meaning": "S'efforcer de / faire en sorte de",
+      "construction": {
+        "動詞": "Forme dictionnaire + ようにします / Forme ない + ようにします",
+        "い形容詞": "",
+        "な形容詞": "",
+        "名詞": ""
+      },
+      "nuance": "Exprime une tentative ou un effort conscient et répété pour adopter un comportement régulier (généralement employé sous la forme ようにしています). Sa variante ようにしてください permet de formuler une demande polie et indirecte d'adopter une bonne habitude ou une consigne.",
+      "warnings": [
+        "La structure ようにしてください ne peut en aucun cas être utilisée pour formuler une requête nécessitant une action immédiate ou instantanée (comme passer le sel).",
+        "Elle implique obligatoirement une notion de continuité, d'attention ou de régularité dans le temps."
+      ],
+      "examples": [
+        {
+          "japanese": "毎日運動して、何でも食べるようにしています。",
+          "translation": "Je tente de faire du sport tous les jours et de manger de tout."
+        },
+        {
+          "japanese": "歯に悪いですから、甘い物を食べないようにしています。",
+          "translation": "J'essaie de ne pas manger de sucreries car c'est mauvais pour les dents."
+        },
+        {
+          "japanese": "もっと野菜を食べるようにしてください。",
+          "translation": "Essayez de manger plus de légumes."
+        },
+        {
+          "japanese": "絶対にパスポートをなくさないようにしてください。",
+          "translation": "Faites très attention à ne pas perdre votre passeport."
+        }
+      ],
+      "connections": {
+        "confusions": [
+          {
+            "target_id": "youni-narimasu",
+            "explanation": "ようにします provient d'une décision volontaire de faire un effort continu, alors que ようになります désigne un changement de capacité ou une habitude installée de fait indépendamment d'un effort immédiat."
+          },
+          {
+            "target_id": "te-kudasai",
+            "explanation": "〜てください s'impose pour commander une action ponctuelle et immédiate, tandis que 〜ようにしてください s'emploie de manière plus polie et indirecte pour des recommandations à long terme."
+          }
+        ],
+        "synonyms": []
+      },
+      "tags": ["effort", "habitude", "requete", "politesse"]
+    }
 ]
