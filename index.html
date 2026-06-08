@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Dico de Grammaire</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f5f5f5; max-width: 600px; margin: 0 auto; }
+        input { width: 100%; padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; margin-bottom: 20px; }
+        .card { background: white; padding: 15px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .title { font-size: 20px; font-weight: bold; color: #333; margin: 0 0 5px 0; }
+        .level { background: #e0f2fe; color: #0369a1; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+        .meaning { font-style: italic; color: #555; margin: 8px 0; }
+        .japanese { background: #fef08a; padding: 5px; display: inline-block; border-radius: 4px; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="search" placeholder="Rechercher un point de grammaire (ex: N3, tame, わけ)...">
+    <div id="results"></div>
+
+    <script>
+        let grammarData = [];
+
+        // 1. Charger le fichier JSON
+        fetch('grammar.json')
+            .then(response => response.json())
+            .then(data => {
+                grammarData = data;
+                displayCards(grammarData); // Afficher tout au début
+            });
+
+        // 2. Fonction pour afficher les cartes
+        function displayCards(cards) {
+            const container = document.getElementById('results');
+            container.innerHTML = cards.map(card => `
+                <div class="card">
+                    <span class="level">${card.level}</span>
+                    <p class="title">${card.title}</p>
+                    <p class="meaning"><strong>Sens :</strong> ${card.meaning}</p>
+                    <p><strong>Exemple :</strong><br><span class="japanese">${card.examples[0].japanese}</span><br><small>${card.examples[0].translation}</small></p>
+                </div>
+            `).join('');
+        }
+
+        // 3. Système de recherche en temps réel
+        document.getElementById('search').addEventListener('input', (e) => {
+            const searchContext = e.target.value.toLowerCase();
+            const filtered = grammarData.filter(card => 
+                card.title.toLowerCase().includes(searchContext) || 
+                card.meaning.toLowerCase().includes(searchContext) ||
+                card.level.toLowerCase().includes(searchContext) ||
+                card.tags.some(tag => tag.toLowerCase().includes(searchContext))
+            );
+            displayCards(filtered);
+        });
+    </script>
+</body>
+</html>

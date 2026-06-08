@@ -1,0 +1,42 @@
+[
+  {
+    "id": "wake-de-wa-nai",
+    "title": "わけではない",
+    "level": "N3",
+    "meaning": "Cela ne veut pas dire que / Ce n'est pas que...",
+    "construction": {
+      "verb": "Forme courte + わけではない",
+      "i_adj": "〜い + わけではない",
+      "na_adj": "〜な + わけではない",
+      "noun": "〜という + わけではない"
+    },
+    "nuance": "Utilisé pour nuancer une affirmation. Ce n'est pas une négation totale.",
+    "warnings": ["Souvent précédé de からといって"],
+    "examples": [
+      {
+        "japanese": "日本人がみんなアニメが好きだというわけではない。",
+        "translation": "Cela ne veut pas dire que tous les Japonais aiment les animés."
+      }
+    ],
+    "tags": ["négation", "nuance"]
+  },
+  {
+    "id": "tame-ni",
+    "title": "ために",
+    "level": "N3",
+    "meaning": "Dans le but de / À cause de",
+    "construction": {
+      "verb": "Dictionnaire + ために",
+      "noun": "Nom + の + ために"
+    },
+    "nuance": "Indique un but clair avec une volonté forte, ou une cause objective.",
+    "warnings": ["Le sujet doit être le même avant et après ために pour le but."],
+    "examples": [
+      {
+        "japanese": "留学のために、貯金しています。",
+        "translation": "Je mets de l'argent de côté dans le but d'étudier à l'étranger."
+      }
+    ],
+    "tags": ["but", "cause"]
+  }
+]
