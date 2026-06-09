@@ -2918,5 +2918,819 @@
       "synonyms": []
     },
     "tags": ["opinion", "subjectif", "conviction", "nuance"]
+  },
+  {
+    "id": "keigo-verb-iu",
+    "title": "言う (Dire)",
+    "type": "keigo",
+    "level": "N4/N3",
+    "meaning": "Dire (Keigo)",
+    "construction": {
+      "Neutre": "言う",
+      "Sonkeigo (Respect)": "おっしゃる",
+      "Kenjougo I (Humble -> Vers qqn)": "（お礼を）申し上げる",
+      "Kenjougo II (Teichougo -> Politesse)": "申す (mousu)"
+    },
+    "nuance": "Transformation complète du verbe 'dire' selon la politesse.",
+    "warnings": [
+      "Pour se présenter : '～と申します'.",
+      "Pour rapporter les paroles du patron : 'おっしゃいました'."
+    ],
+    "examples": [
+      {
+        "japanese": "先生がそうおっしゃいました。",
+        "translation": "C'est ce que le professeur a dit."
+      },
+      {
+        "japanese": "田中と申します。よろしくお願いいたします。",
+        "translation": "Je m'appelle Tanaka. Enchanté."
+      }
+    ],
+    "tags": ["dire", "mousu", "ossharu"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "keigo-verb-iku-kuru-iru",
+    "title": "行く・来る・いる (Aller, Venir, Être)",
+    "type": "keigo",
+    "level": "N4/N3",
+    "meaning": "Aller / Venir / Être (Keigo)",
+    "construction": {
+      "Sonkeigo (Respect)": "いらっしゃる / おいでになる",
+      "Kenjougo I (Humble -> Venir chez qqn)": "伺う (ukagau) / 参る (mairu)",
+      "Kenjougo II (Teichougo -> Déplacement/État)": "参る (mairu) / おる (oru)"
+    },
+    "nuance": "Ces trois verbes partagent souvent les mêmes formes de respect (いらっしゃる).",
+    "warnings": [
+      "伺う (ukagau) s'utilise pour rendre visite à quelqu'un de supérieur.",
+      "おる (oru) s'utilise pour dire où l'on se trouve poliment."
+    ],
+    "examples": [
+      {
+        "japanese": "先生はあちらにいらっしゃいます。",
+        "translation": "Le professeur est là-bas."
+      },
+      {
+        "japanese": "明日、3時に伺います。",
+        "translation": "Demain, je viendrai (chez vous) à 15h."
+      }
+    ],
+    "tags": ["aller", "venir", "etre", "mairu", "irassharu"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "keigo-verb-taberu-nomu",
+    "title": "食べる・飲む (Manger, Boire)",
+    "type": "keigo",
+    "level": "N4/N3",
+    "meaning": "Manger / Boire (Keigo)",
+    "construction": {
+      "Sonkeigo (Respect)": "召し上がる (meshiagaru)",
+      "Kenjougo (Humble)": "いただく (itadaku)"
+    },
+    "nuance": "Utilisé systématiquement lors des repas en contexte formel.",
+    "warnings": [
+      "On dit 'いただきます' avant de manger pour s'abaisser devant la nourriture/l'hôte.",
+      "On demande '何を召し上がりますか' au client."
+    ],
+    "examples": [
+      {
+        "japanese": "どうぞ、召し上がってください。",
+        "translation": "Je vous en prie, mangez / servez-vous."
+      },
+      {
+        "japanese": "刺身も日本酒もいただきます。",
+        "translation": "Je vais prendre (manger/boire) du sashimi et du saké."
+      }
+    ],
+    "tags": ["manger", "boire", "itadaku"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "keigo-verb-miru",
+    "title": "見る (Voir, Regarder)",
+    "type": "keigo",
+    "level": "N4/N3",
+    "meaning": "Voir / Regarder (Keigo)",
+    "construction": {
+      "Sonkeigo (Respect)": "ご覧になる (goran ni naru)",
+      "Kenjougo (Humble)": "拝見する (haiken suru)"
+    },
+    "nuance": "Utilisé pour la lecture de documents ou l'observation.",
+    "examples": [
+      {
+        "japanese": "この資料をご覧になりましたか。",
+        "translation": "Avez-vous consulté (vu) ce document ?"
+      },
+      {
+        "japanese": "先生の写真をちょっと拝見します。",
+        "translation": "Je me permets de regarder un instant la photo du professeur."
+      }
+    ],
+    "tags": ["voir", "regarder", "haiken"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "keigo-verb-suru",
+    "title": "する (Faire)",
+    "type": "keigo",
+    "level": "N4/N3",
+    "meaning": "Faire (Keigo)",
+    "construction": {
+      "Sonkeigo (Respect)": "なさる (nasaru)",
+      "Kenjougo (Humble)": "いたす (itasu)"
+    },
+    "nuance": "Remplace 'suru' dans toutes les formes composées (ex: 勉強なさる).",
+    "examples": [
+      {
+        "japanese": "ゴルフをなさいますか。",
+        "translation": "Faites-vous du golf ?"
+      },
+      {
+        "japanese": "私がいたします。",
+        "translation": "C'est moi qui vais le faire."
+      }
+    ],
+    "tags": ["faire", "nasaru", "itasu"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "keigo-verb-shitteiru",
+    "title": "知っている (Savoir, Connaître)",
+    "type": "keigo",
+    "level": "N4/N3",
+    "meaning": "Savoir / Connaître (Keigo)",
+    "construction": {
+      "Sonkeigo (Respect)": "ご存じだ (gozonji da)",
+      "Kenjougo (Humble)": "存じている (zonjite-iru) / 存ずる"
+    },
+    "examples": [
+      {
+        "japanese": "あの方をご存じですか。",
+        "translation": "Connaissez-vous cette personne ?"
+      },
+      {
+        "japanese": "はい、よく存じております。",
+        "translation": "Oui, je la connais très bien."
+      }
+    ],
+    "tags": ["savoir", "connaitre", "zonjiru"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "keigo-verb-au",
+    "title": "会う (Rencontrer)",
+    "type": "keigo",
+    "level": "N4/N3",
+    "meaning": "Rencontrer (Keigo)",
+    "construction": {
+      "Sonkeigo (Respect)": "お会いになる",
+      "Kenjougo (Humble)": "お目にかかる (ome ni kakaru)"
+    },
+    "examples": [
+      {
+        "japanese": "明日、先生にお目にかかります。",
+        "translation": "Demain, je vais rencontrer le professeur."
+      }
+    ],
+    "tags": ["rencontrer", "ome-ni-kakaru"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "keigo-polite-patterns",
+    "title": "Patterns standards (お / ご)",
+    "type": "keigo",
+    "level": "N4/N3",
+    "meaning": "Formes de politesse régulières",
+    "construction": {
+      "Respect (Action de l'autre)": "お + Base ます + になります",
+      "Humble (Mon action vers l'autre)": "お + Base ます + します / いたします",
+      "Requête (Demander à l'autre)": "お + Base ます + ください"
+    },
+    "nuance": "S'utilise pour les verbes qui n'ont pas de forme spéciale (ex: écrire, lire, porter).",
+    "examples": [
+      {
+        "japanese": "お持ちしましょうか。",
+        "translation": "Puis-je le porter pour vous ?"
+      },
+      {
+        "japanese": "お帰りになりますか。",
+        "translation": "Rentrez-vous chez vous ?"
+      }
+    ],
+    "tags": ["pattern", "construction", "politesse"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "particle-koso",
+    "title": "こそ",
+    "type": "vocabulary",
+    "level": "N3",
+    "meaning": "Précisément / C'est... qui... (Emphase)",
+    "construction": {
+      "Nom": "名詞 + こそ",
+      "Raison": "理由 (から) + こそ"
+    },
+    "nuance": "Utilisé pour souligner un élément spécifique en le distinguant clairement des autres. C'est une emphase forte.",
+    "warnings": [
+      "Souvent utilisé pour exprimer une volonté forte (今度こそ = cette fois et pas une autre).",
+      "Ne s'utilise pas pour des faits banals."
+    ],
+    "examples": [
+      {
+        "japanese": "今度こそ優勝したい。",
+        "translation": "Cette fois-ci (plus que toute autre), je veux gagner."
+      },
+      {
+        "japanese": "親だからこそ、自分の子を厳しくしかるのだ。",
+        "translation": "C'est précisément parce qu'on est parent que l'on gronde sévèrement son enfant."
+      }
+    ],
+    "tags": ["emphase", "distinction"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "particle-demo",
+    "title": "でも",
+    "type": "vocabulary",
+    "level": "N3",
+    "meaning": "Même / Ou quelque chose comme ça",
+    "construction": {
+      "Exemple extrême": "名詞 + でも",
+      "Suggestion": "名詞 + でも (voulant dire 'entre autres')"
+    },
+    "nuance": "1. Présente un cas extrême pour montrer que le reste est évident. 2. Propose une option parmi d'autres pour ne pas être trop direct.",
+    "warnings": [
+      "Dans une suggestion, cela montre une certaine réserve (ex: 'un thé ou autre ?').",
+      "Ne pas confondre avec le 'demo' de début de phrase (Mais)."
+    ],
+    "examples": [
+      {
+        "japanese": "そんなことは子どもでも知っている。",
+        "translation": "Même un enfant sait une chose pareille."
+      },
+      {
+        "japanese": "お茶でも飲みましょうか。",
+        "translation": "Si nous buvions un thé (ou autre chose) ?"
+      }
+    ],
+    "tags": ["concession", "suggestion", "exemple"],
+    "connections": { "confusions": [{ "target_id": "particle-sae", "explanation": "Sae est plus fort et souligne l'inattendu, Demo est plus courant." }], "synonyms": [] }
+  },
+  {
+    "id": "particle-mo",
+    "title": "も",
+    "type": "vocabulary",
+    "level": "N3",
+    "meaning": "Même / Ne serait-ce que (Emphase)",
+    "construction": {
+      "Négation forte": "Quantité minimale (1...) + も + Négatif",
+      "Exemple extrême": "名詞 + も"
+    },
+    "nuance": "Utilisé pour insister sur une quantité nulle ou sur un fait surprenant pour montrer que la situation est sérieuse.",
+    "examples": [
+      {
+        "japanese": "財布は空っぽだ。1円も残っていない。",
+        "translation": "Le porte-monnaie est vide. Il ne reste même pas un yen."
+      },
+      {
+        "japanese": "足が痛くて立つこともできない。",
+        "translation": "J'ai tellement mal aux pieds que je ne peux même pas rester debout."
+      }
+    ],
+    "tags": ["emphase", "négation", "quantité"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "particle-sae",
+    "title": "さえ",
+    "type": "vocabulary",
+    "level": "N3",
+    "meaning": "Même / Si seulement",
+    "construction": {
+      "Exemple extrême": "名詞 + さえ",
+      "Condition minimale": "名詞 + さえ + (Verbe au conditionnel ば)"
+    },
+    "nuance": "1. Souligne un exemple minimal qui rend le reste encore plus flagrant. 2. Indique la seule et unique condition nécessaire.",
+    "warnings": [
+      "Plus formel et emphatique que 'demo'.",
+      "Le pattern '～さえ～ば' est un classique du JLPT."
+    ],
+    "examples": [
+      {
+        "japanese": "冷蔵庫には卵さえ入っていない。",
+        "translation": "Il n'y a même pas d'œufs dans le frigo (pourtant l'aliment de base)."
+      },
+      {
+        "japanese": "自分さえよければ、それでいいのですか。",
+        "translation": "Tant que ça vous va à vous (et personne d'autre), ça vous suffit ?"
+      }
+    ],
+    "tags": ["limite", "condition", "emphase"],
+    "connections": { "confusions": [], "synonyms": [{ "target_id": "sae-ba", "explanation": "Voir la fiche détaillée sur la structure conditionnelle." }] }
+  },
+  {
+    "id": "particle-made",
+    "title": "まで",
+    "type": "vocabulary",
+    "level": "N3",
+    "meaning": "Jusqu'à / Même (Étendue inattendue)",
+    "construction": {
+      "Nom": "名詞 + まで",
+      "Verbe": "て形 + まで"
+    },
+    "nuance": "Souligne que l'étendue d'une situation dépasse ce qui était attendu. On va jusqu'à un point surprenant.",
+    "examples": [
+      {
+        "japanese": "赤ん坊が泣くと、わたしまで泣きたくなる。",
+        "translation": "Quand le bébé pleure, même moi j'ai envie de pleurer (influence inattendue)."
+      },
+      {
+        "japanese": "借金までして高い車を買わなくてもいい。",
+        "translation": "Tu n'as pas besoin d'aller jusqu'à t'endetter pour acheter une voiture chère."
+      }
+    ],
+    "tags": ["étendue", "limite", "surprise"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "particle-kurai-gurai",
+    "title": "くらい・ぐらい",
+    "type": "vocabulary",
+    "level": "N3",
+    "meaning": "Environ / Au moins / À tel point que",
+    "construction": {
+      "Minimum": "名詞 / Adj + くらい",
+      "Comparaison": "名詞 + くらい",
+      "Degré": "普通形 + くらい"
+    },
+    "nuance": "1. Indique un niveau minimum (facilité). 2. Exprime une quantité approximative. 3. Illustre un degré par une comparaison.",
+    "examples": [
+      {
+        "japanese": "簡単なあいさつぐらいなら日本語で言える。",
+        "translation": "S'il s'agit juste de salutations simples (au moins ça), je peux le dire en japonais."
+      },
+      {
+        "japanese": "卵ぐらいの大きさのパンを作った。",
+        "translation": "J'ai fait un pain de la taille d'un œuf (environ)."
+      }
+    ],
+    "tags": ["approximation", "degré", "minimum"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "particle-nado-nanka",
+    "title": "など・なんか",
+    "type": "vocabulary",
+    "level": "N3",
+    "meaning": "Entre autres / Quelque chose comme",
+    "construction": {
+      "Exemple": "名詞 + など / なんか",
+      "Dédain/Humilité": "名詞 + なんか"
+    },
+    "nuance": "1. Cite un exemple parmi d'autres. 2. (なんか) Exprime souvent du dédain (pour l'autre) ou de l'humilité (pour soi) en rabaissant l'importance de la chose.",
+    "warnings": [
+      "など est utilisé à l'écrit/formel, なんか est très oral.",
+      "Nanka peut paraître impoli si utilisé pour parler de quelqu'un."
+    ],
+    "examples": [
+      {
+        "japanese": "ハワイなんかどう？",
+        "translation": "Et Hawaii (par exemple), t'en penses quoi ?"
+      },
+      {
+        "japanese": "わたしなんかまだまだ勉強が足りません。",
+        "translation": "Quelqu'un comme moi a encore beaucoup à apprendre (humilité)."
+      }
+    ],
+    "tags": ["exemple", "humilité", "oral"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "particle-dake",
+    "title": "だけ",
+    "type": "vocabulary",
+    "level": "N3",
+    "meaning": "Seulement / Juste / Autant que",
+    "construction": {
+      "Limitation": "名詞 + だけ",
+      "Limite de portée": "動詞 (辞書形) + だけ"
+    },
+    "nuance": "1. Limite une chose à l'exclusion des autres. 2. Indique la limite maximale de ce qu'on peut faire.",
+    "examples": [
+      {
+        "japanese": "母にだけは本当のことを話そうと思う。",
+        "translation": "Je compte dire la vérité seulement à ma mère."
+      },
+      {
+        "japanese": "好きなだけ食べてもいいよ。",
+        "translation": "Tu peux manger autant que tu veux (jusqu'à ta limite)."
+      }
+    ],
+    "tags": ["limite", "seulement", "maximum"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+  "id": "kanou-kei",
+  "title": "可能形 (Forme potentielle)",
+  "type": "conjugation",
+  "level": "N4",
+  "meaning": "Pouvoir faire / Être capable de",
+  "construction": {
+    "Groupe 1 (u → e)": "辞書形 [-u] → [-e]る (ex: 書く → 書ける / 行く → 行ける)",
+    "Groupe 2 (ru → rareru)": "辞書形 [-ru] → [-られる] (ex: 食べる → 食べられる)",
+    "Groupe 3 (Irréguliers)": "する → できる / 来る → 来られる (こられる)",
+    "Règle Particule": "L'objet du verbe (を) est généralement marqué par が (ex: 漢字を書きる → 漢字が書ける)"
+  },
+  "nuance": "Indique soit une capacité physique/intellectuelle personnelle (ex: savoir lire), soit une possibilité offerte par une situation (ex: on peut changer de l'argent ici). Contrairement au verbe d'action, le verbe potentiel exprime un état.",
+  "warnings": [
+    "Le verbe わかる (comprendre) n'a pas de forme potentielle car il contient déjà l'idée de capacité.",
+    "Pour le Groupe 2, la forme potentielle est identique à la forme passive (~られる).",
+    "Les particules de direction (へ, に, で) restent inchangées."
+  ],
+  "examples": [
+    {
+      "japanese": "ミラーさんは漢字が読めます。",
+      "translation": "M. Miller sait lire les kanji (capacité personnelle)."
+    },
+    {
+      "japanese": "この銀行でドルが換えられます。",
+      "translation": "On peut changer des dollars dans cette banque (possibilité situationnelle)."
+    },
+    {
+      "japanese": "田中さんに会えませんでした。",
+      "translation": "Je n'ai pas pu voir M. Tanaka."
+    },
+    {
+      "japanese": "一人で病院へ行けますか。",
+      "translation": "Pouvez-vous aller à l'hôpital tout seul ?"
+    }
+  ],
+  "connections": {
+    "confusions": [
+      {
+        "target_id": "ukemi-kei",
+        "explanation": "La forme ~られる (Gr. 2) peut être confondue avec le passif."
+      }
+    ],
+    "synonyms": [
+      {
+        "target_id": "koto-ga-dekiru",
+        "explanation": "Équivalent grammatical pour exprimer la possibilité (Verbe forme dictionnaire + ことができる)."
+      }
+    ]
+  },
+  "tags": ["pouvoir", "capacité", "possibilité", "état", "conjugaison"]
+},
+{
+  "id": "ikou-kei",
+  "title": "意向形 (Forme volitive)",
+  "type": "conjugation",
+  "level": "N4",
+  "meaning": "Allons-y ! / J'ai l'intention de...",
+  "construction": {
+    "Groupe 1 (i → o + u)": "ます形 [-i] → [-o]う (ex: 行きます → 行こう / 読みます → 読もう)",
+    "Groupe 2 (ます → you)": "ます形 → +よう (ex: 食べます → 食べよう / 見ます → 見よう)",
+    "Groupe 3 (Irréguliers)": "します → しよう / 来ます (きます) → 来よう (こよう)",
+    "Expression d'intention": "意向形 + と思っています (décidé il y a un certain temps) / と思います (décidé à l'instant)"
+  },
+  "nuance": "1. Version familière de « ～ましょう » (invitation, suggestion ou monologue intérieur). 2. Sert à exprimer une intention ou une volonté de faire quelque chose (en ajoutant 'と想う').",
+  "warnings": [
+    "Pour proposer son aide poliment en style neutre, on ajoute « か » (ex: 手伝おうか？).",
+    "« ～ようと思っています » peut s'utiliser pour parler de l'intention d'une tierce personne (3ème personne).",
+    "Ne pas confondre avec la forme potentielle (~える) !"
+  ],
+  "examples": [
+    {
+      "japanese": "ちょっと休まない？……うん、休もう。",
+      "translation": "Si on se reposait un peu ? ... Oui, reposons-nous (forme neutre de 'mashou')."
+    },
+    {
+      "japanese": "手伝おうか。",
+      "translation": "Veux-tu que je t'aide ? / Allons-nous t'aider ?"
+    },
+    {
+      "japanese": "週末は海へ行こうと思っています。",
+      "translation": "Je compte aller à la mer ce week-end (décision déjà prise auparavant)."
+    },
+    {
+      "japanese": "彼は学校を作ろうと思っています。",
+      "translation": "Il a l'intention de créer une école (3ème personne)."
+    }
+  ],
+  "connections": {
+    "confusions": [
+      {
+        "target_id": "you-to-suru",
+        "explanation": "« Ikoukei + to suru » (N3) signifie 'essayer de' ou 'être sur le point de', alors que 'to omou' exprime une intention."
+      }
+    ],
+    "synonyms": [
+      {
+        "target_id": "mashou",
+        "explanation": "L'équivalent poli (Masu-form) pour proposer ou inviter."
+      }
+    ]
+  },
+  "tags": ["intention", "invitation", "volonté", "conjugaison"]
+},
+{
+  "id": "jouken-kei-ba",
+  "title": "条件形 (～ば)",
+  "type": "conjugation",
+  "level": "N4",
+  "meaning": "Le conditionnel (Si... alors...)",
+  "construction": {
+    "Groupe 1 (i → e)": "ます形 [-i] → [-e]ば (ex: 書けば, 行けば, 呼べば)",
+    "Groupe 2 (ます → reba)": "ます形 → +れば (ex: 食べれば, 見れば)",
+    "Groupe 3 (Irréguliers)": "すれば / 来れば (くれば)",
+    "Forme Négative": "ない形 [-i] → [-ければ] (ex: 行かなければ, 食べなければ)",
+    "Adjectifs en -i": "い形 [-i] → ければ (ex: よければ, 安ければ)",
+    "Adjectifs en -na / Noms": "Enlever [な] / Nom + なら (ex: 暇なら, いい天気なら)"
+  },
+  "nuance": "Exprime une condition nécessaire pour qu'un résultat se produise. C'est une forme qui souligne la relation logique entre la cause et l'effet. Elle est plus utilisée à l'écrit ou dans des explications que ～たら.",
+  "warnings": [
+    "Si le sujet est le même dans les deux parties de la phrase, la proposition principale ne peut pas contenir d'ordre, de souhait ou de requête (utiliser ～たら dans ce cas).",
+    "Exception : Si le verbe de la condition est un verbe d'état (adjectif, nom, ou verbe de capacité), alors on peut utiliser un souhait ou une requête dans la suite.",
+    "Ne s'utilise pas pour une action passée ponctuelle."
+  ],
+  "examples": [
+    {
+      "japanese": "ボタンを押せば、窓が開きます。",
+      "translation": "Si vous appuyez sur le bouton, la fenêtre s'ouvrira (condition mécanique)."
+    },
+    {
+      "japanese": "あした都合がよければ、来てください。",
+      "translation": "Si cela vous arrange demain, venez s'il vous plaît (V1 est un état, donc requête possible)."
+    },
+    {
+      "japanese": "ボールペンがなければ、鉛筆で書いてください。",
+      "translation": "Si vous n'avez pas de stylo bille, écrivez au crayon s'il vous plaît (Condition négative)."
+    },
+    {
+      "japanese": "いい天気なら、向こうに島が見えます。",
+      "translation": "S'il fait beau, on peut voir une île là-bas (Nom + なら)."
+    }
+  ],
+  "connections": {
+    "confusions": [
+      {
+        "target_id": "tara-condition",
+        "explanation": "～たら est beaucoup plus polyvalent et s'utilise pour les conseils, les ordres et les requêtes dans la vie quotidienne."
+      },
+      {
+        "target_id": "to-condition",
+        "explanation": "～と exprime un résultat automatique ou inévitable (lois de la nature, machines), sans aucune nuance de volonté."
+      }
+    ],
+    "synonyms": []
+  },
+  "tags": ["condition", "hypothèse", "logique", "conjugaison"]
+},
+{
+  "id": "ukemi-kei",
+  "title": "受身形 (Forme passive)",
+  "type": "conjugation",
+  "level": "N4",
+  "meaning": "Le passif (Être ...-é par quelqu'un)",
+  "construction": {
+    "Groupe 1 (i → a)": "ます形 [-i] → [-a]れる (ex: 書かれる, 頼まれる, 踏まれる)",
+    "Groupe 2 (ます → rareru)": "ます形 → +られる (ex: 褒められる, 食べられる, 捨てられる)",
+    "Groupe 3 (Irréguliers)": "される / 来られる (こられる)",
+    "Structure de base": "[Victime] は [Agent] に [Verbe Passif]",
+    "Passif de possession": "[Propriétaire] は [Agent] に [Objet] を [Verbe Passif]"
+  },
+  "nuance": "Permet de décrire une action du point de vue de la personne qui la subit. En japonais, le passif est très souvent utilisé pour exprimer que l'on a été importuné, gêné ou que l'on a subi un dommage à cause de l'action d'un tiers (animal, personne ou objet en mouvement).",
+  "warnings": [
+    "Ne s'utilise pas pour des actions bénéfiques dont on est reconnaissant. Pour dire 'on m'a rendu un service', utilisez toujours '～てもらう'.",
+    "Au passif de possession (ex: mon frère a cassé mon PC), le sujet doit être le propriétaire (Moi) et non l'objet (le PC).",
+    "Pour le Groupe 2, la forme passive est identique à la forme potentielle."
+  ],
+  "examples": [
+    {
+      "japanese": "わたしは先生に褒められました。",
+      "translation": "J'ai été félicité par le professeur."
+    },
+    {
+      "japanese": "わたしは母に買い物を頼まれました。",
+      "translation": "J'ai été chargé par ma mère de faire des courses."
+    },
+    {
+      "japanese": "わたしは弟にパソコンを壊されました。",
+      "translation": "Je me suis fait casser mon ordinateur par mon petit frère (sentiment de gêne)."
+    },
+    {
+      "japanese": "わたしは犬に手をかまれました。",
+      "translation": "Je me suis fait mordre la main par un chien."
+    }
+  ],
+  "connections": {
+    "confusions": [
+      {
+        "target_id": "kanou-kei",
+        "explanation": "La forme ~られる du Groupe 2 est strictement identique à la forme potentielle."
+      }
+    ],
+    "synonyms": [
+      {
+        "target_id": "te-morau",
+        "explanation": "Pour une action reçue de manière positive, on utilise '～てもらう' au lieu du passif."
+      }
+    ]
+  },
+  "tags": ["passif", "subir", "gêne", "dommage", "conjugaison"]
+},
+{
+    "id": "sugiru-excessive",
+    "title": "～すぎる",
+    "type": "pattern",
+    "level": "N4",
+    "meaning": "Trop / Excessivement",
+    "construction": {
+      "動詞": "ます形 (base) + すぎる",
+      "い形容詞": "Enlever [い] + すぎる",
+      "な形容詞": "Base (sans な) + すぎる"
+    },
+    "nuance": "Indique que le degré d'une action ou d'un état est excessif. En général, cette expression porte une connotation négative : c'est « trop » au point d'être indésirable ou gênant.",
+    "warnings": [
+      "« すぎる » se conjugue comme un verbe du Groupe 2 (ex: すぎます, すぎた, すぎて).",
+      "Pour l'adjectif いい (bon), on dit よすぎる."
+    ],
+    "examples": [
+      {
+        "japanese": "ゆうべはお酒を飲みすぎました。",
+        "translation": "Hier soir, j'ai trop bu d'alcool."
+      },
+      {
+        "japanese": "このセーターは大きすぎます。",
+        "translation": "Ce pull est trop grand."
+      },
+      {
+        "japanese": "最近の車は操作が簡単すぎて、運転がおもしろくないです。",
+        "translation": "Les voitures récentes sont trop simples à manipuler, la conduite n'est plus intéressante."
+      }
+    ],
+    "tags": ["excès", "négatif", "degré"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "yasui-easy",
+    "title": "～やすい",
+    "type": "pattern",
+    "level": "N4",
+    "meaning": "Facile à / Avoir tendance à",
+    "construction": {
+      "動詞": "ます形 (base) + やすい"
+    },
+    "nuance": "1. Avec un verbe volontaire : Indique que l'action est facile à réaliser physiquement ou psychologiquement. 2. Avec un verbe non-volontaire : Indique qu'une chose a tendance à se produire facilement (probabilité).",
+    "warnings": [
+      "Le bloc [Verbe + やすい] se comporte et se conjugue exactement comme un adjectif en -i.",
+      "L'objet de la phrase est souvent marqué par が car le résultat décrit une caractéristique."
+    ],
+    "examples": [
+      {
+        "japanese": "このパソコンは使いやすいです。",
+        "translation": "Cet ordinateur est facile à utiliser."
+      },
+      {
+        "japanese": "白いシャツは汚れやすいです。",
+        "translation": "Les chemises blanches se salissent facilement (ont tendance à se salir)."
+      },
+      {
+        "japanese": "この薬は砂糖を入れると、飲みやすくなりますよ。",
+        "translation": "Ce médicament sera plus facile à boire si vous y mettez du sucre."
+      }
+    ],
+    "tags": ["facilité", "tendance", "caractéristique"],
+    "connections": { 
+      "confusions": [], 
+      "synonyms": [],
+      "antonyms": [{ "target_id": "nikui-difficult", "explanation": "Son contraire direct." }]
+    }
+  },
+  {
+    "id": "nikui-difficult",
+    "title": "～にくい",
+    "type": "pattern",
+    "level": "N4",
+    "meaning": "Difficile à / Difficilement",
+    "construction": {
+      "動詞": "ます形 (base) + にくい"
+    },
+    "nuance": "1. Avec un verbe volontaire : Indique que l'action est pénible ou techniquement compliquée à faire. 2. Avec un verbe non-volontaire : Indique que l'action ou le changement se produit difficilement (peu de probabilité).",
+    "warnings": [
+      "Le bloc [Verbe + にくい] se comporte et se conjugue comme un adjectif en -i.",
+      "À ne pas confondre avec l'adjectif 'nikui' (haineux), ici c'est un suffixe grammatical."
+    ],
+    "examples": [
+      {
+        "japanese": "東京は住みにくいです。",
+        "translation": "Il est difficile de vivre à Tokyo (la vie y est pénible)."
+      },
+      {
+        "japanese": "雨の日は洗濯物が乾きにくいです。",
+        "translation": "Les jours de pluie, le linge est difficile à sécher (sèche difficilement)."
+      },
+      {
+        "japanese": "このコップは割れにくくて、安全ですよ。",
+        "translation": "Ce verre est difficile à briser (ne se casse pas facilement), il est sûr."
+      }
+    ],
+    "tags": ["difficulté", "pénibilité", "caractéristique"],
+    "connections": { 
+      "confusions": [], 
+      "synonyms": [],
+      "antonyms": [{ "target_id": "yasui-easy", "explanation": "Son contraire direct." }]
+    }
+  },
+  [
+  {
+    "id": "keigo-itadakimasu-object",
+    "title": "いただきます (Recevoir)",
+    "type": "keigo",
+    "level": "N4",
+    "meaning": "Recevoir (Humble)",
+    "construction": {
+      "Structure": "[Moi/Famille] は [Supérieur] に [Objet] を いただきます",
+      "Équivalent neutre": "もらいます"
+    },
+    "nuance": "Forme humble de 'recevoir'. On l'utilise quand on reçoit quelque chose d'une personne de rang social plus élevé (patron, professeur) ou plus âgée.",
+    "warnings": [
+      "Le receveur (sujet) est toujours 'Moi' ou un membre de ma famille.",
+      "La personne qui donne est marquée par la particule に (ou から)."
+    ],
+    "examples": [
+      {
+        "japanese": "わたしは社長にお土産をいただきました。",
+        "translation": "J'ai reçu un souvenir de la part du président (de l'entreprise)."
+      },
+      {
+        "japanese": "娘は部長にお土産をいただきました。",
+        "translation": "Ma fille a reçu un souvenir du directeur."
+      }
+    ],
+    "tags": ["recevoir", "humilité", "transfert"],
+    "connections": { "confusions": [{ "target_id": "keigo-kudasaimasu-object", "explanation": "Kudasaimasu = l'autre est le sujet (il donne). Itadakimasu = je suis le sujet (je reçois)." }], "synonyms": [] }
+  },
+  {
+    "id": "keigo-kudasaimasu-object",
+    "title": "くださいます (Donner)",
+    "type": "keigo",
+    "level": "N4",
+    "meaning": "Donner (Respectueux)",
+    "construction": {
+      "Structure": "[Supérieur] が [Moi/Famille] に [Objet] を くださいます",
+      "Équivalent neutre": "くれます"
+    },
+    "nuance": "Forme respectueuse de 'donner'. On l'utilise quand une personne de rang supérieur fait l'honneur de donner quelque chose au locuteur ou à sa famille.",
+    "warnings": [
+      "Le sujet (celui qui fait l'action) est la personne supérieure.",
+      "Le receveur est obligatoirement 'Moi' ou quelqu'un de mon cercle intime."
+    ],
+    "examples": [
+      {
+        "japanese": "社長がわたしにお土産をくださいました。",
+        "translation": "Le président m'a offert (donné) un souvenir."
+      },
+      {
+        "japanese": "部長が娘にお土産をくださいました。",
+        "translation": "Le directeur a donné un souvenir à ma fille."
+      }
+    ],
+    "tags": ["donner", "respect", "transfert"],
+    "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "verb-yarimasu-object",
+    "title": "やります (Donner)",
+    "type": "vocabulary",
+    "level": "N4",
+    "meaning": "Donner (à un inférieur/animal/plante)",
+    "construction": {
+      "Structure": "[Moi] は [Inférieur/Animal/Plante] に [Objet] を やります",
+      "Équivalent poli": "あげます"
+    },
+    "nuance": "S'utilise pour donner quelque chose à quelqu'un de rang inférieur (rare de nos jours entre humains), à un animal ou pour arroser des plantes.",
+    "warnings": [
+      "De nos jours, on utilise souvent 'あげます' même pour les enfants car 'やります' peut paraître un peu rude.",
+      "C'est le terme standard pour nourrir un animal ou s'occuper des plantes."
+    ],
+    "examples": [
+      {
+        "japanese": "わたしは息子にお菓子をやりました。",
+        "translation": "J'ai donné des bonbons à mon fils."
+      },
+      {
+        "japanese": "わたしは犬にえさをやりました。",
+        "translation": "J'ai donné à manger (la pâtée/croquettes) à mon chien."
+      },
+      {
+        "japanese": "花に水をやります。",
+        "translation": "J'arrose les fleurs (donne de l'eau)."
+      }
+    ],
+    "tags": ["donner", "animaux", "plantes"],
+    "connections": { "confusions": [], "synonyms": [] }
   }
+]
 ]
