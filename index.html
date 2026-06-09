@@ -13,10 +13,10 @@
             --text-main: #1e293b;
             --text-title: #0f172a;
             --text-muted: #64748b;
-            --color-pattern: #059669;    /* Émeraude */
-            --color-vocabulary: #d97706; /* Orange */
-            --color-conjugation: #2563eb;/* Bleu */
-            --color-keigo: #7c3aed;      /* Violet */
+            --color-pattern: #059669;
+            --color-vocabulary: #d97706;
+            --color-conjugation: #2563eb;
+            --color-keigo: #7c3aed;
             --jp-bg: #fef08a;
             --jp-text: #1e293b;
             --warning-bg: #fef2f2;
@@ -42,7 +42,7 @@
         header { position: sticky; top: 0; width: 100%; max-width: 800px; background: var(--header-bg); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); z-index: 10; border-bottom: 1px solid var(--card-border); padding: 10px 15px; box-sizing: border-box; }
         
         .header-container { display: flex; flex-direction: column; gap: 8px; }
-        input#search { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--card-border); background: var(--card-bg); color: inherit; font-size: 16px; box-sizing: border-box; }
+        input#search { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-main); font-size: 16px; box-sizing: border-box; }
 
         .filter-scroll { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
         .filter-scroll::-webkit-scrollbar { display: none; }
@@ -50,7 +50,6 @@
         .chip { padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-muted); cursor: pointer; white-space: nowrap; transition: 0.2s; }
         .chip.active { background: var(--text-title); color: var(--bg-color); border-color: var(--text-title); }
 
-        /* Couleurs au clic sur les types */
         .chip[data-active="pattern"].active { background: var(--color-pattern); color: white; border-color: var(--color-pattern); }
         .chip[data-active="vocabulary"].active { background: var(--color-vocabulary); color: white; border-color: var(--color-vocabulary); }
         .chip[data-active="conjugation"].active { background: var(--color-conjugation); color: white; border-color: var(--color-conjugation); }
@@ -61,7 +60,6 @@
         .preview-card { background: var(--card-bg); border-radius: 12px; margin-bottom: 12px; padding: 15px; border: 1px solid var(--card-border); border-left: 6px solid #ccc; cursor: pointer; transition: 0.2s; position: relative; }
         .preview-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         
-        /* Bordures de couleurs */
         .card-pattern { border-left-color: var(--color-pattern); }
         .card-vocabulary { border-left-color: var(--color-vocabulary); }
         .card-conjugation { border-left-color: var(--color-conjugation); }
@@ -69,51 +67,37 @@
 
         .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; }
         .type-tag { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
-        .lvl-tag { font-size: 11px; font-weight: 700; background: var(--card-border); padding: 2px 6px; border-radius: 4px; }
-        .title { font-size: 18px; font-weight: 700; margin: 2px 0; }
-        .title, h1, h2, h3, h4 {color: var(--text-title);}
+        .lvl-tag { font-size: 11px; font-weight: 700; background: var(--card-border); padding: 2px 6px; border-radius: 4px; color: var(--text-main); }
+        
+        /* FIX COULEUR : On force la couleur des titres pour le mode nuit */
+        .title, h1, h2, h3, h4 { color: var(--text-title) !important; }
+        .detail-card p, .detail-card div { color: var(--text-main); }
 
-        /* Vue Détails */
         #detail-view { display: none; width: 100%; }
         .detail-card { background: var(--card-bg); border-radius: 15px; padding: 20px; border: 1px solid var(--card-border); }
-        .detail-card p {color: var(--text-main);}
-        .back-btn { background: none; border: none; color: var(--color-pattern); font-weight: 700; cursor: pointer; padding: 10px 0; font-size: 16px; margin-bottom: 10px; }
+        
+        .back-btn { background: var(--nuance-bg); border: 1px solid var(--card-border); color: var(--text-main); font-weight: 700; cursor: pointer; padding: 8px 16px; border-radius: 8px; font-size: 14px; margin-bottom: 15px; }
+        
         .construction-table { width: 100%; border-collapse: collapse; margin: 15px 0; background: rgba(0,0,0,0.02); border-radius: 10px; overflow: hidden; }
-        .construction-table td { padding: 12px; border-bottom: 1px solid var(--card-border); font-size: 15px; }
+        .construction-table td { padding: 12px; border-bottom: 1px solid var(--card-border); font-size: 15px; color: var(--text-main); }
         .construction-table td:first-child { font-weight: 700; width: 120px; color: var(--color-pattern); }
-        .jp-box { background: var(--jp-bg); color: var(--jp-text); padding: 8px 12px; border-radius: 8px; font-size: 18px; display: inline-block; margin-bottom: 6px; line-height: 1.4; }
+
+        .jp-box { background: var(--jp-bg); color: var(--jp-text) !important; padding: 8px 12px; border-radius: 8px; font-size: 18px; display: inline-block; margin-bottom: 6px; line-height: 1.4; font-weight: 600; }
         .warn-box { background: var(--warning-bg); border-left: 4px solid #ef4444; padding: 12px; margin: 15px 0; border-radius: 4px; font-size: 14px; }
-        .link-btn { background: var(--card-bg); border: 1px solid var(--card-border); padding: 5px 10px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; }
+        .link-btn { background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-main); padding: 5px 10px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; }
     </style>
 </head>
 <body>
 
 <header id="main-header">
-    <div class="header-container">
-        <input type="text" id="search" placeholder="Rechercher...">
-        <div class="filter-scroll" id="type-filters">
-            <div class="chip active" data-val="all">Tous types</div>
-            <div class="chip" data-val="pattern" data-active="pattern">Grammaire</div>
-            <div class="chip" data-val="vocabulary" data-active="vocabulary">Vocabulaire</div>
-            <div class="chip" data-val="conjugation" data-active="conjugation">Conjugaison</div>
-            <div class="chip" data-val="keigo" data-active="keigo">Keigo</div>
-        </div>
-        <div class="filter-scroll" id="level-filters">
-            <div class="chip active" data-val="all">Tous niveaux</div>
-            <div class="chip" data-val="N1">N1</div>
-            <div class="chip" data-val="N2">N2</div>
-            <div class="chip" data-val="N3">N3</div>
-            <div class="chip" data-val="N4">N4</div>
-            <div class="chip" data-val="N5">N5</div>
-            <div class="chip" style="color: var(--color-vocabulary)" onclick="showRandom()">🎲 Hasard</div>
-        </div>
+    <div class="header-container" id="header-content">
+        <!-- Rempli par le JS -->
     </div>
 </header>
 
 <main>
     <div id="list-view"></div>
     <div id="detail-view">
-        <button class="back-btn" onclick="closeDetail()">← Retour à la liste</button>
         <div id="detail-content"></div>
     </div>
 </main>
@@ -124,57 +108,54 @@
     let filterLevel = "all";
     let searchQuery = "";
 
-    const labels = { 
-        pattern: "Grammaire", 
-        vocabulary: "Vocabulaire", 
-        conjugation: "Conjugaison", 
-        keigo: "Keigo" 
-    };
+    const labels = { pattern: "Grammaire", vocabulary: "Vocabulaire", conjugation: "Conjugaison", keigo: "Keigo" };
 
-    // Chargement des données
+    // Chargement et TRI
     fetch('grammar.json')
         .then(r => r.json())
         .then(data => {
-            grammarData = data;
-            renderList();
-        })
-        .catch(err => {
-            console.error("Erreur de chargement du JSON :", err);
-        });
-
-    // Écouteurs pour les filtres de type
-    document.querySelectorAll('#type-filters .chip').forEach(chip => {
-        chip.addEventListener('click', () => {
-            document.querySelectorAll('#type-filters .chip').forEach(c => c.classList.remove('active'));
-            chip.classList.add('active');
-            filterType = chip.dataset.val;
+            // TRI JAPONAIS (A-I-U-E-O)
+            grammarData = data.sort((a, b) => a.title.localeCompare(b.title, 'ja'));
+            renderHeader();
             renderList();
         });
-    });
 
-    // Écouteurs pour les filtres de niveau
-    document.querySelectorAll('#level-filters .chip').forEach(chip => {
-        if(chip.dataset.val) {
-            chip.addEventListener('click', () => {
-                document.querySelectorAll('#level-filters .chip').forEach(c => c.classList.remove('active'));
-                chip.classList.add('active');
-                filterLevel = chip.dataset.val;
-                renderList();
-            });
-        }
-    });
+    function renderHeader() {
+        const header = document.getElementById('header-content');
+        header.innerHTML = `
+            <input type="text" id="search" placeholder="Rechercher (Romaji ou Japonais)..." value="${searchQuery}">
+            <div class="filter-scroll" id="type-filters">
+                <div class="chip ${filterType==='all'?'active':''}" onclick="updateFilter('type', 'all')">Tous types</div>
+                <div class="chip ${filterType==='pattern'?'active':''}" data-active="pattern" onclick="updateFilter('type', 'pattern')">Grammaire</div>
+                <div class="chip ${filterType==='vocabulary'?'active':''}" data-active="vocabulary" onclick="updateFilter('type', 'vocabulary')">Vocabulaire</div>
+                <div class="chip ${filterType==='conjugation'?'active':''}" data-active="conjugation" onclick="updateFilter('type', 'conjugation')">Conjugaison</div>
+                <div class="chip ${filterType==='keigo'?'active':''}" data-active="keigo" onclick="updateFilter('type', 'keigo')">Keigo</div>
+            </div>
+            <div class="filter-scroll" id="level-filters">
+                <div class="chip ${filterLevel==='all'?'active':''}" onclick="updateFilter('level', 'all')">Tous niveaux</div>
+                ${['N1','N2','N3','N4','N5'].map(n => `
+                    <div class="chip ${filterLevel===n?'active':''}" onclick="updateFilter('level', '${n}')">${n}</div>
+                `).join('')}
+                <div class="chip" style="color: var(--color-vocabulary)" onclick="showRandom()">🎲 Hasard</div>
+            </div>
+        `;
+        document.getElementById('search').addEventListener('input', (e) => {
+            searchQuery = e.target.value.toLowerCase().trim();
+            renderList();
+        });
+    }
 
-    // Écouteur pour la recherche
-    document.getElementById('search').addEventListener('input', (e) => {
-        searchQuery = e.target.value.toLowerCase().trim();
+    function updateFilter(cat, val) {
+        if(cat === 'type') filterType = val;
+        if(cat === 'level') filterLevel = val;
+        renderHeader();
         renderList();
-    });
+    }
 
     function renderList() {
         const list = document.getElementById('list-view');
         const detail = document.getElementById('detail-view');
         const header = document.getElementById('main-header');
-
         list.style.display = "block";
         detail.style.display = "none";
         header.style.display = "block";
@@ -185,47 +166,28 @@
             const title = (item.title || "").toLowerCase();
             const meaning = (item.meaning || "").toLowerCase();
             const tags = (item.tags || []).join(" ").toLowerCase();
-            
-            // Recherche Romaji via ID et champ romaji
             const idClean = (item.id || "").toLowerCase().replace(/-/g, "");
             const romaji = (item.romaji || "").toLowerCase();
             const queryClean = searchQuery.replace(/[-\s]/g, "");
 
             const matchesType = filterType === "all" || type === filterType;
             const matchesLevel = filterLevel === "all" || level.includes(filterLevel);
-            
-            const matchesSearch = title.includes(searchQuery) || 
-                                 meaning.includes(searchQuery) || 
-                                 tags.includes(searchQuery) ||
-                                 idClean.includes(queryClean) ||
-                                 romaji.includes(searchQuery);
+            const matchesSearch = title.includes(searchQuery) || meaning.includes(searchQuery) || 
+                                 tags.includes(searchQuery) || idClean.includes(queryClean) || romaji.includes(searchQuery);
 
             return matchesType && matchesLevel && matchesSearch;
         });
 
-        if (filtered.length === 0) {
-            list.innerHTML = `<p style="text-align:center; margin-top:30px; opacity:0.6;">Aucun résultat trouvé.</p>`;
-            return;
-        }
-
-        list.innerHTML = filtered.map(item => {
-            const itemType = (item.type || "pattern").toLowerCase();
-            return `
-                <div class="preview-card card-${itemType}" onclick="showDetail('${item.id}')">
-                    <div class="card-header">
-                        <span class="type-tag" style="color: var(--color-${itemType})">
-                            ${labels[itemType] || itemType}
-                        </span>
-                        <span class="lvl-tag">${item.level || "?"}</span>
-                    </div>
-                    <div class="title">${item.title || "Sans titre"}</div>
-                    <div style="color: var(--text-muted); font-size: 14px; margin-top: 4px;">
-                        ${item.meaning || "Pas de description"}
-                    </div>
+        list.innerHTML = filtered.map(item => `
+            <div class="preview-card card-${item.type || 'pattern'}" onclick="showDetail('${item.id}')">
+                <div class="card-header">
+                    <span class="type-tag" style="color: var(--color-${item.type || 'pattern'})">${labels[item.type] || item.type}</span>
+                    <span class="lvl-tag">${item.level}</span>
                 </div>
-            `;
-        }).join('');
-        
+                <div class="title">${item.title}</div>
+                <div style="color: var(--text-muted); font-size: 14px; margin-top: 4px;">${item.meaning}</div>
+            </div>
+        `).join('');
         window.scrollTo(0,0);
     }
 
@@ -242,27 +204,19 @@
             .map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('');
 
         document.getElementById('detail-content').innerHTML = `
+            <button class="back-btn" onclick="renderList()">← Retour à la liste</button>
             <div class="detail-card">
                 <div class="card-header">
-                    <span class="type-tag" style="color: var(--color-${(item.type || 'pattern')})">
-                        ${labels[item.type] || item.type}
-                    </span>
+                    <span class="type-tag" style="color: var(--color-${item.type})">${labels[item.type]}</span>
                     <span class="lvl-tag">${item.level}</span>
                 </div>
-                <h1 style="margin: 10px 0 5px 0;">${item.title}</h1>
-                <p style="font-size: 18px; margin-bottom: 20px; color: var(--text-main); font-weight: 600;">${item.meaning}</p>
-                
-                <p style="line-height: 1.6; opacity: 0.9;">${item.nuance || ""}</p>
+                <h1 style="margin: 10px 0 5px 0; color: var(--text-title) !important;">${item.title}</h1>
+                <p style="font-size: 18px; margin-bottom: 20px; font-weight: 600;">${item.meaning}</p>
+                <p style="line-height: 1.6; margin-bottom: 20px;">${item.nuance || ""}</p>
                 
                 ${rows ? `<table class="construction-table">${rows}</table>` : ''}
                 
-                ${item.warnings && item.warnings.length ? `
-                    <div class="warn-box">
-                        <strong>Attention :</strong>
-                        <ul style="margin: 5px 0 0 15px; padding:0;">
-                            ${item.warnings.map(w => `<li>${w}</li>`).join('')}
-                        </ul>
-                    </div>` : ''}
+                ${item.warnings?.length ? `<div class="warn-box"><strong>Attention :</strong><ul style="margin: 5px 0 0 15px; padding:0;">${item.warnings.map(w => `<li>${w}</li>`).join('')}</ul></div>` : ''}
                 
                 <h4 style="margin: 25px 0 10px 0; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">Exemples</h4>
                 ${(item.examples || []).map(ex => `
@@ -272,9 +226,7 @@
                     </div>
                 `).join('')}
 
-                <div id="connections-section">
-                    ${renderConnections(item)}
-                </div>
+                ${renderConnections(item)}
             </div>
         `;
         window.scrollTo(0,0);
@@ -282,46 +234,33 @@
 
     function renderConnections(item) {
         if (!item.connections) return "";
-        
         let html = "";
         const confusions = item.connections.confusions || [];
         const synonyms = item.connections.synonyms || [];
 
         if (confusions.length > 0 || synonyms.length > 0) {
             html += `<hr style="border:none; border-top:1px dashed var(--card-border); margin: 30px 0 20px 0;">`;
-            html += `<h3 style="margin-bottom:15px; font-size:16px;">Liens & Comparaisons</h3>`;
-
             if (confusions.length > 0) {
-                html += `<div style="margin-bottom: 20px;">
-                            <p style="font-size: 12px; font-weight: bold; color: #ef4444; text-transform: uppercase; margin-bottom:8px;">⚠️ À ne pas confondre avec :</p>`;
+                html += `<p style="font-size: 12px; font-weight: bold; color: #ef4444; text-transform: uppercase;">⚠️ À ne pas confondre</p>`;
                 confusions.forEach(c => {
-                    const target = grammarData.find(i => i.id === c.target_id);
-                    const title = target ? target.title : c.target_id;
-                    html += `<button class="link-btn" onclick="showDetail('${c.target_id}')">${title}</button>
+                    const t = grammarData.find(i => i.id === c.target_id);
+                    html += `<button class="link-btn" onclick="showDetail('${c.target_id}')">${t ? t.title : c.target_id}</button>
                              <p style="font-size: 13px; margin: 4px 0 12px 5px; opacity: 0.8;">${c.explanation}</p>`;
                 });
-                html += `</div>`;
             }
-
             if (synonyms.length > 0) {
-                html += `<div style="margin-bottom: 20px;">
-                            <p style="font-size: 12px; font-weight: bold; color: var(--color-pattern); text-transform: uppercase; margin-bottom:8px;">🔄 Synonymes / Proches :</p>`;
+                html += `<p style="font-size: 12px; font-weight: bold; color: var(--color-pattern); text-transform: uppercase;">🔄 Synonymes</p>`;
                 synonyms.forEach(s => {
-                    const target = grammarData.find(i => i.id === s.target_id);
-                    const title = target ? target.title : s.target_id;
-                    html += `<button class="link-btn" onclick="showDetail('${s.target_id}')">${title}</button>
+                    const t = grammarData.find(i => i.id === s.target_id);
+                    html += `<button class="link-btn" onclick="showDetail('${s.target_id}')">${t ? t.title : s.target_id}</button>
                              <p style="font-size: 13px; margin: 4px 0 12px 5px; opacity: 0.8;">${s.explanation}</p>`;
                 });
-                html += `</div>`;
             }
         }
         return html;
     }
 
-    function closeDetail() { renderList(); }
-
     function showRandom() {
-        if(grammarData.length === 0) return;
         const randomItem = grammarData[Math.floor(Math.random() * grammarData.length)];
         showDetail(randomItem.id);
     }
