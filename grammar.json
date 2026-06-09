@@ -3643,7 +3643,6 @@
       "antonyms": [{ "target_id": "yasui-easy", "explanation": "Son contraire direct." }]
     }
   },
-  [
   {
     "id": "keigo-itadakimasu-object",
     "title": "いただきます (Recevoir)",
@@ -3732,5 +3731,4 @@
     "tags": ["donner", "animaux", "plantes"],
     "connections": { "confusions": [], "synonyms": [] }
   }
-]
 ]
