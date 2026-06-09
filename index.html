@@ -85,6 +85,32 @@
         .jp-box { background: var(--jp-bg); color: var(--jp-text) !important; padding: 8px 12px; border-radius: 8px; font-size: 18px; display: inline-block; margin-bottom: 6px; line-height: 1.4; font-weight: 600; }
         .warn-box { background: var(--warning-bg); border-left: 4px solid #ef4444; padding: 12px; margin: 15px 0; border-radius: 4px; font-size: 14px; }
         .link-btn { background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-main); padding: 5px 10px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; }
+    
+        /* Style pour le texte avec furigana */
+ruby {
+    ruby-align: center;
+    cursor: help; /* Indique que c'est cliquable */
+    padding: 0 2px;
+}
+
+/* On cache le furigana (rt) par défaut */
+rt {
+    user-select: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    font-size: 0.6em;
+    color: var(--color-pattern); /* Couleur émeraude pour le distinguer */
+}
+
+/* Quand on clique (classe .active ajoutée par JS), on l'affiche */
+ruby.active rt {
+    opacity: 1;
+}
+
+/* Optionnel : un petit indicateur sous les kanjis pour savoir qu'ils sont cliquables */
+ruby {
+    border-bottom: 1px dashed rgba(128, 128, 128, 0.3);
+}
     </style>
 </head>
 <body>
@@ -103,6 +129,14 @@
 </main>
 
 <script>
+    function formatFurigana(text) {
+    if (!text) return "";
+    // Cette regex cherche le pattern [Texte]{Furigana}
+    return text.replace(/\[([^\]]+)\]\{([^\}]+)\}/g, (match, kanji, furi) => {
+        return `<ruby onclick="this.classList.toggle('active'); event.stopPropagation();">${kanji}<rt>${furi}</rt></ruby>`;
+    });
+    }
+
     let grammarData = [];
     let filterType = "all";
     let filterLevel = "all";
@@ -184,7 +218,7 @@
                     <span class="type-tag" style="color: var(--color-${item.type || 'pattern'})">${labels[item.type] || item.type}</span>
                     <span class="lvl-tag">${item.level}</span>
                 </div>
-                <div class="title">${item.title}</div>
+                <div class="title">${formatFurigana(item.title)}</div>
                 <div style="color: var(--text-muted); font-size: 14px; margin-top: 4px;">${item.meaning}</div>
             </div>
         `).join('');
@@ -210,7 +244,7 @@
                     <span class="type-tag" style="color: var(--color-${item.type})">${labels[item.type]}</span>
                     <span class="lvl-tag">${item.level}</span>
                 </div>
-                <h1 style="margin: 10px 0 5px 0; color: var(--text-title) !important;">${item.title}</h1>
+                <h1 style="margin: 10px 0 5px 0; color: var(--text-title) !important;">${formatFurigana(item.title)}</h1>
                 <p style="font-size: 18px; margin-bottom: 20px; font-weight: 600;">${item.meaning}</p>
                 <p style="line-height: 1.6; margin-bottom: 20px;">${item.nuance || ""}</p>
                 
@@ -221,7 +255,7 @@
                 <h4 style="margin: 25px 0 10px 0; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">Exemples</h4>
                 ${(item.examples || []).map(ex => `
                     <div style="margin-bottom: 15px; border-bottom: 1px solid var(--card-border); padding-bottom: 10px;">
-                        <div class="jp-box">${ex.japanese}</div>
+                        <div class="jp-box">${formatFurigana(ex.japanese)}</div>
                         <div style="color: var(--text-muted); font-size: 14px;">${ex.translation}</div>
                     </div>
                 `).join('')}
