@@ -350,5 +350,575 @@
         "synonyms": []
       },
       "tags": ["effort", "habitude", "requete", "politesse"]
+    },
+    {
+  "id": "tameni",
+  "title": "ために",
+  "level": "N4",
+  "meaning": "Afin de / Pour / En faveur de",
+  "construction": {
+    "動詞": "Forme dictionnaire + ために",
+    "い形容詞": "",
+    "な形容詞": "",
+    "名詞": "Nom + の + ために"
+  },
+  "nuance": "Exprime un but ou un objectif précis poursuivi de manière délibérée par le sujet à l'aide d'un verbe d'action volontaire (volitif). Lorsqu'il est rattaché à un nom, il indique que l'action principale est réalisée au profit, pour le bien ou en faveur de cette personne, entité ou cause.",
+  "warnings": [
+    "Le verbe qui précède ために à l'affirmatif doit obligatoirement exprimer une intention ou une volonté contrôlable par le sujet.",
+    "Il ne s'emploie jamais avec des verbes à la forme négative (〜ない) ou avec des verbes de capacité (potentiels)."
+  ],
+  "examples": [
+    {
+      "japanese": "自分の店を持つために、貯金しています。",
+      "translation": "Je fais des économies pour avoir mon propre magasin."
+    },
+    {
+      "japanese": "家族のために、うちを建てます。",
+      "translation": "Je vais faire construire une maison pour ma famille."
+    },
+    {
+      "japanese": "弁護士になるために、法律を勉強しています。",
+      "translation": "Je fais des études de droit afin de devenir avocat."
     }
+  ],
+  "connections": {
+    "confusions": [
+      {
+        "target_id": "youni-but",
+        "explanation": "ために requiert un verbe exprimant une volonté directe et contrôlée à l'affirmatif (ex: 持つ), alors que ように s'impose avec des verbes non-volitifs, au potentiel (ex: 持てる) ou à la forme négative."
+      }
+    ],
+    "synonyms": []
+  },
+  "tags": ["but", "objectif", "volonte", "beneficiaire"]
+},
+{
+"id": "kurai-da-hodo-da",
+"title": "～くらいだ・～ぐらいだ / ～ほどだ",
+"level": "N3",
+"meaning": "Au point de / À tel point que (exprimer une intensité)",
+"construction": {
+"動詞": "普通形 + くらいだ / ぐらいだ / ほどだ",
+"い形容詞": "普通形 + くらいだ / ぐらいだ / ほどだ",
+"な形容詞": "普通形 (だ → な) + くらいだ / ぐらいだ / ほどだ",
+"名詞": "名詞 + くらいだ / ぐらいだ / ほどだ"
+},
+"nuance": "Permet d'exprimer le degré ou l'intensité d'une situation en la comparant de manière imagée ou exagérée à un exemple concret. 'ほど' traduit généralement une intensité plus forte et s'emploie dans un registre plus formel ou à l'écrit, tandis que 'くらい/ぐらい' est plus courant à l'oral.",
+"warnings": [
+"La situation évoquée pour illustrer le degré est une simple comparaison : elle ne s'est pas réellement produite.",
+"Attention à la liaison avec les adjectifs en -na : on remplace le 'だ' de la forme neutre par 'な' (ex: 折れそうなくらい).",
+"La structure est très souvent combinée sous la forme '～かと思うくらい / ～かと思うほど' pour signifier 'au point que j'ai cru que...'."
+],
+"examples": [
+{
+"japanese": "この店のパンはおいしい。毎日食べたいくらいだ。",
+"translation": "Le pain de ce magasin est délicieux. C'est au point que j'aimerais en manger tous les jours."
+},
+{
+"japanese": "よう子さんの腕は折れそうなくらい細い。",
+"translation": "Le bras de Yoko est si mince qu'il a l'air sur le point de se briser."
+},
+{
+"japanese": "さっき地震があった。本だなが倒れるかと思うほど激しく揺れた。",
+"translation": "Il y a eu un séisme tout à l'heure. Ça a secoué si fort que j'ai cru que la bibliothèque allait tomber."
+}
+],
+"connections": {
+"confusions": [
+{
+"target_id": "kurai-nara",
+"explanation": "Alors que 'kurai da' sert à exprimer une intensité par la comparaison, 'kurai nara' exprime un choix par dépit ('quitte à devoir faire X, autant...')."
+}
+],
+"synonyms": [
+{
+"target_id": "hodo-da",
+"explanation": "Partage le même sens de comparaison d'intensité, mais 'hodo da' appuie sur un degré supérieur et s'utilise dans des contextes plus formels."
+}
+]
+},
+"tags": ["intensité", "degré", "comparaison", "exagération"]
+},
+{
+"id": "kurai-wa-nai-hodo-wa-nai",
+"title": "～くらい…はない・～ぐらい…はない / ～ほど…はない",
+"level": "N3",
+"meaning": "Rien n'est plus... que / Rien n'égale...",
+"construction": {
+"動詞": "辞書形 + ことくらい / ことぐらい / ことほど + [adjectif/verbe] はない",
+"い形容詞": "",
+"な形容詞": "",
+"名詞": "名詞 + くらい / ぐらい / ほど + [adjectif/verbe] はない"
+},
+"nuance": "S'utilise pour exprimer que l'élément mentionné représente le niveau maximal (le plus haut ou le pire) selon le jugement subjectif du locuteur.",
+"warnings": [
+"Cette structure exprime une opinion ou un sentiment personnel fort, elle ne s'utilise pas pour énoncer des faits purement objectifs ou mesurables.",
+"Pour utiliser un verbe en début de phrase, il est indispensable de le nominaliser, généralement avec 'こと' (ex: 料理を作ることぐらい)."
+],
+"examples": [
+{
+"japanese": "リーさんぐらい動物好きな人はいない。",
+"translation": "Il n'y a personne qui aime autant les animaux que Lee-san."
+},
+{
+"japanese": "わたしは料理を作ることぐらい楽しいことはないと思っています。",
+"translation": "Je pense qu'il n'y a rien de plus amusant que de faire la cuisine."
+},
+{
+"japanese": "ああ、あしたも漢字のテストがある。テストほどいやなものはない。",
+"translation": "Ah, demain aussi il y a un test de kanji. Il n'y a rien de plus désagréable que les tests."
+}
+],
+"connections": {
+"confusions": [],
+"synonyms": []
+},
+"tags": ["maximum", "opinion", "subjectif", "comparaison"]
+},
+{
+"id": "kurai-nara",
+"title": "～くらいなら…・～ぐらいなら…",
+"level": "N3",
+"meaning": "Quitte à... autant... / Plutôt que de... (choix par dépit)",
+"construction": {
+"動詞": "辞書形 + くらいなら / ぐらいなら",
+"い形容詞": "",
+"な形容詞": "",
+"名詞": ""
+},
+"nuance": "Indique que la première situation est tellement indésirable ou désagréable aux yeux du locuteur qu'il préfère encore choisir la deuxième option, bien que celle-ci ne soit pas idéale non plus. C'est l'expression d'un choix par dépit.",
+"warnings": [
+"Le verbe qui précède 'くらいなら' doit obligatoirement être à la forme dictionnaire (辞書形).",
+"La conclusion de la phrase exprime très souvent une préférence par défaut ou une recommandation négative (ex: ～でいい, ～ほうがいい, ～たい)."
+],
+"examples": [
+{
+"japanese": "毎朝自分で弁当を作るくらいなら、コンビニ弁当でいい。",
+"translation": "Quitte à devoir préparer mon bento moi-même chaque matin, je préfère encore acheter des bentos de supérette."
+},
+{
+"japanese": "気が合わない人といっしょに生活するぐらいなら、このまま独身でいたい。",
+"translation": "Plutôt que de vivre avec quelqu'un avec qui je ne m'entends pas, je préfère encore rester célibataire ainsi."
+},
+{
+"japanese": "30分も遅れて説明会に行くくらいなら、参加しないほうがいい。",
+"translation": "Quitte à arriver à la réunion d'information avec 30 minutes de retard, il vaut mieux ne pas y aller du tout."
+}
+],
+"connections": {
+"confusions": [
+{
+"target_id": "kurai-da-hodo-da",
+"explanation": "Ne pas confondre 'kurai nara' (rejet d'une option au profit d'une autre) avec 'kurai da' (comparaison pour exprimer l'intensité)."
+}
+],
+"synonyms": []
+},
+"tags": ["choix", "préférence", "dépit", "subjectif"]
+},
+{
+"id": "ni-kagiru",
+"title": "～に限る",
+"level": "N3",
+"meaning": "Rien ne vaut... / ... est la meilleure solution",
+"construction": {
+"動詞": "辞書形 / ない形 + に限る",
+"い形容詞": "",
+"な形容詞": "",
+"名詞": "名詞 + に限る"
+},
+"nuance": "S'utilise pour affirmer de manière catégorique que quelque chose est la meilleure méthode ou la meilleure option possible. Cela traduit une opinion personnelle et un jugement subjectif fort du locuteur, et non un fait universel.",
+"warnings": [
+"Puisqu'il s'agit d'un avis purement subjectif, cette structure ne convient pas pour énoncer des vérités générales, des consignes officielles ou des faits scientifiques.",
+"À ne pas confondre avec d'autres expressions basées sur le verbe 限る (comme に限って ou に限らず) qui possèdent des sens totalement différents."
+],
+"examples": [
+{
+"japanese": "やっぱり映画は映画館で見るに限る。",
+"translation": "Rien ne vaut vraiment le cinéma pour regarder un film."
+},
+{
+"japanese": "かぜがはやっているときは、人が多い所には行かないに限る。",
+"translation": "Quand la grippe court, la meilleure chose à faire est de ne pas aller dans les endroits bondés."
+},
+{
+"japanese": "湖の写真を撮るならこの場所cに限ります。すてきな写真が撮れますよ。",
+"translation": "Si vous voulez prendre des photos du lac, il n'y a pas de meilleur endroit que celui-ci. Vous pourrez y faire de superbes clichés."
+}
+],
+"connections": {
+"confusions": [],
+"synonyms": []
+},
+"tags": ["recommandation", "opinion", "choix", "subjectif"]
+},
+{
+"id": "ni-taishite",
+"title": "～に対して",
+"level": "N3",
+"meaning": "Contrairement à / En contraste avec",
+"construction": {
+"動詞": "普通形 + のに対して",
+"い形容詞": "普通形 + のに対して",
+"な形容詞": "普通形 (だ → な / である) + のに対して",
+"名詞": "名詞 + に対して / 普通形 (だ → な / である) + のに対して"
+},
+"nuance": "S'utilise pour mettre clairement en opposition les caractéristiques, actions ou situations de deux éléments distincts.",
+"warnings": [
+"Ne pas confondre avec l'autre sens de ～に対して qui exprime une cible ou un comportement envers quelqu'un ('à l'égard de / envers').",
+"Lorsqu'on utilise la forme nominale avec 'のに対して', n'oubliez pas d'ajouter 'な' ou 'である' pour les adjectifs en -na et les noms."
+],
+"examples": [
+{
+"japanese": "きのうは大阪では大雨だったのに対して、東京がいい天気だった。",
+"translation": "Hier, alors qu'il pleuvait à verse à Osaka, il faisait beau à Tokyo."
+},
+{
+"japanese": "外遊びが好きな長男に対して、次男は家の中で遊ぶことが好きだ。",
+"translation": "Contrairement au fils aîné qui aime jouer dehors, le cadet préfère jouer à l'intérieur."
+}
+],
+"connections": {
+"confusions": [],
+"synonyms": [
+{
+"target_id": "ippou-de",
+"explanation": "～一方（で） peut aussi marquer un contraste, mais il souligne plutôt la coexistence de deux aspects en parallèle."
+}
+]
+},
+"tags": ["opposition", "contraste", "comparaison"]
+},
+{
+"id": "hanmen",
+"title": "～反面",
+"level": "N3",
+"meaning": "D'un autre côté / En revanche (les deux faces d'une chose)",
+"construction": {
+"動詞": "普通形 + 反面",
+"い形容詞": "普通形 + 反面",
+"な形容詞": "普通形 (だ → な / である) + 反面",
+"名詞": "名詞 + である反面"
+},
+"nuance": "Permet d'exprimer deux aspects opposés ou contradictoires (souvent un avantage et un inconvénient) d'une seule et même situation ou entité.",
+"warnings": [
+"Le sujet de la phrase reste généralement identique pour les deux propositions, car on évalue les deux faces d'une même chose.",
+"Attention à la liaison des adjectifs en -na qui requièrent 'な' ou '物理的である' avant 反面."
+],
+"examples": [
+{
+"japanese": "都会の生活は面白いことが多い反面、ストレスも多い。",
+"translation": "La vie citadine présente beaucoup de côtés intéressants, mais d'un autre côté, elle génère aussi beaucoup de stress."
+},
+{
+"japanese": "一人旅は気楽な反面、何でも一人でやらなければならないので、不便だ。",
+"translation": "Voyager seul est synonyme de liberté, mais en contrepartie, c'est peu pratique car il faut tout gérer soi-même."
+}
+],
+"connections": {
+"confusions": [],
+"synonyms": [
+{
+"target_id": "ippou-de",
+"explanation": "～一方（de） possède un sens quasi identique lorsqu'il exprime deux aspects contrastés, mais il est plus large et peut aussi exprimer de simples actions simultanées."
+}
+]
+},
+"tags": ["contraste", "dualité", "double-tranchant"]
+},
+{
+"id": "ippou-de",
+"title": "～一方（で）",
+"level": "N3",
+"meaning": "D'un côté... de l'autre / Tout en... (simultanéité ou contraste)",
+"construction": {
+"動詞": "普通形 + 一方（で）",
+"い形容詞": "普通形 + 一方（で）",
+"な形容詞": "普通形 (だ → な / である) + 一方（で）",
+"名詞": "名詞 + である一方（で）"
+},
+"nuance": "Indique que deux situations ou actions progressent ou coexistent en même temps. Peut servir à lister deux facettes opposées d'une situation (sens proche de ～反面) ou deux actions parallèles menées de front.",
+"warnings": [
+"La particule で entre parenthèses est optionnelle.",
+"Bien veiller à employer 'である' pour lier un nom à cette structure."
+],
+"examples": [
+{
+"japanese": "会議では自分の意見を言う一方で、ほかの人の話もよく聞いてください。",
+"translation": "Tout en donnant votre avis pendant la réunion, veillez également à bien écouter ce que disent les autres."
+},
+{
+"japanese": "子どもが生まれてうれしかった一方で、重い責任も感じた。",
+"translation": "D'un côté j'étais heureux de la naissance de mon enfant, mais d'un autre, j'ai aussi ressenti une lourde responsabilité."
+}
+],
+"connections": {
+"confusions": [],
+"synonyms": [
+{
+"target_id": "hanmen",
+"explanation": "～反面 met spécifiquement l'accent sur la nature opposée (positive/négative) des deux aspects d'une même chose."
+},
+{
+"target_id": "ni-taishite",
+"explanation": "～に対して confronte de manière flagrante deux entités ou sujets distincts."
+}
+]
+},
+"tags": ["simultanéité", "parallèle", "contraste"]
+},
+{
+"id": "to-iu-yori",
+"title": "～というより",
+"level": "N3",
+"meaning": "Plutôt que de dire... c'est plutôt...",
+"construction": {
+"動詞": "普通形 + というより",
+"い形容詞": "普通形 + というより",
+"な形容詞": "普通形 (だ は省略されることが多い) + というより",
+"名詞": "名詞 + というより"
+},
+"nuance": "Permet de rectifier une formulation ou de nuancer un jugement en indiquant qu'une autre description ou un autre mot est plus exact et approprié pour décrire la situation.",
+"warnings": [
+"Le terme placé juste après ～というより représente la description jugée correcte par le locuteur.",
+"S'utilise fréquemment au milieu d'une réplique pour corriger une affirmation précédente."
+],
+"examples": [
+{
+"japanese": "ぼくたちは友だちというよりいい競争相手なんだよ。",
+"translation": "Nous sommes moins des amis que de bons rivaux."
+},
+{
+"japanese": "頼まれて、というより命令されたんだよ。",
+"translation": "Plutôt que de m'avoir été demandé, cela m'a été ordonné."
+}
+],
+"connections": {
+"confusions": [],
+"synonyms": []
+},
+"tags": ["nuance", "correction", "reformulation"]
+},
+{
+"id": "kawarini",
+"title": "～かわりに",
+"level": "N3",
+"meaning": "En échange de / Au lieu de",
+"construction": {
+"動詞": "普通形 + かわりに",
+"い形容詞": "普通形 + かわりに",
+"な形容詞": "普通形 (だ → な) + かわりに",
+"名詞": "名詞 + のかわりに"
+},
+"nuance": "Possède deux sens principaux : 1) Exprimer une compensation, un troc ou un équilibre entre un avantage et un inconvénient. 2) Indiquer une substitution (faire une action équivalente à la place de celle initialement prévue).",
+"warnings": [
+"Pour remplacer directement un nom, l'utilisation de la particule 'の' est indispensable (名詞 + のかわりに).",
+"La structure implique toujours une notion d'équilibre ou d'équivalence de valeur entre les deux propositions."
+],
+"examples": [
+{
+"japanese": "フリーの仕事は自由な時間が多いかわりに、お金のことがいつも心配だ。",
+"translation": "Le travail en freelance offre beaucoup de temps libre, mais en contrepartie, on s'inquiète toujours pour l'argent."
+},
+{
+"japanese": "今度の正月はいつものようにふるさとに帰るかわりに、両親と海外旅行をしたい。",
+"translation": "Au lieu de retourner dans ma ville natale comme d'habitude pour le Nouvel An, je souhaite faire un voyage à l'étranger avec mis parents."
+}
+],
+"connections": {
+"confusions": [],
+"synonyms": []
+},
+"tags": ["substitution", "compensation", "échange"]
+},
+{
+"id": "sai-ni",
+"title": "～際（に）",
+"level": "N2",
+"meaning": "Au moment de / Lors de",
+"construction": {
+"動詞": "辞書形 / た形 + 際（に）",
+"い形容詞": "",
+"な形容詞": "",
+"名詞": "名詞 + の + 際（に）"
+},
+"nuance": "Expression formelle et soutenue (langage écrit ou public) équivalente à 'とき'. S'emploie principalement pour désigner des occasions professionnelles, administratives ou des événements formels.",
+"warnings": [
+"Se combine principalement avec des verbes ou des noms exprimant des actions précises ou des événements (ex: 使う, 完成する, 搭乗, 外出).",
+"On ne l'utilise généralement pas pour des situations banales ou ordinaires de la vie quotidienne."
+],
+"examples": [
+{
+"japanese": "この整理券は、商品受け取りの際、必要です。",
+"translation": "Ce ticket de retrait est nécessaire lors de la réception de la marchandise."
+},
+{
+"japanese": "アメリカの大統領は来日した際に、わたしたちの大学でスピーチを行った。",
+"translation": "Lors de sa venue au Japon, le président américain a prononcé un discours dans notre université."
+}
+],
+"connections": {
+"confusions": [],
+"synonyms": [
+{
+"target_id": "ni-saishite-ni-atatte",
+"explanation": "～に際して s'utilise également dans des contextes formels, mais cible plus spécifiquement le point de départ ou l'approche d'un grand événement unique."
+}
+]
+},
+"tags": ["temps", "formal", "action"]
+},
+{
+"id": "ni-saishite-ni-atatte",
+"title": "～に際して・～にあたって",
+"level": "N2",
+"meaning": "À l'occasion de / Au moment de (commencer)",
+"construction": {
+"動詞": "辞書形 + に際して / にあたって",
+"い形容詞": "",
+"な形容詞": "",
+"名詞": "名詞 + に際して / にあたって"
+},
+"nuance": "Tournures formelles équivalentes à 'するとき'. Elles s'utilisent pour marquer le commencement d'un événement unique, intentionnel et spécial (comme un mariage, l'inauguration d'une boutique ou le lancement d'un projet).",
+"warnings": [
+"La proposition qui suit contient généralement l'énoncé d'une action volontaire, d'une préparation ou d'une règle essentielle liée à cet événement.",
+"'～にあたって' exprime une démarche proactive ou positive et ne s'emploie jamais avec des événements négatifs (ex: séparation, hospitalisation, faillite)."
+],
+"examples": [
+{
+"japanese": "工事関係者は工事を始めるに際して、近所の住民にあいさつをして回った。",
+"translation": "À l'occasion du début des travaux, les ouvriers ont fait le tour du voisinage pour saluer les habitants."
+},
+{
+"japanese": "新しく事業を始めるにあたって、しっかりと準備をしようと思っております。",
+"translation": "Au moment de lancer cette nouvelle activité, nous avons l'intention de nous préparer rigoureusement."
+}
+],
+"connections": {
+"confusions": [],
+"synonyms": [
+{
+"target_id": "sai-ni",
+"explanation": "～際（に） exprime simplement le moment de l'action de façon générale, là où ～に際して/にあたって est focalisé sur l'entrée ou le seuil d'une nouvelle étape majeure."
+}
+]
+},
+"tags": ["temps", "formal", "événement", "préparation"]
+},
+{
+"id": "ta-totan",
+"title": "～たとたん（に）",
+"level": "N2",
+"meaning": "Au moment précis où / Aussitôt que",
+"construction": {
+"動詞": "た形 + とたん（に）",
+"い形容詞": "",
+"な形容詞": "",
+"名詞": ""
+},
+"nuance": "Indique qu'une action ou un changement soudain survient immédiatement après la réalisation d'un fait, créant un effet de surprise.",
+"warnings": [
+"S'associe uniquement à des verbes décrivant un mouvement ou un changement instantané (ex: 立ち上がる, 変わる).",
+"La proposition finale présente un fait inattendu indépendant de la volonté du locuteur ; on ne peut pas y trouver de souhait (～よう), d'intention ou d'impératif/invitation (～なさい, ～しませんか)."
+],
+"examples": [
+{
+"japanese": "山の頂上でワインを一口飲んだとたんに、めまいがした。",
+"translation": "Au moment précis où j'ai bu une gorgée de vin au sommet de la montagne, j'ai eu un vertige."
+},
+{
+"japanese": "夫は結婚前は優しかったが、結婚したとたんに、態度が変わった。",
+"translation": "Mon mari était doux avant notre mariage, mais aussitôt mariés, son attitude a changé."
+}
+],
+"connections": {
+"confusions": [],
+"synonyms": [
+{
+"target_id": "ka-to-omou-to",
+"explanation": "～たとたん insiste sur le caractère instantané et physique d'un changement, tandis que ～かと思うと souligne plutôt la rapidité de l'enchaînement perçu par l'esprit."
+},
+{
+"target_id": "ka-nai-ka-no-uchi-ni",
+"explanation": "～かないかのうちに met l'accent sur une simultanéité presque absolue, l'action B démarrant avant même la certitude que l'action A soit close."
+}
+]
+},
+"tags": ["temps", "instantanéité", "surprise"]
+},
+{
+"id": "ka-to-omou-to",
+"title": "～（か）と思うと・～（か）と思ったら",
+"level": "N2",
+"meaning": "À peine... que déjà / Au moment même où l'on réalise que...",
+"construction": {
+"動詞": "た形 + （か）と思うと / （か）と思ったら",
+"い形容詞": "",
+"な形容詞": "",
+"名詞": ""
+},
+"nuance": "S'emploie pour décrire une situation où une action ou une transformation majeure succède de façon extrêmement rapide et surprenante à une première situation.",
+"warnings": [
+"On ne l'utilise jamais pour décrire une action volontaire effectuée par le locuteur lui-même.",
+"La conclusion de la phrase doit faire état d'un constat inattendu ; elle exclut l'expression de la volonté, du souhait ou d'une demande adressée à autrui."
+],
+"examples": [
+{
+"japanese": "林さんは部屋に入ってきたかと思うと、いきなり窓を全部開けた。",
+"translation": "À peine Monsieur Hayashi venait-il d'entrer dans la pièce qu'il a brusquement ouvert toutes les fenêtres."
+},
+{
+"japanese": "赤ちゃんは今泣いたかと思うと、もう笑っている。",
+"translation": "Le bébé pleurait à l'instant même, et le voilà déjà en train de rire."
+}
+],
+"connections": {
+"confusions": [],
+"synonyms": [
+{
+"target_id": "ta-totan",
+"explanation": "～たとたん s'applique généralement à des réactions plus mécaniques ou physiologiques immédiates, tandis que ～かと思うと exprime l'étonnement face au contraste de deux actions successives très rapprochées."
+},
+{
+"target_id": "ka-nai-ka-no-uchi-ni",
+"explanation": "～かないかのうちに accentue encore plus fortement la notion de quasi-coexistence temporelle parfaite entre la fin de A et le début de B."
+}
+]
+},
+"tags": ["temps", "rapidité", "changement", "contraste"]
+},
+{
+"id": "ka-nai-ka-no-uchi-ni",
+"title": "～か～ないかのうちに",
+"level": "N2",
+"meaning": "À peine... que / Au moment même où s'achève...",
+"construction": {
+"動詞": "[辞書形 / た形] + か + [同じ動詞の ない形] + かのうちに"
+},
+"nuance": "Traduit le fait qu'une seconde action se produit au moment exact où la première se termine, au point qu'on a l'impression qu'elles se chevauchent ou se déroulent presque de façon simultanée.",
+"warnings": [
+"S'utilise préférentiellement avec des verbes impliquant un dénouement ou un point final immédiat (ex: 着く, 終わる).",
+"Comme pour les structures similaires, la proposition finale ne peut pas servir à exprimer la volonté, l'intention ou une sollicitation du locuteur."
+],
+"examples": [
+{
+"japanese": "一郎はベッドに横になるかならないかのうちに、ぐっすり眠ってしまった。",
+"translation": "À peine Ichiro s'était-il allongé sur le lit qu'il s'endormit profondément."
+},
+{
+"japanese": "わたしは夜が明けたか明けないかのうちに家を出て、空港へ向かった。",
+"translation": "C'est à peine si le jour était levé que j'ai quitté la maison pour me rendre à l'aéroport."
+}
+],
+"connections": {
+"confusions": [],
+"synonyms": [
+{
+"target_id": "ka-to-omou-to",
+"explanation": "～か～ないかのうちに exprime de façon bien plus intense et nette l'idée de simultanéité absolue ('presque au même instant') que la structure ～（か）と思うと."
+}
+]
+},
+"tags": ["temps", "simultanéité", "instantanéité"]
+}
 ]

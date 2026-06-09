@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Grammaire N3</title>
     <style>
-        /* Variables de thèmes (Mode Clair par défaut) */
+        /* Variables de thèmes (Mode Clair) */
         :root {
             --bg-color: #f8fafc;
             --header-bg: rgba(255, 255, 255, 0.9);
@@ -14,8 +14,8 @@
             --text-main: #1e293b;
             --text-title: #0f172a;
             --text-muted: #64748b;
-            --primary: #0284c7;
-            --primary-light: #e0f2fe;
+            --primary: #059669; /* Vert Émeraude */
+            --primary-light: #ecfdf5;
             --warning-bg: #fef2f2;
             --warning-border: #fca5a5;
             --warning-text: #991b1b;
@@ -26,25 +26,25 @@
             --tag-text: #475569;
         }
 
-        /* Détection automatique du Mode Sombre */
+        /* Nouveau Mode Sombre : Neutre Charcoal & Émeraude */
         @media (prefers-color-scheme: dark) {
             :root {
-                --bg-color: #0f172a;
-                --header-bg: rgba(15, 23, 42, 0.9);
-                --card-bg: #1e293b;
-                --card-border: #334155;
-                --text-main: #cbd5e1;
-                --text-title: #f8fafc;
+                --bg-color: #121214;
+                --header-bg: rgba(18, 18, 20, 0.9);
+                --card-bg: #1a1a1e;
+                --card-border: #2c2c35;
+                --text-main: #e2e8f0;
+                --text-title: #ffffff;
                 --text-muted: #94a3b8;
-                --primary: #38bdf8;
-                --primary-light: #0369a1;
-                --warning-bg: #451a03;
-                --warning-border: #b45309;
-                --warning-text: #fef3c7;
-                --jp-bg: #ca8a04;
-                --jp-text: #ffffff;
-                --nuance-bg: #334155;
-                --tag-bg: #334155;
+                --primary: #10b981; /* Émeraude Lumineux */
+                --primary-light: rgba(16, 185, 129, 0.15);
+                --warning-bg: #2d1515;
+                --warning-border: #ef4444;
+                --warning-text: #fca5a5;
+                --jp-bg: #2e2a14;
+                --jp-text: #fef08a;
+                --nuance-bg: #222227;
+                --tag-bg: #2c2c35;
                 --tag-text: #cbd5e1;
             }
         }
@@ -61,7 +61,7 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        /* En-tête fixe (Flou esthétique sur PC/Mobile) */
+        /* En-tête fixe */
         header {
             position: sticky;
             top: 0;
@@ -69,12 +69,19 @@
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             width: 100%;
-            max-width: 800px; /* Élargi pour le confort sur PC */
+            max-width: 800px;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
-            padding: 20px;
+            padding: 16px 20px;
             box-sizing: border-box;
             z-index: 10;
             border-bottom: 1px solid var(--card-border);
+            display: flex;
+            align-items: center;
+            min-height: 80px;
+        }
+
+        .header-container {
+            width: 100%;
         }
 
         input#search {
@@ -94,7 +101,27 @@
             border-color: var(--primary);
         }
 
-        /* Zone principale adaptée PC (Centrée et plus large) */
+        /* Bouton Retour */
+        #back-btn {
+            background: var(--primary-light);
+            color: var(--primary);
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.1s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #back-btn:hover {
+            opacity: 0.9;
+            transform: translateX(-2px);
+        }
+
         main {
             width: 100%;
             max-width: 800px; 
@@ -102,50 +129,43 @@
             box-sizing: border-box;
         }
 
-        /* Style de la carte repliable */
-        details.grammar-card {
+        /* Carte de la liste (Aperçu) */
+        .grammar-preview-card {
             background: var(--card-bg);
             border-radius: 14px;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
+            padding: 18px;
             box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
-            overflow: hidden;
             border: 1px solid var(--card-border);
+            cursor: pointer;
+            position: relative;
             transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
-            scroll-margin-top: 100px; /* Évite que l'en-tête masque le haut de la carte au défilement */
+            padding-right: 40px;
         }
 
-        /* Amélioration de la navigation à la souris sur PC */
         @media (hover: hover) {
-            details.grammar-card:hover {
+            .grammar-preview-card:hover {
                 transform: translateY(-2px);
                 box-shadow: 0 4px 12px rgb(0 0 0 / 0.08);
                 border-color: var(--primary);
             }
         }
 
-        details.grammar-card[open] {
-            box-shadow: 0 4px 12px rgb(0 0 0 / 0.12);
-            transform: none !important;
-        }
-
-        summary {
-            padding: 18px;
-            list-style: none;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            position: relative;
-        }
-
-        summary::-webkit-details-marker {
-            display: none;
+        .grammar-preview-card::after {
+            content: "➔";
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 14px;
         }
 
         .card-header-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 6px;
         }
 
         .grammar-title {
@@ -161,40 +181,43 @@
             font-weight: 700;
             padding: 4px 10px;
             border-radius: 6px;
+            white-space: nowrap;
         }
 
         .grammar-meaning {
             font-size: 16px;
             color: var(--text-muted);
             margin: 0;
-            padding-right: 30px;
         }
 
-        summary::after {
-            content: "➔";
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%) rotate(90deg);
-            color: var(--text-muted);
-            font-size: 14px;
-            transition: transform 0.2s;
+        /* Vue Page Détails */
+        .detail-page {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 4px 16px rgb(0 0 0 / 0.05);
+            padding: 24px;
         }
 
-        details[open] summary::after {
-            transform: translateY(-50%) rotate(-90deg);
+        .detail-header {
+            padding-bottom: 20px;
+            border-bottom: 1px dashed var(--card-border);
+            margin-bottom: 20px;
         }
 
-        /* Contenu interne de la carte */
-        .card-content {
-            padding: 0 20px 20px 20px;
-            border-top: 1px dashed var(--card-border);
-            font-size: 15px;
-            line-height: 1.6;
+        .detail-header .grammar-title {
+            font-size: 28px;
+        }
+
+        .detail-header .grammar-meaning {
+            font-size: 18px;
+            color: var(--text-main);
+            margin-top: 8px;
+            font-weight: 500;
         }
 
         h4 {
-            margin: 20px 0 10px 0;
+            margin: 24px 0 10px 0;
             color: var(--text-title);
             font-size: 14px;
             text-transform: uppercase;
@@ -205,25 +228,27 @@
         .nuance-text {
             color: var(--text-main);
             background: var(--nuance-bg);
-            padding: 14px;
-            border-radius: 8px;
-            margin: 0 0 20px 0;
+            padding: 16px;
+            border-radius: 10px;
+            margin: 0 0 24px 0;
+            line-height: 1.6;
         }
 
-        /* Tableau de construction */
+        /* Table de construction */
         .construction-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             background: var(--bg-color);
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
         }
 
         .construction-table td {
-            padding: 12px 14px;
+            padding: 14px 16px;
             border-bottom: 1px solid var(--card-border);
             font-size: 15px;
+            line-height: 1.5;
         }
 
         .construction-table tr:last-child td {
@@ -236,14 +261,14 @@
             width: 110px;
         }
 
-        /* Boîte d'alertes */
+        /* Alerte pièges */
         .warning-box {
             background: var(--warning-bg);
             border-left: 4px solid var(--warning-border);
             color: var(--warning-text);
-            padding: 14px;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 20px;
+            padding: 16px;
+            border-radius: 0 10px 10px 0;
+            margin-bottom: 24px;
         }
 
         .warning-box ul {
@@ -251,10 +276,10 @@
             padding-left: 20px;
         }
 
-        /* Structure des exemples */
+        /* Exemples */
         .example-item {
-            margin-bottom: 16px;
-            padding-bottom: 16px;
+            margin-bottom: 18px;
+            padding-bottom: 18px;
             border-bottom: 1px solid var(--card-border);
         }
 
@@ -267,12 +292,13 @@
         .jp-sentence {
             background: var(--jp-bg);
             color: var(--jp-text);
-            padding: 6px 10px;
+            padding: 6px 12px;
             border-radius: 6px;
             font-weight: 500;
             display: inline-block;
-            font-size: 17px;
-            margin-bottom: 6px;
+            font-size: 18px;
+            margin-bottom: 8px;
+            line-height: 1.4;
         }
 
         .fr-sentence {
@@ -282,15 +308,15 @@
             padding-left: 4px;
         }
 
-        /* Références Croisées / Connexions */
+        /* Connexions & Liens */
         .connections-container {
-            margin-top: 20px;
-            padding-top: 5px;
+            margin-top: 24px;
+            padding-top: 8px;
             border-top: 1px dashed var(--card-border);
         }
 
         .connection-group {
-            margin-bottom: 14px;
+            margin-bottom: 16px;
         }
 
         .connection-group:last-child {
@@ -301,33 +327,32 @@
             font-size: 13px;
             font-weight: 700;
             color: var(--text-muted);
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .connection-link {
             display: inline-block;
             background: var(--primary-light);
             color: var(--primary);
-            padding: 4px 10px;
+            padding: 6px 12px;
             border-radius: 6px;
             text-decoration: none;
             font-size: 14px;
             font-weight: bold;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
             border: none;
             cursor: pointer;
-            transition: opacity 0.2s, transform 0.1s;
+            transition: opacity 0.2s;
         }
 
         .connection-link:hover {
-            opacity: 0.9;
-            transform: translateY(-1px);
+            opacity: 0.85;
         }
 
         .connection-desc {
             font-size: 14px;
             color: var(--text-main);
-            margin: 0 0 8px 4px;
+            margin: 0 0 10px 4px;
             line-height: 1.4;
         }
 
@@ -336,14 +361,14 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-top: 20px;
+            margin-top: 24px;
         }
 
         .tag {
             background: var(--tag-bg);
             color: var(--tag-text);
             font-size: 12px;
-            padding: 4px 10px;
+            padding: 4px 12px;
             border-radius: 20px;
         }
     </style>
@@ -351,161 +376,186 @@
 <body>
 
     <header>
-        <input type="text" id="search" placeholder="Rechercher un point de grammaire, sens, tag..." autofocus>
+        <div id="header-container" class="header-container">
+            </div>
     </header>
 
-    <main id="results"></main>
+    <main>
+        <div id="list-view"></div>
+        <div id="detail-view" style="display: none;"></div>
+    </main>
 
     <script>
         let grammarData = [];
+        let currentSearchQuery = "";
 
         // Charger le fichier JSON
         fetch('grammar.json')
             .then(response => response.json())
             .then(data => {
                 grammarData = data;
-                displayCards(grammarData);
+                showListView();
             });
 
-        // Fonction d'aide pour obtenir le titre d'un point à partir de son ID
         function getTitleById(id) {
             const found = grammarData.find(item => item.id === id);
             return found ? found.title : id;
         }
 
-        // Système de navigation dynamique entre fiches via les ID
-        function navigateToCard(targetId) {
+        // --- GESTION DES VUES ---
+
+        // Afficher la liste principale
+        function showListView() {
+            document.getElementById('detail-view').style.display = 'none';
+            document.getElementById('list-view').style.display = 'block';
+
+            // Restaurer l'en-tête de recherche
+            const headerBox = document.getElementById('header-container');
+            headerBox.innerHTML = `<input type="text" id="search" placeholder="Rechercher un point de grammaire, sens, tag..." autofocus>`;
+            
+            // Remettre la valeur de recherche précédente si elle existe
             const searchInput = document.getElementById('search');
+            searchInput.value = currentSearchQuery;
             
-            // Si le point ciblé n'est actuellement pas affiché à cause de la recherche, on réinitialise la vue
-            if (searchInput.value !== '') {
-                searchInput.value = '';
-                displayCards(grammarData);
-            }
-            
-            const targetElement = document.getElementById(`card-${targetId}`);
-            if (targetElement) {
-                targetElement.open = true; // Déplie la carte automatiquement
-                targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' }); // Centre l'affichage sur le point ciblé
-                
-                // Petit effet de flash pour guider le regard de l'utilisateur
-                targetElement.style.borderColor = 'var(--primary)';
-                setTimeout(() => {
-                    targetElement.style.borderColor = '';
-                }, 1000);
-            }
+            // Gérer l'écouteur de recherche
+            searchInput.addEventListener('input', (e) => {
+                currentSearchQuery = e.target.value.toLowerCase().trim();
+                filterAndDisplayList();
+            });
+
+            filterAndDisplayList();
+            window.scrollTo(0, 0);
         }
 
-        function displayCards(cards) {
-            const container = document.getElementById('results');
-            if (cards.length === 0) {
+        // Filtrer et afficher les cartes d'aperçu
+        function filterAndDisplayList() {
+            const container = document.getElementById('list-view');
+            
+            const filtered = grammarData.filter(card => 
+                card.title.toLowerCase().includes(currentSearchQuery) || 
+                card.meaning.toLowerCase().includes(currentSearchQuery) ||
+                card.level.toLowerCase().includes(currentSearchQuery) ||
+                card.id.toLowerCase().includes(currentSearchQuery) ||
+                card.tags.some(tag => tag.toLowerCase().includes(currentSearchQuery))
+            );
+
+            if (filtered.length === 0) {
                 container.innerHTML = `<p style="text-align:center; color:var(--text-muted); margin-top: 40px;">Aucun point de grammaire trouvé.</p>`;
                 return;
             }
 
-            container.innerHTML = cards.map(card => {
-                // Table de construction mise à jour avec les clés japonaises demandées
-                let constructionRows = '';
-                if(card.construction['動詞']) constructionRows += `<tr><td>動詞</td><td>${card.construction['動詞']}</td></tr>`;
-                if(card.construction['い形容詞']) constructionRows += `<tr><td>い形容詞</td><td>${card.construction['い形容詞']}</td></tr>`;
-                if(card.construction['な形容詞']) constructionRows += `<tr><td>な形容詞</td><td>${card.construction['な形容詞']}</td></tr>`;
-                if(card.construction['名詞']) constructionRows += `<tr><td>名詞</td><td>${card.construction['名詞']}</td></tr>`;
-
-                const warningsHTML = card.warnings && card.warnings.length > 0 
-                    ? `<div class="warning-box"><ul>${card.warnings.map(w => `<li>${w}</li>`).join('')}</ul></div>`
-                    : '';
-
-                const examplesHTML = card.examples.map(ex => `
-                    <div class="example-item">
-                        <div class="jp-sentence">${ex.japanese}</div>
-                        <p class="fr-sentence">${ex.translation}</p>
+            container.innerHTML = filtered.map(card => `
+                <div class="grammar-preview-card" onclick="showDetailView('${card.id}')">
+                    <div class="card-header-top">
+                        <span class="grammar-title">${card.title}</span>
+                        <span class="level-badge">${card.level}</span>
                     </div>
-                `).join('');
-
-                // Génération de la section des Liens Références Croisées (connections)
-                let connectionsHTML = '';
-                if (card.connections) {
-                    let confusionsHTML = '';
-                    if (card.connections.confusions && card.connections.confusions.length > 0) {
-                        confusionsHTML = `
-                            <div class="connection-group">
-                                <div class="connection-label">⚠️ À ne pas confondre avec :</div>
-                                ${card.connections.confusions.map(c => `
-                                    <button class="connection-link" onclick="navigateToCard('${c.target_id}')">${getTitleById(c.target_id)}</button>
-                                    <p class="connection-desc">${c.explanation}</p>
-                                `).join('')}
-                            </div>
-                        `;
-                    }
-
-                    let synonymsHTML = '';
-                    if (card.connections.synonyms && card.connections.synonyms.length > 0) {
-                        synonymsHTML = `
-                            <div class="connection-group">
-                                <div class="connection-label">🔄 Dans le même style :</div>
-                                ${card.connections.synonyms.map(s => `
-                                    <button class="connection-link" onclick="navigateToCard('${s.target_id}')">${getTitleById(s.target_id)}</button>
-                                    <p class="connection-desc">${s.explanation}</p>
-                                `).join('')}
-                            </div>
-                        `;
-                    }
-
-                    if (confusionsHTML || synonymsHTML) {
-                        connectionsHTML = `
-                            <div class="connections-container">
-                                <h4>Liens & Comparaisons</h4>
-                                ${confusionsHTML}
-                                ${synonymsHTML}
-                            </div>
-                        `;
-                    }
-                }
-
-                const tagsHTML = card.tags.map(tag => `<span class="tag">#${tag}</span>`).join('');
-
-                return `
-                    <details class="grammar-card" id="card-${card.id}">
-                        <summary>
-                            <div class="card-header-top">
-                                <span class="grammar-title">${card.title}</span>
-                                <span class="level-badge">${card.level}</span>
-                            </div>
-                            <p class="grammar-meaning">${card.meaning}</p>
-                        </summary>
-                        <div class="card-content">
-                            <h4>Nuance</h4>
-                            <p class="nuance-text">${card.nuance}</p>
-                            
-                            <h4>Construction</h4>
-                            <table class="construction-table">${constructionRows}</table>
-                            
-                            ${warningsHTML}
-                            
-                            <h4>Exemples</h4>
-                            <div class="examples-container">${examplesHTML}</div>
-
-                            ${connectionsHTML}
-                            
-                            <div class="tags-container">${tagsHTML}</div>
-                        </div>
-                    </details>
-                `;
-            }).join('');
+                    <p class="grammar-meaning">${card.meaning}</p>
+                </div>
+            `).join('');
         }
 
-        // Système de recherche globale
-        document.getElementById('search').addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase().trim();
-            const filtered = grammarData.filter(card => 
-                card.title.toLowerCase().includes(query) || 
-                card.meaning.toLowerCase().includes(query) ||
-                card.level.toLowerCase().includes(query) ||
-                card.id.toLowerCase().includes(query) ||
-                card.tags.some(tag => tag.toLowerCase().includes(query))
-            );
-            displayCards(filtered);
-        });
+        // Afficher la "page" de détails d'un point spécifique
+        function showDetailView(id) {
+            const card = grammarData.find(item => item.id === id);
+            if (!card) return;
+
+            document.getElementById('list-view').style.display = 'none';
+            document.getElementById('detail-view').style.display = 'block';
+
+            // Remplacer l'en-tête par le bouton Retour
+            const headerBox = document.getElementById('header-container');
+            headerBox.innerHTML = `<button id="back-btn" onclick="showListView()">← Retour à la liste</button>`;
+
+            // Générer le contenu de la fiche
+            let constructionRows = '';
+            if(card.construction['動詞']) constructionRows += `<tr><td>動詞</td><td>${card.construction['動詞']}</td></tr>`;
+            if(card.construction['い形容詞']) constructionRows += `<tr><td>い形容詞</td><td>${card.construction['い形容詞']}</td></tr>`;
+            if(card.construction['な形容詞']) constructionRows += `<tr><td>な形容詞</td><td>${card.construction['な形容詞']}</td></tr>`;
+            if(card.construction['名詞']) constructionRows += `<tr><td>名詞</td><td>${card.construction['名詞']}</td></tr>`;
+
+            const warningsHTML = card.warnings && card.warnings.length > 0 
+                ? `<div class="warning-box"><ul>${card.warnings.map(w => `<li>${w}</li>`).join('')}</ul></div>`
+                : '';
+
+            const examplesHTML = card.examples.map(ex => `
+                <div class="example-item">
+                    <div class="jp-sentence">${ex.japanese}</div>
+                    <p class="fr-sentence">${ex.translation}</p>
+                </div>
+            `).join('');
+
+            let connectionsHTML = '';
+            if (card.connections) {
+                let confusionsHTML = '';
+                if (card.connections.confusions && card.connections.confusions.length > 0) {
+                    confusionsHTML = `
+                        <div class="connection-group">
+                            <div class="connection-label">⚠️ À ne pas confondre avec :</div>
+                            ${card.connections.confusions.map(c => `
+                                <button class="connection-link" onclick="showDetailView('${c.target_id}')">${getTitleById(c.target_id)}</button>
+                                <p class="connection-desc">${c.explanation}</p>
+                            `).join('')}
+                        </div>
+                    `;
+                }
+
+                let synonymsHTML = '';
+                if (card.connections.synonyms && card.connections.synonyms.length > 0) {
+                    synonymsHTML = `
+                        <div class="connection-group">
+                            <div class="connection-label">🔄 Dans le même style :</div>
+                            ${card.connections.synonyms.map(s => `
+                                <button class="connection-link" onclick="showDetailView('${s.target_id}')">${getTitleById(s.target_id)}</button>
+                                <p class="connection-desc">${s.explanation}</p>
+                            `).join('')}
+                        </div>
+                    `;
+                }
+
+                if (confusionsHTML || synonymsHTML) {
+                    connectionsHTML = `
+                        <div class="connections-container">
+                            <h4>Liens & Comparaisons</h4>
+                            ${confusionsHTML}
+                            ${synonymsHTML}
+                        </div>
+                    `;
+                }
+            }
+
+            const tagsHTML = card.tags.map(tag => `<span class="tag">#${tag}</span>`).join('');
+
+            const container = document.getElementById('detail-view');
+            container.innerHTML = `
+                <div class="detail-page">
+                    <div class="detail-header">
+                        <div class="card-header-top">
+                            <span class="grammar-title">${card.title}</span>
+                            <span class="level-badge">${card.level}</span>
+                        </div>
+                        <p class="grammar-meaning">${card.meaning}</p>
+                    </div>
+                    
+                    <h4>Nuance</h4>
+                    <p class="nuance-text">${card.nuance}</p>
+                    
+                    <h4>Construction</h4>
+                    <table class="construction-table">${constructionRows}</table>
+                    
+                    ${warningsHTML}
+                    
+                    <h4>Exemples</h4>
+                    <div class="examples-container">${examplesHTML}</div>
+
+                    ${connectionsHTML}
+                    
+                    <div class="tags-container">${tagsHTML}</div>
+                </div>
+            `;
+
+            window.scrollTo(0, 0);
+        }
     </script>
 </body>
 </html>
