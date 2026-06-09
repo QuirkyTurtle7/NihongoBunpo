@@ -133,6 +133,23 @@
         .jp-sentence { background: var(--jp-bg); color: var(--jp-text); padding: 8px 14px; border-radius: 8px; font-weight: 500; font-size: 18px; margin-bottom: 8px; display: inline-block; line-height: 1.4; }
         .warning-box { background: var(--warning-bg); border-left: 4px solid var(--warning-border); color: var(--warning-text); padding: 16px; border-radius: 0 10px 10px 0; margin-bottom: 24px; }
         .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 12px; padding: 4px 12px; border-radius: 20px; }
+        .connection-link {
+        display: inline-block;
+        background: var(--primary-light);
+        color: var(--primary);
+        padding: 4px 10px;
+        border-radius: 6px;
+        border: 1px solid var(--primary);
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        margin-bottom: 5px;
+        transition: 0.2s;
+    }
+        .connection-link:hover {
+        background: var(--primary);
+        color: white;
+    }
     </style>
 </head>
 <body>
@@ -147,161 +164,184 @@
     </main>
 
     <script>
-        let grammarData = [];
-        let currentSearchQuery = "";
-        let activeFilter = "all";
+    let grammarData = [];
+    let currentSearchQuery = "";
+    let activeFilter = "all";
 
-        const typesMap = {
-            "all": "Tous",
-            "pattern": "Grammaire",
-            "vocabulary": "Vocabulaire",
-            "conjugation": "Conjugaison",
-            "keigo": "Keigo"
-        };
+    // Mapping des labels pour l'affichage
+    const typesMap = {
+        "pattern": "Grammaire",
+        "vocabulary": "Vocabulaire",
+        "conjugation": "Conjugaison",
+        "keigo": "Keigo"
+    };
 
-        fetch('grammar.json')
-            .then(r => r.json())
-            .then(data => {
-                grammarData = data;
-                showListView();
-            });
+    fetch('grammar.json')
+        .then(r => r.json())
+        .then(data => {
+            grammarData = data;
+            showListView();
+        })
+        .catch(err => console.error("Erreur chargement JSON:", err));
 
-        function getTitleById(id) {
-            const found = grammarData.find(item => item.id === id);
-            return found ? found.title : id;
-        }
+    function getTitleById(id) {
+        const found = grammarData.find(item => item.id === id);
+        return found ? found.title : id;
+    }
 
-        function showListView() {
-            document.getElementById('detail-view').style.display = 'none';
-            document.getElementById('list-view').style.display = 'block';
+    function showListView() {
+        document.getElementById('detail-view').style.display = 'none';
+        document.getElementById('list-view').style.display = 'block';
 
-            const headerBox = document.getElementById('header-container');
-            headerBox.innerHTML = `
-                <input type="text" id="search" placeholder="Rechercher..." value="${currentSearchQuery}" autofocus>
-                <div class="filter-scroll">
-                    ${Object.entries(typesMap).map(([key, label]) => `
-                        <div class="chip ${activeFilter === key ? 'active' : ''}" onclick="setFilter('${key}')">${label}</div>
-                    `).join('')}
-                </div>
-            `;
-            
-            const searchInput = document.getElementById('search');
-            searchInput.addEventListener('input', (e) => {
-                currentSearchQuery = e.target.value.toLowerCase().trim();
-                filterAndDisplayList();
-            });
-
+        const headerBox = document.getElementById('header-container');
+        headerBox.innerHTML = `
+            <input type="text" id="search" placeholder="Rechercher un point, sens, tag..." value="${currentSearchQuery}" autofocus>
+            <div class="filter-scroll">
+                <div class="chip ${activeFilter === 'all' ? 'active' : ''}" onclick="setFilter('all')">Tous</div>
+                <div class="chip ${activeFilter === 'pattern' ? 'active' : ''}" onclick="setFilter('pattern')">Grammaire</div>
+                <div class="chip ${activeFilter === 'vocabulary' ? 'active' : ''}" onclick="setFilter('vocabulary')">Vocabulaire</div>
+                <div class="chip ${activeFilter === 'conjugation' ? 'active' : ''}" onclick="setFilter('conjugation')">Conjugaison</div>
+                <div class="chip ${activeFilter === 'keigo' ? 'active' : ''}" onclick="setFilter('keigo')">Keigo</div>
+            </div>
+        `;
+        
+        const searchInput = document.getElementById('search');
+        searchInput.addEventListener('input', (e) => {
+            currentSearchQuery = e.target.value.toLowerCase().trim();
             filterAndDisplayList();
-        }
+        });
 
-        function setFilter(type) {
-            activeFilter = type;
-            showListView(); // Rafraîchit l'en-tête et la liste
-        }
+        filterAndDisplayList();
+    }
 
-        function filterAndDisplayList() {
-            const container = document.getElementById('list-view');
+    function setFilter(type) {
+        activeFilter = type;
+        showListView();
+    }
+
+    function filterAndDisplayList() {
+        const container = document.getElementById('list-view');
+        
+        const filtered = grammarData.filter(card => {
+            // Sécurité : on force en minuscule pour la comparaison
+            const itemType = (card.type || "").toLowerCase();
             
-            const filtered = grammarData.filter(card => {
-                const matchesSearch = card.title.toLowerCase().includes(currentSearchQuery) || 
-                                     card.meaning.toLowerCase().includes(currentSearchQuery) ||
-                                     card.tags.some(tag => tag.toLowerCase().includes(currentSearchQuery));
-                const matchesType = activeFilter === "all" || card.type === activeFilter;
-                return matchesSearch && matchesType;
-            });
+            const matchesSearch = card.title.toLowerCase().includes(currentSearchQuery) || 
+                                 card.meaning.toLowerCase().includes(currentSearchQuery) ||
+                                 (card.tags && card.tags.some(tag => tag.toLowerCase().includes(currentSearchQuery)));
+            
+            const matchesType = activeFilter === "all" || itemType === activeFilter;
+            
+            return matchesSearch && matchesType;
+        });
 
-            if (filtered.length === 0) {
-                container.innerHTML = `<p style="text-align:center; color:var(--text-muted); margin-top: 40px;">Aucun point trouvé.</p>`;
-                return;
-            }
+        if (filtered.length === 0) {
+            container.innerHTML = `<p style="text-align:center; color:var(--text-muted); margin-top: 40px;">Aucun point trouvé pour ce filtre ou cette recherche.</p>`;
+            return;
+        }
 
-            container.innerHTML = filtered.map(card => `
+        container.innerHTML = filtered.map(card => {
+            const itemType = (card.type || "").toLowerCase();
+            const typeLabel = typesMap[itemType] || itemType || "Inconnu";
+
+            return `
                 <div class="grammar-preview-card" onclick="showDetailView('${card.id}')">
                     <div class="card-header-top">
                         <div>
-                            <span class="type-badge">${typesMap[card.type] || card.type}</span>
+                            <span class="type-badge">${typeLabel}</span>
                             <span class="grammar-title">${card.title}</span>
                         </div>
                         <span class="level-badge">${card.level}</span>
                     </div>
                     <p class="grammar-meaning">${card.meaning}</p>
                 </div>
-            `).join('');
-        }
+            `;
+        }).join('');
+    }
 
-        function showDetailView(id) {
-            const card = grammarData.find(item => item.id === id);
-            if (!card) return;
+    function showDetailView(id) {
+        const card = grammarData.find(item => item.id === id);
+        if (!card) return;
 
-            document.getElementById('list-view').style.display = 'none';
-            document.getElementById('detail-view').style.display = 'block';
+        document.getElementById('list-view').style.display = 'none';
+        document.getElementById('detail-view').style.display = 'block';
 
-            const headerBox = document.getElementById('header-container');
-            headerBox.innerHTML = `<button id="back-btn" onclick="showListView()">← Retour à la liste</button>`;
+        const headerBox = document.getElementById('header-container');
+        headerBox.innerHTML = `<button id="back-btn" onclick="showListView()">← Retour à la liste</button>`;
 
-            // Génération DYNAMIQUE du tableau de construction (pour tout type)
-            let constructionRows = Object.entries(card.construction)
-                .filter(([key, value]) => value && value.trim() !== "")
+        let constructionRows = "";
+        if (card.construction) {
+            constructionRows = Object.entries(card.construction)
+                .filter(([_, value]) => value && value.trim() !== "")
                 .map(([key, value]) => `<tr><td>${key}</td><td>${value}</td></tr>`)
                 .join('');
-
-            const container = document.getElementById('detail-view');
-            container.innerHTML = `
-                <div class="detail-page">
-                    <div class="detail-header">
-                        <div class="card-header-top">
-                            <span class="grammar-title">${card.title}</span>
-                            <span class="level-badge">${card.level}</span>
-                        </div>
-                        <p class="grammar-meaning">${card.meaning}</p>
-                    </div>
-                    
-                    <h4>Nuance</h4>
-                    <p class="nuance-text">${card.nuance}</p>
-                    
-                    ${constructionRows ? `<h4>Construction</h4><table class="construction-table">${constructionRows}</table>` : ''}
-                    
-                    ${card.warnings?.length ? `<div class="warning-box"><ul>${card.warnings.map(w => `<li>${w}</li>`).join('')}</ul></div>` : ''}
-                    
-                    <h4>Exemples</h4>
-                    <div>${card.examples.map(ex => `
-                        <div style="margin-bottom: 18px; border-bottom: 1px solid var(--card-border); padding-bottom: 12px;">
-                            <div class="jp-sentence">${ex.japanese}</div>
-                            <p style="color:var(--text-muted); margin: 4px 0 0 0;">${ex.translation}</p>
-                        </div>
-                    `).join('')}</div>
-
-                    ${renderConnections(card)}
-                    
-                    <div class="tags-container" style="margin-top:20px;">
-                        ${card.tags.map(tag => `<span class="tag">#${tag}</span>`).join('')}
-                    </div>
-                </div>
-            `;
-            window.scrollTo(0, 0);
         }
 
-        function renderConnections(card) {
-            if (!card.connections) return '';
-            let html = '<div style="margin-top:24px; border-top:1px dashed var(--card-border); padding-top:10px;"><h4>Liens</h4>';
+        const container = document.getElementById('detail-view');
+        container.innerHTML = `
+            <div class="detail-page">
+                <div class="detail-header">
+                    <div class="card-header-top">
+                        <span class="grammar-title">${card.title}</span>
+                        <span class="level-badge">${card.level}</span>
+                    </div>
+                    <p class="grammar-meaning">${card.meaning}</p>
+                </div>
+                
+                <h4>Nuance</h4>
+                <p class="nuance-text">${card.nuance || "Pas de nuance précisée."}</p>
+                
+                ${constructionRows ? `<h4>Construction</h4><table class="construction-table">${constructionRows}</table>` : ''}
+                
+                ${card.warnings && card.warnings.length ? `<div class="warning-box"><ul>${card.warnings.map(w => `<li>${w}</li>`).join('')}</ul></div>` : ''}
+                
+                <h4>Exemples</h4>
+                <div>${card.examples.map(ex => `
+                    <div style="margin-bottom: 18px; border-bottom: 1px solid var(--card-border); padding-bottom: 12px;">
+                        <div class="jp-sentence">${ex.japanese}</div>
+                        <p style="color:var(--text-muted); margin: 4px 0 0 0;">${ex.translation}</p>
+                    </div>
+                `).join('')}</div>
+
+                ${renderConnections(card)}
+                
+                <div class="tags-container" style="margin-top:20px;">
+                    ${card.tags ? card.tags.map(tag => `<span class="tag">#${tag}</span>`).join('') : ''}
+                </div>
+            </div>
+        `;
+        window.scrollTo(0, 0);
+    }
+
+    function renderConnections(card) {
+        if (!card.connections) return '';
+        let html = '';
+        
+        const hasConfusions = card.connections.confusions && card.connections.confusions.length > 0;
+        const hasSynonyms = card.connections.synonyms && card.connections.synonyms.length > 0;
+
+        if (hasConfusions || hasSynonyms) {
+            html += '<div style="margin-top:24px; border-top:1px dashed var(--card-border); padding-top:10px;"><h4>Liens</h4>';
             
-            if (card.connections.confusions?.length) {
-                html += `<div style="margin-bottom:12px;"><div style="font-size:12px; font-weight:700; color:var(--text-muted);">Confusions :</div>
+            if (hasConfusions) {
+                html += `<div style="margin-bottom:12px;"><div style="font-size:12px; font-weight:700; color:var(--text-muted); margin-bottom:5px;">⚠️ À ne pas confondre avec :</div>
                 ${card.connections.confusions.map(c => `
                     <button class="connection-link" onclick="showDetailView('${c.target_id}')">${getTitleById(c.target_id)}</button>
-                    <p style="font-size:13px; margin: 4px 0 8px 4px;">${c.explanation}</p>
+                    <p style="font-size:13px; margin: 0 0 10px 4px; line-height:1.4;">${c.explanation}</p>
                 `).join('')}</div>`;
             }
             
-            if (card.connections.synonyms?.length) {
-                html += `<div><div style="font-size:12px; font-weight:700; color:var(--text-muted);">Synonymes :</div>
+            if (hasSynonyms) {
+                html += `<div><div style="font-size:12px; font-weight:700; color:var(--text-muted); margin-bottom:5px;">🔄 Synonymes / Proches :</div>
                 ${card.connections.synonyms.map(s => `
                     <button class="connection-link" onclick="showDetailView('${s.target_id}')">${getTitleById(s.target_id)}</button>
-                    <p style="font-size:13px; margin: 4px 0 8px 4px;">${s.explanation}</p>
+                    <p style="font-size:13px; margin: 0 0 10px 4px; line-height:1.4;">${s.explanation}</p>
                 `).join('')}</div>`;
             }
-            return html + '</div>';
+            html += '</div>';
         }
-    </script>
+        return html;
+    }
+</script>
 </body>
 </html>
