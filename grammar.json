@@ -920,5 +920,800 @@
 ]
 },
 "tags": ["temps", "simultanéité", "instantanéité"]
-}
+},
+{
+    "id": "saichuu-da",
+    "title": "～最中に / ～最中だ",
+    "level": "N2",
+    "meaning": "Au beau milieu de / En plein milieu de",
+    "construction": {
+      "動詞": "ている形 + 最中に",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": "名詞 + の最中に"
+    },
+    "nuance": "Indique qu'une action est en cours de réalisation (souvent sur une période relativement courte) lorsqu'un événement inattendu survient et l'interrompt ou la perturbe.",
+    "warnings": [
+      "La proposition qui suit exprime souvent un événement gênant ou une surprise (ex: il s'est mis à pleuvoir).",
+      "S'utilise pour des actions avec une certaine durée mais perçues comme ponctuelles (examen, repas, discours)."
+    ],
+    "examples": [
+      {
+        "japanese": "浜辺でバーベキューをやっている最中に、急に雨が降り出した。",
+        "translation": "En plein milieu de notre barbecue sur la plage, la pluie s'est mise à tomber soudainement."
+      },
+      {
+        "japanese": "スピーチの最中に、突然電気が消えた。",
+        "translation": "Au beau milieu du discours, l'électricité s'est brusquement coupée."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "aida-ni",
+          "explanation": "« Aida ni » est neutre et temporel, alors que « Saichuu ni » insiste sur l'intensité du moment et l'aspect perturbateur de l'interruption."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["temps", "interruption", "aspect"]
+  },
+  {
+    "id": "uchi-ni-a",
+    "title": "～うちに (A - Opportunité)",
+    "level": "N2",
+    "meaning": "Tant que / Avant que",
+    "construction": {
+      "動詞": "辞書形 / ている形 / ない形 + うちに",
+      "い形容詞": "い形容詞 + うちに",
+      "な形容詞": "な形容詞 + なうちに",
+      "名詞": "名詞 + のうちに"
+    },
+    "nuance": "Action volontaire effectuée avant qu'un changement de situation ne rende la chose difficile ou impossible. On profite d'un état actuel limité dans le temps.",
+    "warnings": [
+      "La proposition principale exprime une action intentionnelle ou une volonté du locuteur.",
+      "S'utilise avec des expressions de durée ou d'état (pendant que je suis étudiant, tant qu'il fait chaud)."
+    ],
+    "examples": [
+      {
+        "japanese": "家事は、子供が眠っているうちに、全部やってしまった。",
+        "translation": "J'ai fini toutes les tâches ménagères tant que les enfants dormaient."
+      },
+      {
+        "japanese": "忘れないうちに、カレンダーにメモしておこう。",
+        "translation": "Notons-le dans le calendrier avant d'oublier."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["temps", "opportunité", "volontaire"]
+  },
+  {
+    "id": "uchi-ni-b",
+    "title": "～うちに (B - Changement)",
+    "level": "N2",
+    "meaning": "Pendant que / À force de (changement naturel)",
+    "construction": {
+      "動詞": "辞書形 / ている形 / ない形 + うちに",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": ""
+    },
+    "nuance": "Pendant qu'une action se prolonge, un changement non intentionnel se produit naturellement ou sans que le locuteur ne s'en aperçoive au début.",
+    "warnings": [
+      "La proposition principale ne contient pas de volonté ou d'intention.",
+      "Met l'accent sur l'évolution d'un état au cours du temps."
+    ],
+    "examples": [
+      {
+        "japanese": "知らないうちに、雨が降り始めていた。",
+        "translation": "Sans que je m'en aperçoive, la pluie avait commencé à tomber."
+      },
+      {
+        "japanese": "この携帯電話は、長い間使っているうちに、もう自分の体の一部のようになった。",
+        "translation": "À force d'utiliser ce téléphone portable depuis longtemps, il est devenu comme une partie de mon corps."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["temps", "changement progressif", "involontaire"]
+  },
+  {
+    "id": "bakari-da-ippou-da",
+    "title": "～ばかりだ・～一方だ",
+    "level": "N2",
+    "meaning": "Ne pas cesser de / Continuer à (tendance unique)",
+    "construction": {
+      "動詞": "辞書形 + ばかりだ / 一方だ",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": ""
+    },
+    "nuance": "Indique qu'une situation évolue de façon continue dans une seule et même direction. « ばかりだ » est plus souvent utilisé pour des évolutions jugées négatives.",
+    "warnings": [
+      "S'utilise uniquement avec des verbes exprimant un changement (augmenter, diminuer, empirer).",
+      "Ne peut pas être utilisé pour des actions ponctuelles."
+    ],
+    "examples": [
+      {
+        "japanese": "一度問題が起きてから、彼との人間関係は悪くなる一方だ。",
+        "translation": "Depuis qu'un problème est survenu, ma relation avec lui ne fait que se dégrader."
+      },
+      {
+        "japanese": "このごろは仕事が多くて残業が増えるばかりだ。",
+        "translation": "Ces derniers temps, il y a tellement de travail que les heures supplémentaires ne font qu'augmenter."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": [
+        {
+          "target_id": "tsutsu-aru",
+          "explanation": "« Tsutsu aru » décrit un processus en cours de façon neutre, alors que « Bakari da » insiste sur la fatalité ou la force de la tendance (souvent négative)."
+        }
+      ]
+    },
+    "tags": ["changement", "progression", "négatif"]
+  },
+  {
+    "id": "you-to-shite-iru",
+    "title": "～（よ）うとしている",
+    "level": "N2",
+    "meaning": "Être sur le point de",
+    "construction": {
+      "動詞": "意向形 (volitif) + としている",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": ""
+    },
+    "nuance": "Exprime qu'un changement ou une action est sur le point de se produire de manière imminente. Registre de langue soutenu ou descriptif.",
+    "warnings": [
+      "S'emploie avec des verbes exprimant un changement instantané ou le début/fin d'un processus (commencer, s'ouvrir, fleurir).",
+      "Ne décrit pas l'intention personnelle du locuteur dans la vie courante, mais plutôt un constat sur une situation."
+    ],
+    "examples": [
+      {
+        "japanese": "さあ、決勝戦が今、始まろうとしています。みんな緊張しています。",
+        "translation": "Et voilà, la finale est sur le point de commencer. Tout le monde est tendu."
+      },
+      {
+        "japanese": "桜が満開になろうとしているとき、雪が降った。",
+        "translation": "La neige est tombée alors que les cerisiers étaient sur le point d'être en pleine floraison."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "tokoro-da",
+          "explanation": "« Tokoro da » s'utilise pour des actions quotidiennes immédiates, tandis que « (yo)u to shite iru » est plus formel et souvent utilisé pour des phénomènes naturels ou des événements publics."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["aspect", "immédiateté", "formel"]
+  },
+  {
+    "id": "tsutsu-aru",
+    "title": "～つつある",
+    "level": "N2",
+    "meaning": "Être en train de (processus en cours)",
+    "construction": {
+      "動詞": "ます形 (base) + つつある",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": ""
+    },
+    "nuance": "Indique qu'un changement est en cours de progression constante. C'est une expression formelle typique du langage écrit ou des reportages.",
+    "warnings": [
+      "Le verbe doit exprimer une évolution graduelle (se réchauffer, se moderniser, s'étendre).",
+      "Ne s'utilise pas pour des actions simples du quotidien (manger, lire)."
+    ],
+    "examples": [
+      {
+        "japanese": "次第に暖かくなりつつあります。春はもうすぐです。",
+        "translation": "Il commence à faire de plus en plus doux. Le printemps approche."
+      },
+      {
+        "japanese": "明治時代の初め、日本は急速に近代化しつつあった。",
+        "translation": "Au début de l'ère Meiji, le Japon était en train de se moderniser rapidement."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": [
+        {
+          "target_id": "te-iru",
+          "explanation": "« Te iru » est neutre. « Tsutsu aru » souligne le mouvement de progression vers un nouvel état."
+        }
+      ]
+    },
+    "tags": ["changement progressif", "formel", "aspect"]
+  },
+  {
+    "id": "tsutsu",
+    "title": "～つつ",
+    "level": "N2",
+    "meaning": "Tout en / En même temps que",
+    "construction": {
+      "動詞": "ます形 (base) + つつ",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": ""
+    },
+    "nuance": "Exprime la réalisation simultanée de deux actions sur une certaine durée. Équivalent formel et soutenu de « ～ながら ».",
+    "warnings": [
+      "Le sujet de la proposition A et de la proposition B doit obligatoirement être le même.",
+      "S'utilise avec des verbes impliquant une certaine durée de temps (réfléchir, expérimenter)."
+    ],
+    "examples": [
+      {
+        "japanese": "将来の仕事のこと、お金のことなどを考えつつ、進路を選ばなければならない。",
+        "translation": "Je dois choisir mon orientation tout en réfléchissant à mon futur métier, aux questions d'argent, etc."
+      },
+      {
+        "japanese": "いろいろな体験を楽しみつつ、日本の生活に慣れていった。",
+        "translation": "Je me suis habitué à la vie au Japon tout en profitant de diverses expériences."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "nagara",
+          "explanation": "« Nagara » est la forme standard et orale. « Tsutsu » est littéraire et formel."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["simultanéité", "formel", "durée"]
+  },
+  {
+    "id": "te-hajimete",
+    "title": "～てはじめて",
+    "level": "N2",
+    "meaning": "Ce n'est qu'après avoir... que / Seulement après...",
+    "construction": {
+      "動詞": "て形 + はじめて",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": ""
+    },
+    "nuance": "Indique qu'une chose nouvelle se produit, ou qu'on réalise enfin quelque chose, suite à une expérience ou un changement d'état spécifique qui ne s'était pas produit auparavant.",
+    "warnings": [
+      "La proposition principale exprime souvent une réalisation (気がつく), un changement ou un fait qui devient possible.",
+      "Ne s'utilise pas pour de simples successions d'actions sans prise de conscience."
+    ],
+    "examples": [
+      {
+        "japanese": "実際に現地の様子を見てはじめて、今回の地震のひどさを知った。",
+        "translation": "Ce n'est qu'après avoir vu l'état des lieux de mes propres yeux que j'ai réalisé la gravité de ce séisme."
+      },
+      {
+        "japanese": "相手の話の途中で話を始めるくせがあると、人に言われてはじめて気がついた。",
+        "translation": "C'est seulement quand on me l'a fait remarquer que j'ai réalisé que j'avais l'habitude de couper la parole aux gens."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["temps", "réalisation", "expérience"]
+  },
+  {
+    "id": "ue-de",
+    "title": "～上で",
+    "level": "N2",
+    "meaning": "Après avoir... (condition préalable)",
+    "construction": {
+      "動詞": "た形 + 上で",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": "名詞 + の + 上で"
+    },
+    "nuance": "Indique qu'une action A est une préparation indispensable avant de passer à l'action B. C'est une tournure formelle utilisée pour des décisions ou des processus logiques.",
+    "warnings": [
+      "Le sujet doit être le même pour les deux propositions.",
+      "L'action qui suit (B) doit être une action volontaire découlant du résultat de A.",
+      "Ne s'utilise pas pour des actions quotidiennes évidentes (ex: 'après avoir mangé, j'ai dormi')."
+    ],
+    "examples": [
+      {
+        "japanese": "自分一人では決められませんので、家族と相談した上で、お返事をいたします。",
+        "translation": "Ne pouvant décider seul, je vous donnerai une réponse après en avoir discuté avec ma famille."
+      },
+      {
+        "japanese": "文書が保存されていることを確かめた上で、パソコンをシャットダウンしてください。",
+        "translation": "Veuillez éteindre l'ordinateur après avoir vérifié que le document est bien enregistré."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "te-kara",
+          "explanation": "« Te kara » exprime une simple succession temporelle, alors que « Ue de » insiste sur la nécessité de l'étape préalable pour la suite du processus."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["temps", "préparation", "formel"]
+  },
+  {
+    "id": "shidai",
+    "title": "～次第",
+    "level": "N2",
+    "meaning": "Dès que / Aussitôt que (formel)",
+    "construction": {
+      "動詞": "ます形 (base) + 次第",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": ""
+    },
+    "nuance": "S'utilise pour dire qu'une action sera effectuée immédiatement après qu'une condition (dont la réalisation est certaine avec le temps) soit remplie. Très courant dans le milieu professionnel.",
+    "warnings": [
+      "La proposition principale exprime souvent une intention, une volonté ou une demande du locuteur.",
+      "On ne l'utilise pas pour des faits passés."
+    ],
+    "examples": [
+      {
+        "japanese": "詳しいことがわかり次第、ご連絡いたします。",
+        "translation": "Je vous contacterai dès que j'aurai plus de détails."
+      },
+      {
+        "japanese": "会場の準備ができ次第、ご案内いたします。",
+        "translation": "Nous vous ferons entrer dès que la salle sera prête."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "ta-totan",
+          "explanation": "« Ta totan » exprime une surprise face à un événement passé soudain, tandis que « Shidai » est tourné vers une action future planifiée dès qu'une condition est remplie."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["temps", "immédiateté", "professionnel"]
+  },
+  {
+    "id": "irai-te-konokata",
+    "title": "～以来・～てこのかた",
+    "level": "N2",
+    "meaning": "Depuis que / Depuis lors",
+    "construction": {
+      "動詞": "て形 + 以来 / このかた",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": "名詞 + 以来"
+    },
+    "nuance": "Indique qu'un état ou une situation a commencé à un moment précis du passé et s'est poursuivi sans interruption jusqu'à aujourd'hui. « てこのかた » est plus emphatique et formel.",
+    "warnings": [
+      "Ne s'utilise pas pour un passé très récent (ex: hier).",
+      "La proposition principale doit décrire un état continu, pas une action ponctuelle future."
+    ],
+    "examples": [
+      {
+        "japanese": "子供が生まれて以来、外で酒を飲んでいない。",
+        "translation": "Depuis que mon enfant est né, je n'ai plus bu d'alcool à l'extérieur."
+      },
+      {
+        "japanese": "日本から帰国してこのかた、毎日日本のことを思い出している。",
+        "translation": "Depuis mon retour du Japon, il ne se passe pas un jour sans que je repense à ce pays."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "te-kara",
+          "explanation": "« Te kara » exprime simplement le point de départ, tandis que « Irai » insiste sur la continuité ininterrompue de l'état depuis ce point."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["temps", "continuité", "durée"]
+  },
+  {
+    "id": "te-kara-denaito",
+    "title": "～てからでないと・～てからでなければ",
+    "level": "N2",
+    "meaning": "À moins de... / Tant que... n'est pas fait",
+    "construction": {
+      "動詞": "て形 + からでないと / からでなければ",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": ""
+    },
+    "nuance": "Indique qu'une condition préalable est absolument obligatoire. Si elle n'est pas remplie, l'action ou l'état de la proposition principale ne peut pas se réaliser.",
+    "warnings": [
+      "La proposition principale est presque toujours à la forme négative ou exprime une impossibilité/difficulté (ex: 無理だ, できない)."
+    ],
+    "examples": [
+      {
+        "japanese": "もっと情報を集めてからでないと、その話が本当かどうか判断できない。",
+        "translation": "À moins de recueillir plus d'informations, il est impossible de juger si cette histoire est vraie ou non."
+      },
+      {
+        "japanese": "この電車は車内の清掃が済んでからでないと、ご乗車になれません。",
+        "translation": "Tant que le nettoyage intérieur n'est pas terminé, vous ne pouvez pas monter dans ce train."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["condition", "nécessité", "négation"]
+  },
+  {
+    "id": "wo-hajime-to-shite",
+    "title": "～をはじめ（として）",
+    "level": "N2",
+    "meaning": "À commencer par / Notamment",
+    "construction": {
+      "動詞": "",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": "名詞 + をはじめ（として） / 名詞 + をはじめとする + 名詞"
+    },
+    "nuance": "Permet d'introduire un exemple représentatif parmi un ensemble plus large. C'est une expression formelle (硬い言い方).",
+    "warnings": [
+      "Le nom qui suit l'expression représente généralement l'ensemble ou la catégorie dont l'exemple fait partie.",
+      "Utiliser la forme « をはじめとする + 名詞 » pour qualifier directement un nom."
+    ],
+    "examples": [
+      {
+        "japanese": "この体育館では水泳をはじめ、いろいろなスポーツが楽しめる。",
+        "translation": "Dans ce gymnase, on peut pratiquer divers sports, à commencer par la natation."
+      },
+      {
+        "japanese": "このあたりには、市役所をはじめとする市の公共の建物が多い。",
+        "translation": "Dans les environs, il y a beaucoup de bâtiments publics municipaux, notamment la mairie."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["énumération", "exemple", "formel"]
+  },
+  {
+    "id": "kara-shite",
+    "title": "～からして",
+    "level": "N2",
+    "meaning": "Rien que par / À en juger par (un détail)",
+    "construction": {
+      "動詞": "",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": "名詞 + からして"
+    },
+    "nuance": "Indique qu'en prenant un seul exemple (souvent un détail ou un point non essentiel), on peut déjà juger que l'ensemble est de la même nature. Souvent utilisé pour des critiques négatives.",
+    "warnings": [
+      "Le locuteur souligne un point particulier pour suggérer que le reste est à l'avenant.",
+      "Est presque toujours suivi d'une évaluation ou d'un jugement (souvent négatif)."
+    ],
+    "examples": [
+      {
+        "japanese": "この旅行の計画には無理がある。出発時間からして早すぎる。",
+        "translation": "Ce projet de voyage n'est pas réaliste. Rien que l'heure de départ est déjà bien trop tôt."
+      },
+      {
+        "japanese": "さすがプロの選手は走り方からしてわたしたちとは違う。",
+        "translation": "Comme on pouvait s'y attendre de la part d'un pro, rien que sa façon de courir est différente de la nôtre."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["jugement", "exemple", "critique"]
+  },
+  {
+    "id": "ni-watatte",
+    "title": "～にわたって",
+    "level": "N2",
+    "meaning": "Sur tout / À travers (étendue)",
+    "construction": {
+      "動詞": "",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": "名詞 + にわたって / 名詞 + にわたる + 名詞"
+    },
+    "nuance": "Exprime le fait qu'une situation s'étend sur une vaste échelle d'espace, de temps, de nombre de fois ou de domaine.",
+    "warnings": [
+      "S'utilise avec des mots exprimant une mesure ou une étendue (ex: 20km, 3 jours, divers genres).",
+      "Utiliser « にわたる + 名詞 » pour qualifier un nom."
+    ],
+    "examples": [
+      {
+        "japanese": "連休の最終日、高速道路は20キロにわたって渋滞が続いた。",
+        "translation": "Le dernier jour des vacances, les embouteillages sur l'autoroute se sont étendus sur 20 kilomètres."
+      },
+      {
+        "japanese": "彼はいろいろなジャンルにわたり、たくさんの本を読んでいる。",
+        "translation": "Il lit énormément de livres à travers des genres très variés."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["étendue", "temps", "espace"]
+  },
+  {
+    "id": "wo-tsuujite-a",
+    "title": "～を通じて・～を通して (A)",
+    "level": "N2",
+    "meaning": "Tout au long de / Pendant tout le temps de",
+    "construction": {
+      "動詞": "",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": "名詞 + を通じて / を通して"
+    },
+    "nuance": "Indique qu'une situation reste identique ou continue durant toute une période de temps relativement longue.",
+    "warnings": [
+      "S'attache à des mots exprimant une durée (ex: les quatre saisons, 10 ans, période d'emploi).",
+      "La proposition qui suit décrit un état ou une action qui dure."
+    ],
+    "examples": [
+      {
+        "japanese": "この町には四季を通じて観光客が訪れる。",
+        "translation": "Des touristes visitent cette ville tout au long de l'année (à travers les quatre saisons)."
+      },
+      {
+        "japanese": "この10年間を通し、彼はいつも新しいことに挑戦していた。",
+        "translation": "Durant ces dix dernières années, il a toujours relevé de nouveaux défis."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["temps", "durée", "continuité"]
+  },
+  {
+    "id": "wo-tsuujite-b",
+    "title": "～を通じて・～を通して (B)",
+    "level": "N2",
+    "meaning": "Par l'intermédiaire de / Via",
+    "construction": {
+      "動詞": "",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": "名詞 + を通じて / を通して"
+    },
+    "nuance": "Indique le moyen ou l'intermédiaire par lequel on réalise quelque chose. Il ne s'agit pas d'un outil physique direct, mais d'un canal ou d'une médiation.",
+    "warnings": [
+      "Ne s'utilise pas pour des outils concrets et directs (ex: on n'utilise pas cette forme pour dire 'manger avec des baguettes').",
+      "S'applique à des médias, des activités ou des personnes servant de relais."
+    ],
+    "examples": [
+      {
+        "japanese": "今日では、インターネットを通じて世界中の情報が手に入る。",
+        "translation": "De nos jours, on peut obtenir des informations du monde entier via Internet."
+      },
+      {
+        "japanese": "わたしたちは、ボランティア活動を通して、いろいろな国の人たちと交流を深めている。",
+        "translation": "À travers nos activités de bénévolat, nous approfondissons nos échanges avec des personnes de divers pays."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["moyen", "intermédiaire", "méthode"]
+  },
+  {
+    "id": "kagiri",
+    "title": "～限り",
+    "level": "N2",
+    "meaning": "Autant que / Dans la limite de",
+    "construction": {
+      "動詞": "辞書形 / ている形 + 限り",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": "名詞 + の + 限り"
+    },
+    "nuance": "Signifie faire tout ce qui est possible dans les limites de ses capacités, de ses connaissances ou d'une situation donnée.",
+    "warnings": [
+      "S'utilise souvent avec des verbes au potentiel (できる) ou exprimant un état continu (ている).",
+      "Indique l'utilisation totale d'une ressource (ex: 力の限り = de toutes ses forces)."
+    ],
+    "examples": [
+      {
+        "japanese": "環境を守るためにわたしもできる限りのことをしたい。",
+        "translation": "Je veux faire tout mon possible (dans la limite de ce que je peux faire) pour protéger l'environnement."
+      },
+      {
+        "japanese": "あしたはいよいよ試合だ。力の限り頑張ろう。",
+        "translation": "C'est enfin le match demain. Donnons-nous à fond, de toutes nos forces."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["limite", "effort", "capacité"]
+  },
+  {
+    "id": "dake",
+    "title": "～だけ",
+    "level": "N2",
+    "meaning": "Autant que / Tout son saoul",
+    "construction": {
+      "動詞": "辞書形 + だけ",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": ""
+    },
+    "nuance": "Indique la limite maximale d'une action, souvent liée au désir ou à la capacité. On fait l'action jusqu'à ce qu'on ne puisse plus ou qu'on n'en ait plus envie.",
+    "warnings": [
+      "S'utilise fréquemment avec des verbes au potentiel ou des expressions de désir (～たい, 欲しい, 好きな).",
+      "On répète souvent le même verbe avant et après (ex: 食べるだけ食べる)."
+    ],
+    "examples": [
+      {
+        "japanese": "ここにあるダンボールを、車に積めるだけ積んで持って帰ってください。",
+        "translation": "Chargez autant de cartons qu'il est possible d'en mettre dans la voiture et emportez-les."
+      },
+      {
+        "japanese": "今日は部長に言いたいだけの不満を全部言って、すっきりした。",
+        "translation": "Aujourd'hui, j'ai déballé au directeur tous les griefs que j'avais sur le cœur, ça m'a soulagé."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["limite", "désir", "capacité"]
+  },
+  {
+    "id": "ni-kagiri",
+    "title": "～に限り",
+    "level": "N2",
+    "meaning": "Uniquement pour / Exceptionnellement pour",
+    "construction": {
+      "動詞": "",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": "名詞 + に限り"
+    },
+    "nuance": "Indique une exception limitée à un groupe, un lieu ou une circonstance spécifique. C'est une expression formelle (langage public ou administratif).",
+    "warnings": [
+      "S'utilise pour annoncer des règles ou des exceptions officielles.",
+      "La phrase ne se termine généralement pas par une forme négative ou une incitation à l'action."
+    ],
+    "examples": [
+      {
+        "japanese": "こちらのちらしをご持参のお客様に限り、すべての商品を1割引でお買い求めいただけます。",
+        "translation": "Uniquement pour les clients munis de ce prospectus, tous les articles bénéficient d'une réduction de 10 %."
+      },
+      {
+        "japanese": "欠席理由が正当な場合に限り出席扱いをしますが、それ以外の欠席は認めません。",
+        "translation": "Nous ne comptabiliserons l'absence comme une présence que dans les cas où le motif est légitime ; les autres absences ne seront pas acceptées."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "ni-kagitte",
+          "explanation": "« Ni kagiri » est une règle d'exception objective, tandis que « Ni kagitte » exprime souvent un sentiment subjectif (malchance ou confiance)."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["limite", "exception", "formel"]
+  },
+  {
+    "id": "kagiri-wa",
+    "title": "～限り（は）",
+    "level": "N2",
+    "meaning": "Tant que / Aussi longtemps que",
+    "construction": {
+      "動詞": "普通形現在 + 限り（は）",
+      "い形容詞": "普通形現在 + 限り（は）",
+      "な形容詞": "な形容詞 + な/である + 限り（は）",
+      "名詞": "名詞 + である + 限り（は）"
+    },
+    "nuance": "Indique que tant qu'un état ou une condition persiste, la situation décrite dans la proposition principale reste inchangée.",
+    "warnings": [
+      "Les deux propositions doivent exprimer un état ou une situation continue.",
+      "La proposition principale ne peut pas être au passé."
+    ],
+    "examples": [
+      {
+        "japanese": "社長が考え方を変えない限りは、この会社は何も変わらないのではないか。",
+        "translation": "Tant que le PDG ne changera pas sa façon de penser, rien ne changera dans cette entreprise, n'est-ce pas ?"
+      },
+      {
+        "japanese": "足が丈夫な限り、まだまだ山登りが楽しめるだろう。",
+        "translation": "Tant que mes jambes resteront solides, je pourrai encore profiter de l'alpinisme."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "kagiri-de-wa",
+          "explanation": "« Kagiri wa » porte sur la durée d'une condition, alors que « Kagiri de wa » restreint la validité d'une affirmation à une source d'information."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["condition", "continuité", "temps"]
+  },
+  {
+    "id": "kagiri-de-wa",
+    "title": "～限りでは",
+    "level": "N2",
+    "meaning": "Pour autant que / D'après",
+    "construction": {
+      "動詞": "辞書形 / た形 + 限りでは",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": "名詞 + の + 限りでは"
+    },
+    "nuance": "Restreint la validité d'un jugement ou d'une information à la portée des connaissances ou des sources du locuteur (ce qu'il a vu, entendu ou étudié).",
+    "warnings": [
+      "S'utilise avec des verbes liés à l'acquisition d'information (見る, 聞く, 覚えている, 知っている, 調査など).",
+      "La proposition principale exprime un jugement ou un fait constaté."
+    ],
+    "examples": [
+      {
+        "japanese": "今回の調査の限りでは、書類にミスはなかった。",
+        "translation": "Pour autant que cette enquête permette d'en juger, il n'y avait pas d'erreurs dans les documents."
+      },
+      {
+        "japanese": "わたしが知っている限りでは、この近所に花屋はありません。",
+        "translation": "Pour autant que je sache, il n'y a pas de fleuriste dans les environs."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["limite", "information", "jugement"]
+  },
+  {
+    "id": "ni-kagitte",
+    "title": "～に限って",
+    "level": "N2",
+    "meaning": "Justement / Particulièrement",
+    "construction": {
+      "動詞": "",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": "名詞 + に限って"
+    },
+    "nuance": "Possède trois nuances : A) Exception à l'habitude (juste ce jour-là). B) Mauvais timing / Malchance (pile quand il ne fallait pas). C) Confiance absolue (S'il y a bien quelqu'un qui ne ferait pas ça, c'est...).",
+    "warnings": [
+      "Dans le sens B, exprime souvent le mécontentement ou la frustration du locuteur.",
+      "Dans le sens C, il est souvent suivi d'une structure négative exprimant une certitude (～はずはない)."
+    ],
+    "examples": [
+      {
+        "japanese": "ふだん酒などあまり飲まない彼が、今日に限ってかなり飲んだ。",
+        "translation": "Lui qui ne boit d'ordinaire pas beaucoup d'alcool, il a justement pas mal bu aujourd'hui."
+      },
+      {
+        "japanese": "今日は大切な用事があったのに、こんな時に限って子供が熱を出してしまった。",
+        "translation": "Alors que j'avais quelque chose d'important à faire aujourd'hui, il a fallu que mon enfant tombe malade pile à ce moment-là."
+      },
+      {
+        "japanese": "うちの子に限って友達をいじめることはないと思いますが……。",
+        "translation": "S'il y a bien une chose dont je suis sûre, c'est que mon enfant ne martyriserait jamais ses amis, mais..."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "ni-kagiri",
+          "explanation": "« Ni kagiri » est une règle objective, alors que « Ni kagitte » souligne une coïncidence ou un sentiment personnel."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["subjectif", "exception", "malchance", "confiance"]
+  }
 ]
