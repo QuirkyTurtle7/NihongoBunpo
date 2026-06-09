@@ -122,14 +122,25 @@
     let filterLevel = "all";
     let searchQuery = "";
 
-    const labels = { pattern: "Grammaire", vocabulary: "Vocabulaire", conjugation: "Conjugaison", keigo: "Keigo" };
+    const labels = { 
+        pattern: "Grammaire", 
+        vocabulary: "Vocabulaire", 
+        conjugation: "Conjugaison", 
+        keigo: "Keigo" 
+    };
 
-    fetch('grammar.json').then(r => r.json()).then(data => {
-        grammarData = data;
-        renderList();
-    });
+    // Chargement des données
+    fetch('grammar.json')
+        .then(r => r.json())
+        .then(data => {
+            grammarData = data;
+            renderList();
+        })
+        .catch(err => {
+            console.error("Erreur de chargement du JSON :", err);
+        });
 
-    // Gestion des filtres
+    // Écouteurs pour les filtres de type
     document.querySelectorAll('#type-filters .chip').forEach(chip => {
         chip.addEventListener('click', () => {
             document.querySelectorAll('#type-filters .chip').forEach(c => c.classList.remove('active'));
@@ -139,6 +150,7 @@
         });
     });
 
+    // Écouteurs pour les filtres de niveau
     document.querySelectorAll('#level-filters .chip').forEach(chip => {
         if(chip.dataset.val) {
             chip.addEventListener('click', () => {
@@ -150,8 +162,9 @@
         }
     });
 
+    // Écouteur pour la recherche
     document.getElementById('search').addEventListener('input', (e) => {
-        searchQuery = e.target.value.toLowerCase();
+        searchQuery = e.target.value.toLowerCase().trim();
         renderList();
     });
 
@@ -165,25 +178,24 @@
         header.style.display = "block";
 
         const filtered = grammarData.filter(item => {
-            // On récupère toutes les données de recherche
             const type = (item.type || "").toLowerCase();
             const level = (item.level || "").toUpperCase();
             const title = (item.title || "").toLowerCase();
             const meaning = (item.meaning || "").toLowerCase();
             const tags = (item.tags || []).join(" ").toLowerCase();
             
-            // NOUVEAU : On inclut l'ID et un champ romaji caché
-            const id = (item.id || "").toLowerCase().replace(/-/g, ""); // "uchi-ni" devient "uchini"
+            // Recherche Romaji via ID et champ romaji
+            const idClean = (item.id || "").toLowerCase().replace(/-/g, "");
             const romaji = (item.romaji || "").toLowerCase();
+            const queryClean = searchQuery.replace(/[-\s]/g, "");
 
             const matchesType = filterType === "all" || type === filterType;
             const matchesLevel = filterLevel === "all" || level.includes(filterLevel);
             
-            // La recherche regarde maintenant partout
             const matchesSearch = title.includes(searchQuery) || 
                                  meaning.includes(searchQuery) || 
                                  tags.includes(searchQuery) ||
-                                 id.includes(searchQuery.replace(/\s/g, "")) || // permet de taper "uchini" pour "uchi-ni"
+                                 idClean.includes(queryClean) ||
                                  romaji.includes(searchQuery);
 
             return matchesType && matchesLevel && matchesSearch;
@@ -230,47 +242,84 @@
         document.getElementById('detail-content').innerHTML = `
             <div class="detail-card">
                 <div class="card-header">
-                    <span class="type-tag" style="color: var(--color-${item.type})">${labels[item.type]}</span>
+                    <span class="type-tag" style="color: var(--color-${(item.type || 'pattern')})">
+                        ${labels[item.type] || item.type}
+                    </span>
                     <span class="lvl-tag">${item.level}</span>
                 </div>
                 <h1 style="margin: 10px 0 5px 0;">${item.title}</h1>
                 <p style="font-size: 18px; margin-bottom: 20px;">${item.meaning}</p>
                 
-                <p style="line-height: 1.6; opacity: 0.9;">${item.nuance}</p>
+                <p style="line-height: 1.6; opacity: 0.9;">${item.nuance || ""}</p>
                 
                 ${rows ? `<table class="construction-table">${rows}</table>` : ''}
                 
-                ${item.warnings?.length ? `<div class="warn-box"><strong>Attention :</strong><ul style="margin: 5px 0 0 15px; padding:0;">${item.warnings.map(w => `<li>${w}</li>`).join('')}</ul></div>` : ''}
+                ${item.warnings && item.warnings.length ? `
+                    <div class="warn-box">
+                        <strong>Attention :</strong>
+                        <ul style="margin: 5px 0 0 15px; padding:0;">
+                            ${item.warnings.map(w => `<li>${w}</li>`).join('')}
+                        </ul>
+                    </div>` : ''}
                 
                 <h4 style="margin: 25px 0 10px 0; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">Exemples</h4>
-                ${item.examples.map(ex => `
+                ${(item.examples || []).map(ex => `
                     <div style="margin-bottom: 15px; border-bottom: 1px solid var(--card-border); padding-bottom: 10px;">
                         <div class="jp-box">${ex.japanese}</div>
                         <div style="color: var(--text-muted); font-size: 14px;">${ex.translation}</div>
                     </div>
                 `).join('')}
 
-                ${renderConnections(item)}
+                <div id="connections-section">
+                    ${renderConnections(item)}
+                </div>
             </div>
         `;
         window.scrollTo(0,0);
     }
 
     function renderConnections(item) {
-        if(!item.connections) return "";
-        let h = "";
-        if(item.connections.confusions?.length) {
-            h += `<h4 style="margin: 20px 0 10px 0; font-size: 12px; color: var(--text-muted);">Confusions</h4>`;
-            item.connections.confusions.forEach(c => {
-                h += `<button class="link-btn" onclick="showDetail('${c.target_id}')">${c.target_id}</button>`;
-            });
+        if (!item.connections) return "";
+        
+        let html = "";
+        const confusions = item.connections.confusions || [];
+        const synonyms = item.connections.synonyms || [];
+
+        if (confusions.length > 0 || synonyms.length > 0) {
+            html += `<hr style="border:none; border-top:1px dashed var(--card-border); margin: 30px 0 20px 0;">`;
+            html += `<h3 style="margin-bottom:15px; font-size:16px;">Liens & Comparaisons</h3>`;
+
+            if (confusions.length > 0) {
+                html += `<div style="margin-bottom: 20px;">
+                            <p style="font-size: 12px; font-weight: bold; color: #ef4444; text-transform: uppercase; margin-bottom:8px;">⚠️ À ne pas confondre avec :</p>`;
+                confusions.forEach(c => {
+                    const target = grammarData.find(i => i.id === c.target_id);
+                    const title = target ? target.title : c.target_id;
+                    html += `<button class="link-btn" onclick="showDetail('${c.target_id}')">${title}</button>
+                             <p style="font-size: 13px; margin: 4px 0 12px 5px; opacity: 0.8;">${c.explanation}</p>`;
+                });
+                html += `</div>`;
+            }
+
+            if (synonyms.length > 0) {
+                html += `<div style="margin-bottom: 20px;">
+                            <p style="font-size: 12px; font-weight: bold; color: var(--color-pattern); text-transform: uppercase; margin-bottom:8px;">🔄 Synonymes / Proches :</p>`;
+                synonyms.forEach(s => {
+                    const target = grammarData.find(i => i.id === s.target_id);
+                    const title = target ? target.title : s.target_id;
+                    html += `<button class="link-btn" onclick="showDetail('${s.target_id}')">${title}</button>
+                             <p style="font-size: 13px; margin: 4px 0 12px 5px; opacity: 0.8;">${s.explanation}</p>`;
+                });
+                html += `</div>`;
+            }
         }
-        return h;
+        return html;
     }
 
     function closeDetail() { renderList(); }
 
     function showRandom() {
+        if(grammarData.length === 0) return;
         const randomItem = grammarData[Math.floor(Math.random() * grammarData.length)];
         showDetail(randomItem.id);
     }
