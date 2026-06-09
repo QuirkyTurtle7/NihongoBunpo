@@ -69,7 +69,6 @@
         .type-tag { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
         .lvl-tag { font-size: 11px; font-weight: 700; background: var(--card-border); padding: 2px 6px; border-radius: 4px; color: var(--text-main); }
         
-        /* FIX COULEUR : On force la couleur des titres pour le mode nuit */
         .title, h1, h2, h3, h4 { color: var(--text-title) !important; }
         .detail-card p, .detail-card div { color: var(--text-main); }
 
@@ -85,40 +84,33 @@
         .jp-box { background: var(--jp-bg); color: var(--jp-text) !important; padding: 8px 12px; border-radius: 8px; font-size: 18px; display: inline-block; margin-bottom: 6px; line-height: 1.4; font-weight: 600; }
         .warn-box { background: var(--warning-bg); border-left: 4px solid #ef4444; padding: 12px; margin: 15px 0; border-radius: 4px; font-size: 14px; }
         .link-btn { background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-main); padding: 5px 10px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; }
-    
-        /* Style pour le texte avec furigana */
-ruby {
-    ruby-align: center;
-    cursor: help; /* Indique que c'est cliquable */
-    padding: 0 2px;
-}
 
-/* On cache le furigana (rt) par défaut */
-rt {
-    user-select: none;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    font-size: 0.6em;
-    color: var(--color-pattern); /* Couleur émeraude pour le distinguer */
-}
-
-/* Quand on clique (classe .active ajoutée par JS), on l'affiche */
-ruby.active rt {
-    opacity: 1;
-}
-
-/* Optionnel : un petit indicateur sous les kanjis pour savoir qu'ils sont cliquables */
-ruby {
-    border-bottom: 1px dashed rgba(128, 128, 128, 0.3);
-}
+        /* --- STYLES FURIGANA --- */
+        ruby {
+            ruby-align: center;
+            cursor: pointer;
+            border-bottom: 1px dashed rgba(128, 128, 128, 0.2);
+        }
+        rt {
+            user-select: none;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            font-size: 0.55em;
+            color: var(--color-pattern);
+            line-height: 1.1;
+        }
+        /* Desktop: Affiche au survol */
+        @media (hover: hover) {
+            ruby:hover rt { opacity: 1; }
+        }
+        /* Mobile & Tablette: Affiche au clic (classe .active) */
+        ruby.active rt { opacity: 1; }
     </style>
 </head>
 <body>
 
 <header id="main-header">
-    <div class="header-container" id="header-content">
-        <!-- Rempli par le JS -->
-    </div>
+    <div class="header-container" id="header-content"></div>
 </header>
 
 <main>
@@ -129,12 +121,12 @@ ruby {
 </main>
 
 <script>
+    // Moteur Furigana [Kanji]{Furi}
     function formatFurigana(text) {
-    if (!text) return "";
-    // Cette regex cherche le pattern [Texte]{Furigana}
-    return text.replace(/\[([^\]]+)\]\{([^\}]+)\}/g, (match, kanji, furi) => {
-        return `<ruby onclick="this.classList.toggle('active'); event.stopPropagation();">${kanji}<rt>${furi}</rt></ruby>`;
-    });
+        if (!text) return "";
+        return text.replace(/\[([^\]]+)\]\{([^\}]+)\}/g, (match, kanji, furi) => {
+            return `<ruby onclick="this.classList.toggle('active'); event.stopPropagation();">${kanji}<rt>${furi}</rt></ruby>`;
+        });
     }
 
     let grammarData = [];
@@ -144,11 +136,9 @@ ruby {
 
     const labels = { pattern: "Grammaire", vocabulary: "Vocabulaire", conjugation: "Conjugaison", keigo: "Keigo" };
 
-    // Chargement et TRI
     fetch('grammar.json')
         .then(r => r.json())
         .then(data => {
-            // TRI JAPONAIS (A-I-U-E-O)
             grammarData = data.sort((a, b) => a.title.localeCompare(b.title, 'ja'));
             renderHeader();
             renderList();
@@ -167,9 +157,7 @@ ruby {
             </div>
             <div class="filter-scroll" id="level-filters">
                 <div class="chip ${filterLevel==='all'?'active':''}" onclick="updateFilter('level', 'all')">Tous niveaux</div>
-                ${['N1','N2','N3','N4','N5'].map(n => `
-                    <div class="chip ${filterLevel===n?'active':''}" onclick="updateFilter('level', '${n}')">${n}</div>
-                `).join('')}
+                ${['N1','N2','N3','N4','N5'].map(n => `<div class="chip ${filterLevel===n?'active':''}" onclick="updateFilter('level', '${n}')">${n}</div>`).join('')}
                 <div class="chip" style="color: var(--color-vocabulary)" onclick="showRandom()">🎲 Hasard</div>
             </div>
         `;
@@ -235,7 +223,7 @@ ruby {
 
         const rows = Object.entries(item.construction || {})
             .filter(([_, v]) => v)
-            .map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('');
+            .map(([k, v]) => `<tr><td>${k}</td><td>${formatFurigana(v)}</td></tr>`).join('');
 
         document.getElementById('detail-content').innerHTML = `
             <button class="back-btn" onclick="renderList()">← Retour à la liste</button>
@@ -244,9 +232,9 @@ ruby {
                     <span class="type-tag" style="color: var(--color-${item.type})">${labels[item.type]}</span>
                     <span class="lvl-tag">${item.level}</span>
                 </div>
-                <h1 style="margin: 10px 0 5px 0; color: var(--text-title) !important;">${formatFurigana(item.title)}</h1>
+                <h1 style="margin: 10px 0 5px 0;">${formatFurigana(item.title)}</h1>
                 <p style="font-size: 18px; margin-bottom: 20px; font-weight: 600;">${item.meaning}</p>
-                <p style="line-height: 1.6; margin-bottom: 20px;">${item.nuance || ""}</p>
+                <p style="line-height: 1.6; margin-bottom: 20px;">${formatFurigana(item.nuance || "")}</p>
                 
                 ${rows ? `<table class="construction-table">${rows}</table>` : ''}
                 
@@ -278,7 +266,7 @@ ruby {
                 html += `<p style="font-size: 12px; font-weight: bold; color: #ef4444; text-transform: uppercase;">⚠️ À ne pas confondre</p>`;
                 confusions.forEach(c => {
                     const t = grammarData.find(i => i.id === c.target_id);
-                    html += `<button class="link-btn" onclick="showDetail('${c.target_id}')">${t ? t.title : c.target_id}</button>
+                    html += `<button class="link-btn" onclick="showDetail('${c.target_id}')">${t ? formatFurigana(t.title) : c.target_id}</button>
                              <p style="font-size: 13px; margin: 4px 0 12px 5px; opacity: 0.8;">${c.explanation}</p>`;
                 });
             }
@@ -286,7 +274,7 @@ ruby {
                 html += `<p style="font-size: 12px; font-weight: bold; color: var(--color-pattern); text-transform: uppercase;">🔄 Synonymes</p>`;
                 synonyms.forEach(s => {
                     const t = grammarData.find(i => i.id === s.target_id);
-                    html += `<button class="link-btn" onclick="showDetail('${s.target_id}')">${t ? t.title : s.target_id}</button>
+                    html += `<button class="link-btn" onclick="showDetail('${s.target_id}')">${t ? formatFurigana(t.title) : s.target_id}</button>
                              <p style="font-size: 13px; margin: 4px 0 12px 5px; opacity: 0.8;">${s.explanation}</p>`;
                 });
             }
@@ -295,6 +283,7 @@ ruby {
     }
 
     function showRandom() {
+        if (grammarData.length === 0) return;
         const randomItem = grammarData[Math.floor(Math.random() * grammarData.length)];
         showDetail(randomItem.id);
     }

@@ -868,46 +868,52 @@
 "tags": ["temps", "instantanéité", "surprise"]
 },
 {
-"id": "ka-to-omou-to",
-"title": "～（か）と[思]{おも}うと・～（か）と[思]{おも}ったら",
-"type": "pattern",
-    "level": "N2",
-"meaning": "À peine... que déjà / Au moment même où l'on réalise que...",
-"construction": {
-"動詞": "た形 + （か）と[思]{おも}うと / （か）と[思]{おも}ったら",
-"い形容詞": "",
-"な形容詞": "",
-"名詞": ""
-},
-"nuance": "S'emploie pour décrire une situation où une action ou une transformation majeure succède de façon extrêmement rapide et surprenante à une première situation.",
-"warnings": [
-"On ne l'utilise jamais pour décrire une action volontaire effectuée par le locuteur lui-même.",
-"La conclusion de la phrase doit faire état d'un constat inattendu ; elle exclut l'expression de la volonté, du souhait ou d'une demande adressée à autrui."
-],
-"examples": [
-{
-"japanese": "林さんは部屋に入ってきたかと思うと、いきなり窓を全部開けた。",
-"translation": "À peine Monsieur Hayashi venait-il d'entrer dans la pièce qu'il a brusquement ouvert toutes les fenêtres."
-},
-{
-"japanese": "赤ちゃんは今泣いたかと思うと、もう笑っている。",
-"translation": "Le bébé pleurait à l'instant même, et le voilà déjà en train de rire."
-}
-],
-"connections": {
-"confusions": [],
-"synonyms": [
-{
-"target_id": "ta-totan",
-"explanation": "～たとたん s'applique généralement à des réactions plus mécaniques ou physiologiques immédiates, tandis que ～かと思うと exprime l'étonnement face au contraste de deux actions successives très rapprochées."
-},
-{
-"target_id": "ka-nai-ka-no-uchi-ni",
-"explanation": "～かないかのうちに accentue encore plus fortement la notion de quasi-coexistence temporelle parfaite entre la fin de A et le début de B."
-}
-]
-},
-"tags": ["temps", "rapidité", "changement", "contraste"]
+  "id": "ka-to-omou-to",
+  "romaji": "ka to omou to ka to omottara",
+  "title": "～（か）と[思]{おも}うと・～（か）と[思]{おも}ったら",
+  "type": "pattern",
+  "level": "N2",
+  "meaning": "À peine... que déjà / Au moment même où l'on réalise que...",
+  "construction": {
+    "動詞": "た[形]{けい} + （か）と[思]{おも}うと / （か）と[思]{おも}ったら",
+    "い形容詞": "",
+    "な形容詞": "",
+    "名詞": ""
+  },
+  "nuance": "S'emploie pour décrire une situation où une action ou une transformation majeure succède de façon extrêmement rapide et surprenante à une première situation.",
+  "warnings": [
+    "On ne l'utilise jamais pour décrire une action volontaire effectuée par le locuteur lui-même.",
+    "La conclusion de la phrase doit faire état d'un constat inattendu ; elle exclut l'expression de la volonté, du souhait ou d'une demande adressée à autrui."
+  ],
+  "examples": [
+    {
+      "japanese": "[林]{はやし}さんは[部屋]{へや}に[入]{はい}ってきたかと思ったら、いきなり[窓]{まど}を[全部]{ぜんぶ}[開]{あ}けた。",
+      "translation": "À peine Monsieur Hayashi venait-il d'entrer dans la pièce qu'il a brusquement ouvert toutes les fenêtres."
+    },
+    {
+      "japanese": "[赤]{あか}ちゃんは[今]{いま}[泣]{な}いたかと思ったら、もう[笑]{わら}っている。",
+      "translation": "Le bébé pleurait à l'instant même, et le voilà déjà en train de rire."
+    }
+  ],
+  "connections": {
+    "confusions": [],
+    "synonyms": [
+      {
+        "target_id": "ta-totan",
+        "explanation": "～たとたん s'applique généralement à des réactions plus mécaniques ou physiologiques immédiates, tandis que ～かと思うと exprime l'étonnement face au contraste de deux actions successives très rapprochées."
+      },
+      {
+        "target_id": "ka-nai-ka-no-uchi-ni",
+        "explanation": "～かないかのうちに accentue encore plus fortement la notion de quasi-coexistence temporelle parfaite entre la fin de A et le début de B."
+      }
+    ]
+  },
+  "tags": [
+    "temps",
+    "rapidité",
+    "changement",
+    "contraste"
+  ]
 },
 {
 "id": "ka-nai-ka-no-uchi-ni",
