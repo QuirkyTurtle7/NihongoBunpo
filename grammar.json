@@ -1,20 +1,21 @@
 [
-  {
+{
     "id": "uchi-ni-a",
-    "title": "～うちに (A)",
+    "title": "～うちに (A - Opportunité)",
     "type": "pattern",
-    "level": "N3",
-    "meaning": "Tant que / Avant que (pour une action volontaire)",
+    "level": "N3/N2",
+    "meaning": "Tant que / Avant que (Opportunité)",
     "construction": {
       "動詞": "辞書形 / ている形 / ない形 + うちに",
       "い形容詞": "い形容詞 + うちに",
       "な形容詞": "な形容詞 + なうちに",
       "名詞": "名詞 + のうちに"
     },
-    "nuance": "Indique qu'il faut accomplir une action volontaire pendant qu'une situation actuelle dure, car il sera trop tard ou difficile de le faire une fois que cette situation aura changé.",
+    "nuance": "Indique qu'il faut accomplir une action volontaire pendant qu'une situation actuelle dure (état, période ou durée), car il sera trop tard ou difficile de le faire une fois que cette situation aura changé. On profite d'une fenêtre d'opportunité.",
     "warnings": [
       "Exprime une action intentionnelle ou volontaire du locuteur dans la proposition principale.",
-      "Ne s'utilise pas si le changement de situation dépend de la volonté du locuteur."
+      "Ne s'utilise pas si le changement de situation (la limite) dépend de la volonté du locuteur.",
+      "S'utilise avec des expressions de durée ou d'état (ex: étudiant, beau temps, pendant qu'il dort)."
     ],
     "examples": [
       {
@@ -22,51 +23,50 @@
         "translation": "Tant que je suis au Japon, j'aimerais essayer de gravir le mont Fuji une fois."
       },
       {
+        "japanese": "家事は、子供が眠っているうちに、全部やってしまった。",
+        "translation": "J'ai fini toutes les tâches ménagères tant que les enfants dormaient."
+      },
+      {
         "japanese": "はい、アイスクリーム。溶けないうちに早く食べてくださいね。",
         "translation": "Tenez, la glace. Mangez-la vite avant qu'elle ne fonde."
       },
       {
-        "japanese": "明るいうちに庭の掃除をしてしまおう。",
-        "translation": "Profitons qu'il fasse encore jour pour finir de nettoyer le jardin."
+        "japanese": "忘れないうちに、カレンダーにメモしておこう。",
+        "translation": "Notons-le dans le calendrier avant d'oublier (pendant que la mémoire est fraîche)."
       }
     ],
-    "tags": [
-      "temps",
-      "limite",
-      "opportunité",
-      "volontaire"
-    ],
+    "tags": ["temps", "limite", "opportunité", "volontaire"],
     "connections": {
       "confusions": [
         {
           "target_id": "aida-ni",
-          "explanation": "« Aida ni » s'utilise pour une période de temps définie, alors que « Uchi ni » insiste sur la limite de l'opportunité (avant qu'il ne soit trop tard)."
+          "explanation": "« Aida ni » s'utilise pour une période de temps définie, alors que « Uchi ni » insiste sur la limite de l'opportunité (faire l'action avant qu'il ne soit trop tard)."
         }
       ],
       "synonyms": [
         {
           "target_id": "uchi-ni-b",
-          "explanation": "Partage la même structure, mais la nuance (B) implique un changement involontaire et progressif, sans intention du locuteur."
+          "explanation": "Partage la même structure, mais la nuance (B) implique un changement involontaire et naturel."
         }
       ]
     }
   },
   {
     "id": "uchi-ni-b",
-    "title": "～うちに (B)",
+    "title": "～うちに (B - Changement)",
     "type": "pattern",
-    "level": "N3",
-    "meaning": "Pendant que / Au fur et à mesure (changement progressif)",
+    "level": "N3/N2",
+    "meaning": "Pendant que / À force de (Changement naturel)",
     "construction": {
       "動詞": "辞書形 / ている形 / ない形 + うちに",
       "い形容詞": "",
       "な形容詞": "",
       "名詞": ""
     },
-    "nuance": "Pendant qu'un processus ou une action continue se déroule, un changement non intentionnel et indépendant de la volonté du locuteur se produit.",
+    "nuance": "Pendant qu'un processus ou une action continue se déroule, un changement non intentionnel se produit naturellement ou sans que le locuteur ne s'en rende compte au début. On insiste sur l'évolution d'un état.",
     "warnings": [
-      "La proposition principale ne contient pas d'expression de la volonté ou de l'intention du locuteur.",
-      "Met l'accent sur un changement d'état qui s'opère naturellement sans qu'on s'en rende compte."
+      "La proposition principale ne contient PAS d'expression de la volonté ou de l'intention du locuteur.",
+      "Met l'accent sur un changement d'état qui s'opère naturellement avec le temps."
     ],
     "examples": [
       {
@@ -74,25 +74,25 @@
         "translation": "Je me suis endormi sans m'en rendre compte pendant que j'écoutais de la musique."
       },
       {
+        "japanese": "知らないうちに、雨が降り始めていた。",
+        "translation": "Sans que je m'en aperçoive, la pluie avait commencé à tomber."
+      },
+      {
         "japanese": "少し難しい曲でも、練習を重ねるうちに弾けるようになりますよ。",
         "translation": "Même s'il s'agit d'un morceau un peu difficile, à force de s'entraîner, on finit par arriver à le jouer."
       },
       {
-        "japanese": "気がつかないうちに外は暗くなっていた。",
-        "translation": "Sans que je m'en aperçoive, la nuit était tombée dehors."
+        "japanese": "この携帯電話は、長い間使っているうちに、もう自分の体の一部のようになった。",
+        "translation": "À force d'utiliser ce téléphone portable depuis longtemps, il est devenu comme une partie de mon corps."
       }
     ],
-    "tags": [
-      "temps",
-      "changement progressif",
-      "involontaire"
-    ],
+    "tags": ["temps", "changement progressif", "involontaire"],
     "connections": {
       "confusions": [],
       "synonyms": [
         {
           "target_id": "uchi-ni-a",
-          "explanation": "Même structure, mais la version (A) implique une action volontaire faite avant un changement d'état."
+          "explanation": "Même structure, mais la version (A) implique une action volontaire faite sciemment pour profiter d'un moment."
         }
       ]
     }
@@ -981,72 +981,6 @@
       "synonyms": []
     },
     "tags": ["temps", "interruption", "aspect"]
-  },
-  {
-    "id": "uchi-ni-a",
-    "title": "～うちに (A - Opportunité)",
-    "type": "pattern",
-    "level": "N2",
-    "meaning": "Tant que / Avant que",
-    "construction": {
-      "動詞": "辞書形 / ている形 / ない形 + うちに",
-      "い形容詞": "い形容詞 + うちに",
-      "な形容詞": "な形容詞 + なうちに",
-      "名詞": "名詞 + のうちに"
-    },
-    "nuance": "Action volontaire effectuée avant qu'un changement de situation ne rende la chose difficile ou impossible. On profite d'un état actuel limité dans le temps.",
-    "warnings": [
-      "La proposition principale exprime une action intentionnelle ou une volonté du locuteur.",
-      "S'utilise avec des expressions de durée ou d'état (pendant que je suis étudiant, tant qu'il fait chaud)."
-    ],
-    "examples": [
-      {
-        "japanese": "家事は、子供が眠っているうちに、全部やってしまった。",
-        "translation": "J'ai fini toutes les tâches ménagères tant que les enfants dormaient."
-      },
-      {
-        "japanese": "忘れないうちに、カレンダーにメモしておこう。",
-        "translation": "Notons-le dans le calendrier avant d'oublier."
-      }
-    ],
-    "connections": {
-      "confusions": [],
-      "synonyms": []
-    },
-    "tags": ["temps", "opportunité", "volontaire"]
-  },
-  {
-    "id": "uchi-ni-b",
-    "title": "～うちに (B - Changement)",
-    "type": "pattern",
-    "level": "N2",
-    "meaning": "Pendant que / À force de (changement naturel)",
-    "construction": {
-      "動詞": "辞書形 / ている形 / ない形 + うちに",
-      "い形容詞": "",
-      "な形容詞": "",
-      "名詞": ""
-    },
-    "nuance": "Pendant qu'une action se prolonge, un changement non intentionnel se produit naturellement ou sans que le locuteur ne s'en aperçoive au début.",
-    "warnings": [
-      "La proposition principale ne contient pas de volonté ou d'intention.",
-      "Met l'accent sur l'évolution d'un état au cours du temps."
-    ],
-    "examples": [
-      {
-        "japanese": "知らないうちに、雨が降り始めていた。",
-        "translation": "Sans que je m'en aperçoive, la pluie avait commencé à tomber."
-      },
-      {
-        "japanese": "この携帯電話は、長い間使っているうちに、もう自分の体の一部のようになった。",
-        "translation": "À force d'utiliser ce téléphone portable depuis longtemps, il est devenu comme une partie de mon corps."
-      }
-    ],
-    "connections": {
-      "confusions": [],
-      "synonyms": []
-    },
-    "tags": ["temps", "changement progressif", "involontaire"]
   },
   {
     "id": "bakari-da-ippou-da",
@@ -3486,8 +3420,8 @@
     "synonyms": []
   },
   "tags": ["condition", "hypothèse", "logique", "conjugaison"]
-},
-{
+    },
+    {
   "id": "ukemi-kei",
   "title": "受身形 (Forme passive)",
   "type": "conjugation",
@@ -3539,8 +3473,8 @@
     ]
   },
   "tags": ["passif", "subir", "gêne", "dommage", "conjugaison"]
-},
-{
+    },
+    {
     "id": "sugiru-excessive",
     "title": "～すぎる",
     "type": "pattern",

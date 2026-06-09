@@ -158,32 +158,60 @@
     function renderList() {
         const list = document.getElementById('list-view');
         const detail = document.getElementById('detail-view');
+        const header = document.getElementById('main-header');
+
         list.style.display = "block";
         detail.style.display = "none";
-        document.getElementById('main-header').style.display = "block";
+        header.style.display = "block";
 
         const filtered = grammarData.filter(item => {
+            // On récupère toutes les données de recherche
             const type = (item.type || "").toLowerCase();
             const level = (item.level || "").toUpperCase();
+            const title = (item.title || "").toLowerCase();
+            const meaning = (item.meaning || "").toLowerCase();
+            const tags = (item.tags || []).join(" ").toLowerCase();
             
+            // NOUVEAU : On inclut l'ID et un champ romaji caché
+            const id = (item.id || "").toLowerCase().replace(/-/g, ""); // "uchi-ni" devient "uchini"
+            const romaji = (item.romaji || "").toLowerCase();
+
             const matchesType = filterType === "all" || type === filterType;
             const matchesLevel = filterLevel === "all" || level.includes(filterLevel);
-            const matchesSearch = item.title.toLowerCase().includes(searchQuery) || 
-                                 item.meaning.toLowerCase().includes(searchQuery);
+            
+            // La recherche regarde maintenant partout
+            const matchesSearch = title.includes(searchQuery) || 
+                                 meaning.includes(searchQuery) || 
+                                 tags.includes(searchQuery) ||
+                                 id.includes(searchQuery.replace(/\s/g, "")) || // permet de taper "uchini" pour "uchi-ni"
+                                 romaji.includes(searchQuery);
 
             return matchesType && matchesLevel && matchesSearch;
         });
 
-        list.innerHTML = filtered.map(item => `
-            <div class="preview-card card-${item.type}" onclick="showDetail('${item.id}')">
-                <div class="card-header">
-                    <span class="type-tag" style="color: var(--color-${item.type})">${labels[item.type] || item.type}</span>
-                    <span class="lvl-tag">${item.level}</span>
+        if (filtered.length === 0) {
+            list.innerHTML = `<p style="text-align:center; margin-top:30px; opacity:0.6;">Aucun résultat trouvé.</p>`;
+            return;
+        }
+
+        list.innerHTML = filtered.map(item => {
+            const itemType = (item.type || "pattern").toLowerCase();
+            return `
+                <div class="preview-card card-${itemType}" onclick="showDetail('${item.id}')">
+                    <div class="card-header">
+                        <span class="type-tag" style="color: var(--color-${itemType})">
+                            ${labels[itemType] || itemType}
+                        </span>
+                        <span class="lvl-tag">${item.level || "?"}</span>
+                    </div>
+                    <div class="title">${item.title || "Sans titre"}</div>
+                    <div style="color: var(--text-muted); font-size: 14px; margin-top: 4px;">
+                        ${item.meaning || "Pas de description"}
+                    </div>
                 </div>
-                <div class="title">${item.title}</div>
-                <div style="color: var(--text-muted); font-size: 14px; margin-top: 4px;">${item.meaning}</div>
-            </div>
-        `).join('');
+            `;
+        }).join('');
+        
         window.scrollTo(0,0);
     }
 
