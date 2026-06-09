@@ -2,6 +2,7 @@
   {
     "id": "uchi-ni-a",
     "title": "～うちに (A)",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Tant que / Avant que (pour une action volontaire)",
     "construction": {
@@ -53,6 +54,7 @@
   {
     "id": "uchi-ni-b",
     "title": "～うちに (B)",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Pendant que / Au fur et à mesure (changement progressif)",
     "construction": {
@@ -98,6 +100,7 @@
   {
     "id": "aida-ni",
     "title": "～間・～間に",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Pendant que / Durant",
     "construction": {
@@ -148,6 +151,7 @@
   {
     "id": "te-kara-denaito",
     "title": "～てからでないと・～てからでなければ",
+    "type": "pattern",
     "level": "N3",
     "meaning": "À moins de... / Tant que... n'est pas fait",
     "construction": {
@@ -183,6 +187,7 @@
   {
     "id": "tokoro-da",
     "title": "～ところだ・～ところ (+助詞)",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Être sur le point de / En train de / Venir tout juste de",
     "construction": {
@@ -227,7 +232,8 @@
   {
       "id": "youni-but",
       "title": "ように",
-      "level": "N4",
+      "type": "pattern",
+    "level": "N4",
       "meaning": "Afin de / de sorte que / pour que",
       "construction": {
         "動詞": "Forme dictionnaire (verbe non-volontaire / potentiel) + ように / Forme ない + ように",
@@ -264,7 +270,8 @@
     {
       "id": "youni-narimasu",
       "title": "ようになります",
-      "level": "N4",
+      "type": "pattern",
+    "level": "N4",
       "meaning": "Devenir capable de / prendre l'habitude de",
       "construction": {
         "動詞": "Forme dictionnaire (verbe potentiel / d'état / de volonté) + ようになります",
@@ -305,7 +312,8 @@
     {
       "id": "youni-shimasu",
       "title": "ようにします",
-      "level": "N4",
+      "type": "pattern",
+    "level": "N4",
       "meaning": "S'efforcer de / faire en sorte de",
       "construction": {
         "動詞": "Forme dictionnaire + ようにします / Forme ない + ようにします",
@@ -354,7 +362,8 @@
     {
   "id": "tameni",
   "title": "ために",
-  "level": "N4",
+  "type": "pattern",
+    "level": "N4",
   "meaning": "Afin de / Pour / En faveur de",
   "construction": {
     "動詞": "Forme dictionnaire + ために",
@@ -395,7 +404,8 @@
 {
 "id": "kurai-da-hodo-da",
 "title": "～くらいだ・～ぐらいだ / ～ほどだ",
-"level": "N3",
+"type": "pattern",
+    "level": "N3",
 "meaning": "Au point de / À tel point que (exprimer une intensité)",
 "construction": {
 "動詞": "普通形 + くらいだ / ぐらいだ / ほどだ",
@@ -442,7 +452,8 @@
 {
 "id": "kurai-wa-nai-hodo-wa-nai",
 "title": "～くらい…はない・～ぐらい…はない / ～ほど…はない",
-"level": "N3",
+"type": "pattern",
+    "level": "N3",
 "meaning": "Rien n'est plus... que / Rien n'égale...",
 "construction": {
 "動詞": "辞書形 + ことくらい / ことぐらい / ことほど + [adjectif/verbe] はない",
@@ -478,7 +489,8 @@
 {
 "id": "kurai-nara",
 "title": "～くらいなら…・～ぐらいなら…",
-"level": "N3",
+"type": "pattern",
+    "level": "N3",
 "meaning": "Quitte à... autant... / Plutôt que de... (choix par dépit)",
 "construction": {
 "動詞": "辞書形 + くらいなら / ぐらいなら",
@@ -519,7 +531,8 @@
 {
 "id": "ni-kagiru",
 "title": "～に限る",
-"level": "N3",
+"type": "pattern",
+    "level": "N3",
 "meaning": "Rien ne vaut... / ... est la meilleure solution",
 "construction": {
 "動詞": "辞書形 / ない形 + に限る",
@@ -555,7 +568,8 @@
 {
 "id": "ni-taishite",
 "title": "～に対して",
-"level": "N3",
+"type": "pattern",
+    "level": "N3",
 "meaning": "Contrairement à / En contraste avec",
 "construction": {
 "動詞": "普通形 + のに対して",
@@ -592,7 +606,8 @@
 {
 "id": "hanmen",
 "title": "～反面",
-"level": "N3",
+"type": "pattern",
+    "level": "N3",
 "meaning": "D'un autre côté / En revanche (les deux faces d'une chose)",
 "construction": {
 "動詞": "普通形 + 反面",
@@ -629,7 +644,8 @@
 {
 "id": "ippou-de",
 "title": "～一方（で）",
-"level": "N3",
+"type": "pattern",
+    "level": "N3",
 "meaning": "D'un côté... de l'autre / Tout en... (simultanéité ou contraste)",
 "construction": {
 "動詞": "普通形 + 一方（で）",
@@ -670,7 +686,8 @@
 {
 "id": "to-iu-yori",
 "title": "～というより",
-"level": "N3",
+"type": "pattern",
+    "level": "N3",
 "meaning": "Plutôt que de dire... c'est plutôt...",
 "construction": {
 "動詞": "普通形 + というより",
@@ -702,7 +719,8 @@
 {
 "id": "kawarini",
 "title": "～かわりに",
-"level": "N3",
+"type": "pattern",
+    "level": "N3",
 "meaning": "En échange de / Au lieu de",
 "construction": {
 "動詞": "普通形 + かわりに",
@@ -734,7 +752,8 @@
 {
 "id": "sai-ni",
 "title": "～際（に）",
-"level": "N2",
+"type": "pattern",
+    "level": "N2",
 "meaning": "Au moment de / Lors de",
 "construction": {
 "動詞": "辞書形 / た形 + 際（に）",
@@ -771,7 +790,8 @@
 {
 "id": "ni-saishite-ni-atatte",
 "title": "～に際して・～にあたって",
-"level": "N2",
+"type": "pattern",
+    "level": "N2",
 "meaning": "À l'occasion de / Au moment de (commencer)",
 "construction": {
 "動詞": "辞書形 + に際して / にあたって",
@@ -808,7 +828,8 @@
 {
 "id": "ta-totan",
 "title": "～たとたん（に）",
-"level": "N2",
+"type": "pattern",
+    "level": "N2",
 "meaning": "Au moment précis où / Aussitôt que",
 "construction": {
 "動詞": "た形 + とたん（に）",
@@ -849,7 +870,8 @@
 {
 "id": "ka-to-omou-to",
 "title": "～（か）と思うと・～（か）と思ったら",
-"level": "N2",
+"type": "pattern",
+    "level": "N2",
 "meaning": "À peine... que déjà / Au moment même où l'on réalise que...",
 "construction": {
 "動詞": "た形 + （か）と思うと / （か）と思ったら",
@@ -890,7 +912,8 @@
 {
 "id": "ka-nai-ka-no-uchi-ni",
 "title": "～か～ないかのうちに",
-"level": "N2",
+"type": "pattern",
+    "level": "N2",
 "meaning": "À peine... que / Au moment même où s'achève...",
 "construction": {
 "動詞": "[辞書形 / た形] + か + [同じ動詞の ない形] + かのうちに"
@@ -924,6 +947,7 @@
 {
     "id": "saichuu-da",
     "title": "～最中に / ～最中だ",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Au beau milieu de / En plein milieu de",
     "construction": {
@@ -961,6 +985,7 @@
   {
     "id": "uchi-ni-a",
     "title": "～うちに (A - Opportunité)",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Tant que / Avant que",
     "construction": {
@@ -993,6 +1018,7 @@
   {
     "id": "uchi-ni-b",
     "title": "～うちに (B - Changement)",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Pendant que / À force de (changement naturel)",
     "construction": {
@@ -1025,6 +1051,7 @@
   {
     "id": "bakari-da-ippou-da",
     "title": "～ばかりだ・～一方だ",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Ne pas cesser de / Continuer à (tendance unique)",
     "construction": {
@@ -1062,6 +1089,7 @@
   {
     "id": "you-to-shite-iru",
     "title": "～（よ）うとしている",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Être sur le point de",
     "construction": {
@@ -1099,6 +1127,7 @@
   {
     "id": "tsutsu-aru",
     "title": "～つつある",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Être en train de (processus en cours)",
     "construction": {
@@ -1136,6 +1165,7 @@
   {
     "id": "tsutsu",
     "title": "～つつ",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Tout en / En même temps que",
     "construction": {
@@ -1173,6 +1203,7 @@
   {
     "id": "te-hajimete",
     "title": "～てはじめて",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Ce n'est qu'après avoir... que / Seulement après...",
     "construction": {
@@ -1205,6 +1236,7 @@
   {
     "id": "ue-de",
     "title": "～上で",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Après avoir... (condition préalable)",
     "construction": {
@@ -1243,6 +1275,7 @@
   {
     "id": "shidai",
     "title": "～次第",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Dès que / Aussitôt que (formel)",
     "construction": {
@@ -1280,6 +1313,7 @@
   {
     "id": "irai-te-konokata",
     "title": "～以来・～てこのかた",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Depuis que / Depuis lors",
     "construction": {
@@ -1317,6 +1351,7 @@
   {
     "id": "te-kara-denaito",
     "title": "～てからでないと・～てからでなければ",
+    "type": "pattern",
     "level": "N2",
     "meaning": "À moins de... / Tant que... n'est pas fait",
     "construction": {
@@ -1348,6 +1383,7 @@
   {
     "id": "wo-hajime-to-shite",
     "title": "～をはじめ（として）",
+    "type": "pattern",
     "level": "N2",
     "meaning": "À commencer par / Notamment",
     "construction": {
@@ -1380,6 +1416,7 @@
   {
     "id": "kara-shite",
     "title": "～からして",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Rien que par / À en juger par (un détail)",
     "construction": {
@@ -1412,6 +1449,7 @@
   {
     "id": "ni-watatte",
     "title": "～にわたって",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Sur tout / À travers (étendue)",
     "construction": {
@@ -1444,6 +1482,7 @@
   {
     "id": "wo-tsuujite-a",
     "title": "～を通じて・～を通して (A)",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Tout au long de / Pendant tout le temps de",
     "construction": {
@@ -1476,6 +1515,7 @@
   {
     "id": "wo-tsuujite-b",
     "title": "～を通じて・～を通して (B)",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Par l'intermédiaire de / Via",
     "construction": {
@@ -1508,6 +1548,7 @@
   {
     "id": "kagiri",
     "title": "～限り",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Autant que / Dans la limite de",
     "construction": {
@@ -1540,6 +1581,7 @@
   {
     "id": "dake",
     "title": "～だけ",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Autant que / Tout son saoul",
     "construction": {
@@ -1572,6 +1614,7 @@
   {
     "id": "ni-kagiri",
     "title": "～に限り",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Uniquement pour / Exceptionnellement pour",
     "construction": {
@@ -1609,6 +1652,7 @@
   {
     "id": "kagiri-wa",
     "title": "～限り（は）",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Tant que / Aussi longtemps que",
     "construction": {
@@ -1646,6 +1690,7 @@
   {
     "id": "kagiri-de-wa",
     "title": "～限りでは",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Pour autant que / D'après",
     "construction": {
@@ -1678,6 +1723,7 @@
   {
     "id": "ni-kagitte",
     "title": "～に限って",
+    "type": "pattern",
     "level": "N2",
     "meaning": "Justement / Particulièrement",
     "construction": {
@@ -1719,6 +1765,7 @@
   {
     "id": "tame-ni-causalite",
     "title": "～ためだ・～ため（に）",
+    "type": "pattern",
     "level": "N3",
     "meaning": "À cause de / En raison de / Du fait de",
     "construction": {
@@ -1761,6 +1808,7 @@
   {
     "id": "ni-yotte-causalite",
     "title": "～によって・～による",
+    "type": "pattern",
     "level": "N3",
     "meaning": "À cause de / Par / En raison de (moyen ou cause)",
     "construction": {
@@ -1798,6 +1846,7 @@
   {
     "id": "kara-koto-kara",
     "title": "～から・～ことから",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Du fait que / En raison de / À en juger par",
     "construction": {
@@ -1830,6 +1879,7 @@
   {
     "id": "okage-sei",
     "title": "～おかげだ / ～せいだ",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Grâce à (positif) / À cause de (négatif)",
     "construction": {
@@ -1862,6 +1912,7 @@
   {
     "id": "no-dakara",
     "title": "～のだから",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Puisque / Étant donné que (évidence)",
     "construction": {
@@ -1899,6 +1950,7 @@
   {
     "id": "no-nara",
     "title": "～（の）なら",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Si c'est le cas / Si (en se basant sur une info)",
     "construction": {
@@ -1940,6 +1992,7 @@
   {
     "id": "te-wa-no-dewa",
     "title": "～ては… / ～（の）では…",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Si... (conséquence négative prévisible)",
     "construction": {
@@ -1976,6 +2029,7 @@
   {
     "id": "sae-ba",
     "title": "～さえ…ば / ～さえ…なら",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Si seulement... / Il suffit de... pour que...",
     "construction": {
@@ -2012,6 +2066,7 @@
   {
     "id": "tatoe-te-mo",
     "title": "たとえ～ても / たとえ～でも",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Même si... (concession forte)",
     "construction": {
@@ -2048,6 +2103,7 @@
   {
     "id": "ba-tara-nara-hypothetique",
     "title": "～ば… / ～たら… / ～なら… (Irréel)",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Si... (condition irréelle / regret)",
     "construction": {
@@ -2084,6 +2140,7 @@
   {
     "id": "to-iu-koto-da-to-no-koto-da",
     "title": "～ということだ・～とのことだ",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Il paraît que / J'ai entendu dire que (formel)",
     "construction": {
@@ -2121,6 +2178,7 @@
   {
     "id": "to-iwarete-iru",
     "title": "～と言われている",
+    "type": "pattern",
     "level": "N3",
     "meaning": "On dit que / Il est dit que (réputation)",
     "construction": {
@@ -2153,6 +2211,7 @@
   {
     "id": "to-ka",
     "title": "～とか",
+    "type": "pattern",
     "level": "N3",
     "meaning": "J'ai entendu dire que... (incertain)",
     "construction": {
@@ -2185,6 +2244,7 @@
   {
     "id": "tte",
     "title": "～って",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Il paraît / [Sujet] a dit que (familier)",
     "construction": {
@@ -2222,6 +2282,7 @@
   {
     "id": "to-iu",
     "title": "～という",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Il est dit que / Selon les récits (littéraire)",
     "construction": {
@@ -2259,6 +2320,7 @@
   {
     "id": "hazu-ga-nai-wake-ga-nai",
     "title": "～はずがない・～わけがない",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Il est impossible que / Ce n'est pas possible que",
     "construction": {
@@ -2296,6 +2358,7 @@
   {
     "id": "to-wa-kagiranai",
     "title": "～とは限らない",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Pas forcément / Pas toujours",
     "construction": {
@@ -2328,6 +2391,7 @@
   {
     "id": "wake-de-wa-nai",
     "title": "～わけではない・～というわけではない・～のではない",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Ce n'est pas que / Cela ne veut pas dire que",
     "construction": {
@@ -2365,6 +2429,7 @@
   {
     "id": "nai-koto-wa-nai",
     "title": "～ないことはない",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Ce n'est pas impossible / On peut dire que...",
     "construction": {
@@ -2397,6 +2462,7 @@
   {
     "id": "koto-wa-ga",
     "title": "～ことは～が、…",
+    "type": "pattern",
     "level": "N3",
     "meaning": "C'est vrai que... mais...",
     "construction": {
@@ -2428,6 +2494,7 @@
    {
     "id": "te-hoshii-te-moraitai",
     "title": "～てもらいたい・～ていただきたい・～てほしい",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Vouloir que (quelqu'un d'autre) fasse quelque chose",
     "construction": {
@@ -2469,6 +2536,7 @@
   {
     "id": "sase-te-hoshii-sase-te-moraitai",
     "title": "～（さ）せてもらいたい・～（さ）せていただきたい・～（さ）せてほしい",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Vouloir être autorisé à faire quelque chose",
     "construction": {
@@ -2506,6 +2574,7 @@
   {
     "id": "to-ii-ba-ii-tara-ii-a",
     "title": "～といい・～ばいい・～たらいい (A)",
+    "type": "pattern",
     "level": "N3",
     "meaning": "J'espère que... / Pourvu que...",
     "construction": {
@@ -2538,6 +2607,7 @@
   {
     "id": "to-ii-ba-ii-tara-ii-b",
     "title": "～といい・～ばいい・～たらいい (B)",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Tu devrais... / Il n'y a qu'à...",
     "construction": {
@@ -2573,46 +2643,88 @@
     "tags": ["conseil", "suggestion", "recommandation"]
   },
   {
-    "id": "meirei-kinshi",
-    "title": "命令（しろ）/ 禁止（～な）",
-    "level": "N3",
-    "meaning": "Impératif (Ordre) / Prohibitif (Interdiction)",
-    "construction": {
-      "動詞": "【命令】 Gr.1: [e] (ex: 走れ) / Gr.2: [base]+ろ (ex: 降りろ) / Gr.3: しろ, 来い | 【禁止】 辞書形 + な",
-      "い形容詞": "",
-      "な形容詞": "",
-      "名詞": ""
+  "id": "meirei-kei",
+  "title": "命令形",
+  "type": "conjugation",
+  "level": "N3",
+  "meaning": "L'impératif (Ordre direct)",
+  "construction": {
+    "Groupe 1 (u → e)": "辞書形 [-u] → [-e] (ex: 書け, 走れ, 待て)",
+    "Groupe 2 (ru → ro)": "辞書形 [-ru] → [-ro] (ex: 食べろ, 見ろ, 起きろ)",
+    "Groupe 3 (Irréguliers)": "する → しろ / 来る → 来い",
+    "Exception": "くれる → くれ"
+  },
+  "nuance": "Exprime un ordre brutal, martial ou une incitation forte (sport). Très direct, utilisé par une personne en position d'autorité.",
+  "warnings": [
+    "Ne jamais utiliser avec des supérieurs.",
+    "À l'oral, les femmes utilisent plutôt la forme '～なさい' ou '～て' pour donner un ordre.",
+    "Souvent utilisé dans les slogans ou les situations d'urgence."
+  ],
+  "examples": [
+    {
+      "japanese": "「走れ、走れ！」と監督が叫んだ。",
+      "translation": "« Courez, courez ! » a crié l'entraîneur."
     },
-    "nuance": "Exprime un ordre direct et autoritaire ou une interdiction stricte. Utilisé principalement par les hommes dans un cadre de supériorité, lors d'entraînements sportifs, ou sur des panneaux de signalisation.",
-    "warnings": [
-      "À éviter absolument avec des supérieurs hiérarchiques.",
-      "Souvent utilisé dans le discours indirect (ex: ~と言われた) pour rapporter une instruction.",
-      "Exception notable : くれる devient くれ à l'impératif."
-    ],
-    "examples": [
+    {
+      "japanese": "早くしろ！遅れるぞ。",
+      "translation": "Dépêche-toi ! On va être en retard."
+    }
+  ],
+  "connections": {
+    "confusions": [
       {
-        "japanese": "「走れ、走れ！」と監督が叫んだ。",
-        "translation": "« Courez, courez ! » a crié l'entraîneur."
-      },
-      {
-        "japanese": "立て札に「スピードを出すな！」と書いてある。",
-        "translation": "Il est écrit sur le panneau : « Ne dépassez pas la vitesse autorisée ! »"
+        "target_id": "nasai",
+        "explanation": "Ordre poli mais ferme utilisé par les parents ou professeurs."
       }
     ],
-    "connections": {
-      "confusions": [
-        {
-          "target_id": "nasai",
-          "explanation": "～なさい est un ordre poli mais ferme (parent/professeur), tandis que l'impératif pur est plus brutal ou martial."
-        }
-      ],
-      "synonyms": []
-    },
-    "tags": ["ordre", "interdiction", "direct"]
+    "synonyms": [
+      {
+        "target_id": "kinshi-na",
+        "explanation": "Le pendant négatif (l'interdiction)."
+      }
+    ]
   },
+  "tags": ["ordre", "conjugaison", "direct"]
+},
+{
+  "id": "kinshi-na",
+  "title": "禁止形 (～な)",
+  "type": "conjugation",
+  "level": "N3",
+  "meaning": "L'interdiction (Ne fais pas... !)",
+  "construction": {
+    "Tous verbes": "辞書形 + な (ex: 食べるな, 行くな, するな)"
+  },
+  "nuance": "Une interdiction stricte et autoritaire. On la retrouve sur les panneaux de sécurité ou dans les moments de colère/urgence.",
+  "warnings": [
+    "À ne pas confondre avec le 'na' de fin de phrase qui est une particule de recherche d'accord.",
+    "Forme très impolie si elle n'est pas justifiée par l'autorité ou l'urgence."
+  ],
+  "examples": [
+    {
+      "japanese": "「スピードを出すな！」と書いてある。",
+      "translation": "Il est écrit : « Ne dépassez pas la vitesse ! »"
+    },
+    {
+      "japanese": "私のものに触るな。",
+      "translation": "Ne touche pas à mes affaires."
+    }
+  ],
+  "connections": {
+    "confusions": [],
+    "synonyms": [
+      {
+        "target_id": "meirei-kei",
+        "explanation": "Le pendant affirmatif (l'ordre)."
+      }
+    ]
+  },
+  "tags": ["interdiction", "conjugaison", "direct"]
+},
   {
     "id": "koto-meirei",
     "title": "～こと",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Il faut... / Obligation (Consignes)",
     "construction": {
@@ -2650,6 +2762,7 @@
   {
     "id": "beki-da",
     "title": "～べきだ・～べき / ～べきではない",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Devrait / Il faut (sens moral ou logique)",
     "construction": {
@@ -2687,6 +2800,7 @@
   {
     "id": "tara-dou-ka",
     "title": "～たらどうか",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Et si tu... ? / Pourquoi ne pas... ?",
     "construction": {
@@ -2724,6 +2838,7 @@
   {
     "id": "you-to-suru",
     "title": "～（よ）うとする",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Essayer de / Être sur le point de",
     "construction": {
@@ -2765,6 +2880,7 @@
   {
     "id": "tsumori-da-belief",
     "title": "～つもりだ",
+    "type": "pattern",
     "level": "N3",
     "meaning": "Croire que / Avoir l'impression de / S'imaginer que",
     "construction": {

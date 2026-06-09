@@ -3,171 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Grammaire Japonaise Pro</title>
+    <title>Grammaire Japonaise</title>
     <style>
+        /* Variables de thèmes (Restaurées selon tes souhaits) */
         :root {
             --bg-color: #f8fafc;
+            --header-bg: rgba(255, 255, 255, 0.9);
             --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --primary: #059669; /* Pattern */
-            --keigo: #7c3aed;   /* Keigo */
-            --vocab: #d97706;   /* Vocab */
             --card-border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-title: #0f172a;
+            --text-muted: #64748b;
+            --primary: #059669; /* Vert Émeraude */
+            --primary-light: #ecfdf5;
+            --warning-bg: #fef2f2;
+            --warning-border: #fca5a5;
+            --warning-text: #991b1b;
+            --jp-bg: #fef08a;
+            --jp-text: #1e293b;
+            --nuance-bg: #f1f5f9;
+            --tag-bg: #e2e8f0;
+            --tag-text: #475569;
         }
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --bg-color: #0f172a;
-                --card-bg: #1e293b;
-                --text-main: #f1f5f9;
-                --card-border: #334155;
+                --bg-color: #121214;
+                --header-bg: rgba(18, 18, 20, 0.9);
+                --card-bg: #1a1a1e;
+                --card-border: #2c2c35;
+                --text-main: #e2e8f0;
+                --text-title: #ffffff;
+                --text-muted: #94a3b8;
+                --primary: #10b981;
+                --primary-light: rgba(16, 185, 129, 0.15);
+                --warning-bg: #2d1515;
+                --warning-border: #ef4444;
+                --warning-text: #fca5a5;
+                --jp-bg: #2e2a14;
+                --jp-text: #fef08a;
+                --nuance-bg: #222227;
+                --tag-bg: #2c2c35;
+                --tag-text: #cbd5e1;
             }
         }
 
         body {
-            font-family: -apple-system, system-ui, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0; padding: 0;
             display: flex; flex-direction: column; align-items: center;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         header {
-            position: sticky; top: 0; width: 100%; max-width: 800px;
-            background: var(--bg-color); padding: 15px; z-index: 10;
-            border-bottom: 1px solid var(--card-border);
+            position: sticky; top: 0;
+            background: var(--header-bg);
+            backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+            width: 100%; max-width: 800px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            padding: 16px 20px; box-sizing: border-box;
+            z-index: 10; border-bottom: 1px solid var(--card-border);
         }
 
-        /* Barre de recherche et Filtres */
-        .search-box { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid var(--card-border); background: var(--card-bg); color: inherit; font-size: 16px; margin-bottom: 10px; box-sizing: border-box; }
-        
-        .filter-group { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 5px; }
-        .filter-btn { padding: 6px 12px; border-radius: 20px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-main); cursor: pointer; font-size: 13px; white-space: nowrap; transition: 0.2s; }
-        .filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+        .header-container { width: 100%; display: flex; flex-direction: column; gap: 12px; }
 
-        main { width: 100%; max-width: 800px; padding: 15px; box-sizing: border-box; }
-
-        /* Cartes de liste */
-        .card { 
-            background: var(--card-bg); border-radius: 12px; padding: 15px; margin-bottom: 12px;
-            border-left: 5px solid var(--primary); box-shadow: 0 2px 4px rgba(0,0,0,0.05); cursor: pointer;
+        input#search {
+            width: 100%; padding: 12px 16px; font-size: 16px;
+            background-color: var(--card-bg); color: var(--text-title);
+            border: 2px solid var(--card-border); border-radius: 12px;
+            box-sizing: border-box; outline: none;
         }
-        .card.keigo { border-left-color: var(--keigo); }
-        .card.vocabulary { border-left-color: var(--vocab); }
+        input#search:focus { border-color: var(--primary); }
 
-        .card-header { display: flex; justify-content: space-between; align-items: center; }
-        .card-title { font-size: 20px; font-weight: bold; }
-        .type-badge { font-size: 10px; text-transform: uppercase; padding: 2px 6px; border-radius: 4px; background: #eee; color: #666; }
+        /* Filtres chips */
+        .filter-scroll {
+            display: flex; gap: 8px; overflow-x: auto;
+            padding-bottom: 4px; scrollbar-width: none;
+        }
+        .filter-scroll::-webkit-scrollbar { display: none; }
 
-        /* Vue Détails */
-        .detail-view { background: var(--card-bg); padding: 20px; border-radius: 15px; width: 100%; }
-        .back-btn { background: none; border: none; color: var(--primary); font-weight: bold; cursor: pointer; padding: 10px 0; font-size: 16px; }
-        
-        .construction-table { width: 100%; border-collapse: collapse; margin: 15px 0; background: rgba(0,0,0,0.02); border-radius: 8px; }
-        .construction-table td { padding: 12px; border-bottom: 1px solid var(--card-border); }
-        .construction-table td:first-child { font-weight: bold; color: var(--primary); width: 30%; }
+        .chip {
+            padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;
+            background: var(--card-bg); border: 1px solid var(--card-border);
+            color: var(--text-muted); cursor: pointer; white-space: nowrap; transition: 0.2s;
+        }
+        .chip.active {
+            background: var(--primary); color: white; border-color: var(--primary);
+        }
 
-        .jp-box { background: #fef08a; color: #1e293b; padding: 8px 12px; border-radius: 6px; display: inline-block; font-size: 18px; margin: 5px 0; }
-        .warning-box { background: #fef2f2; border-left: 4px solid #ef4444; padding: 12px; color: #991b1b; margin: 15px 0; border-radius: 4px; }
+        #back-btn {
+            background: var(--primary-light); color: var(--primary);
+            border: none; padding: 10px 18px; border-radius: 8px;
+            font-size: 15px; font-weight: 700; cursor: pointer;
+            display: flex; align-items: center; gap: 8px;
+        }
+
+        main { width: 100%; max-width: 800px; padding: 20px; box-sizing: border-box; }
+
+        .grammar-preview-card {
+            background: var(--card-bg); border-radius: 14px;
+            margin-bottom: 14px; padding: 18px;
+            border: 1px solid var(--card-border); cursor: pointer;
+            position: relative; transition: 0.2s; padding-right: 40px;
+        }
+        .grammar-preview-card:hover {
+            transform: translateY(-2px); border-color: var(--primary);
+            box-shadow: 0 4px 12px rgb(0 0 0 / 0.08);
+        }
+        .grammar-preview-card::after {
+            content: "➔"; position: absolute; right: 20px; top: 50%;
+            transform: translateY(-50%); color: var(--text-muted); font-size: 14px;
+        }
+
+        .card-header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+        .grammar-title { font-size: 20px; font-weight: 700; color: var(--text-title); }
+        .type-badge { font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 6px; border-radius: 4px; background: var(--nuance-bg); color: var(--text-muted); font-weight: 700; margin-right: 8px; }
+        .level-badge { background: var(--primary-light); color: var(--primary); font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 6px; }
+
+        .detail-page { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--card-border); padding: 24px; }
+        .detail-header { padding-bottom: 20px; border-bottom: 1px dashed var(--card-border); margin-bottom: 20px; }
+        .detail-header .grammar-title { font-size: 26px; }
+
+        .construction-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; background: var(--bg-color); border-radius: 10px; overflow: hidden; }
+        .construction-table td { padding: 14px 16px; border-bottom: 1px solid var(--card-border); font-size: 15px; }
+        .construction-table td:first-child { font-weight: bold; color: var(--primary); width: 120px; }
+
+        .jp-sentence { background: var(--jp-bg); color: var(--jp-text); padding: 8px 14px; border-radius: 8px; font-weight: 500; font-size: 18px; margin-bottom: 8px; display: inline-block; line-height: 1.4; }
+        .warning-box { background: var(--warning-bg); border-left: 4px solid var(--warning-border); color: var(--warning-text); padding: 16px; border-radius: 0 10px 10px 0; margin-bottom: 24px; }
+        .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 12px; padding: 4px 12px; border-radius: 20px; }
     </style>
 </head>
 <body>
 
-<header>
-    <input type="text" id="search" class="search-box" placeholder="Rechercher...">
-    <div class="filter-group" id="filters">
-        <button class="filter-btn active" onclick="setFilter('all')">Tous</button>
-        <button class="filter-btn" onclick="setFilter('pattern')">Grammaire</button>
-        <button class="filter-btn" onclick="setFilter('keigo')">Keigo</button>
-        <button class="filter-btn" onclick="setFilter('vocabulary')">Mots isolés</button>
-    </div>
-</header>
+    <header>
+        <div id="header-container" class="header-container"></div>
+    </header>
 
-<main>
-    <div id="list-container"></div>
-    <div id="detail-container" style="display:none"></div>
-</main>
+    <main>
+        <div id="list-view"></div>
+        <div id="detail-view" style="display: none;"></div>
+    </main>
 
-<script>
-    let data = [];
-    let currentFilter = 'all';
+    <script>
+        let grammarData = [];
+        let currentSearchQuery = "";
+        let activeFilter = "all";
 
-    fetch('grammar.json').then(r => r.json()).then(json => {
-        data = json;
-        renderList();
-    });
+        const typesMap = {
+            "all": "Tous",
+            "pattern": "Grammaire",
+            "vocabulary": "Vocabulaire",
+            "conjugation": "Conjugaison",
+            "keigo": "Keigo"
+        };
 
-    function setFilter(type) {
-        currentFilter = type;
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.innerText.toLowerCase().includes(type) || (type === 'all' && btn.innerText === 'Tous'));
-        });
-        renderList();
-    }
+        fetch('grammar.json')
+            .then(r => r.json())
+            .then(data => {
+                grammarData = data;
+                showListView();
+            });
 
-    document.getElementById('search').addEventListener('input', renderList);
+        function getTitleById(id) {
+            const found = grammarData.find(item => item.id === id);
+            return found ? found.title : id;
+        }
 
-    function renderList() {
-        const query = document.getElementById('search').value.toLowerCase();
-        const container = document.getElementById('list-container');
-        document.getElementById('detail-container').style.display = 'none';
-        container.style.display = 'block';
+        function showListView() {
+            document.getElementById('detail-view').style.display = 'none';
+            document.getElementById('list-view').style.display = 'block';
 
-        const filtered = data.filter(item => {
-            const matchesType = currentFilter === 'all' || item.type === currentFilter;
-            const matchesSearch = item.title.toLowerCase().includes(query) || item.meaning.toLowerCase().includes(query);
-            return matchesType && matchesSearch;
-        });
-
-        container.innerHTML = filtered.map(item => `
-            <div class="card ${item.type}" onclick="showDetail('${item.id}')">
-                <div class="card-header">
-                    <span class="card-title">${item.title}</span>
-                    <span class="type-badge">${item.type}</span>
+            const headerBox = document.getElementById('header-container');
+            headerBox.innerHTML = `
+                <input type="text" id="search" placeholder="Rechercher..." value="${currentSearchQuery}" autofocus>
+                <div class="filter-scroll">
+                    ${Object.entries(typesMap).map(([key, label]) => `
+                        <div class="chip ${activeFilter === key ? 'active' : ''}" onclick="setFilter('${key}')">${label}</div>
+                    `).join('')}
                 </div>
-                <div style="color: #64748b; margin-top: 5px;">${item.meaning}</div>
-            </div>
-        `).join('');
-    }
+            `;
+            
+            const searchInput = document.getElementById('search');
+            searchInput.addEventListener('input', (e) => {
+                currentSearchQuery = e.target.value.toLowerCase().trim();
+                filterAndDisplayList();
+            });
 
-    function showDetail(id) {
-        const item = data.find(i => i.id === id);
-        const container = document.getElementById('detail-container');
-        const list = document.getElementById('list-container');
+            filterAndDisplayList();
+        }
 
-        list.style.display = 'none';
-        container.style.display = 'block';
+        function setFilter(type) {
+            activeFilter = type;
+            showListView(); // Rafraîchit l'en-tête et la liste
+        }
 
-        // Génération dynamique de la table de construction
-        let constructionHTML = Object.entries(item.construction)
-            .filter(([_, val]) => val !== "")
-            .map(([key, val]) => `<tr><td>${key}</td><td>${val}</td></tr>`)
-            .join('');
+        function filterAndDisplayList() {
+            const container = document.getElementById('list-view');
+            
+            const filtered = grammarData.filter(card => {
+                const matchesSearch = card.title.toLowerCase().includes(currentSearchQuery) || 
+                                     card.meaning.toLowerCase().includes(currentSearchQuery) ||
+                                     card.tags.some(tag => tag.toLowerCase().includes(currentSearchQuery));
+                const matchesType = activeFilter === "all" || card.type === activeFilter;
+                return matchesSearch && matchesType;
+            });
 
-        container.innerHTML = `
-            <button class="back-btn" onclick="renderList()">← Retour</button>
-            <div class="detail-view">
-                <h1>${item.title} <span style="font-size: 14px; color: gray;">${item.level}</span></h1>
-                <p><strong>${item.meaning}</strong></p>
-                <hr>
-                <p>${item.nuance}</p>
-                
-                <h3>Construction</h3>
-                <table class="construction-table">${constructionHTML}</table>
+            if (filtered.length === 0) {
+                container.innerHTML = `<p style="text-align:center; color:var(--text-muted); margin-top: 40px;">Aucun point trouvé.</p>`;
+                return;
+            }
 
-                ${item.warnings.length ? `<div class="warning-box"><strong>Attention :</strong> <ul>${item.warnings.map(w => `<li>${w}</li>`).join('')}</ul></div>` : ''}
-
-                <h3>Exemples</h3>
-                ${item.examples.map(ex => `
-                    <div style="margin-bottom: 15px;">
-                        <div class="jp-box">${ex.japanese}</div>
-                        <div style="color: #64748b; font-size: 14px;">${ex.translation}</div>
+            container.innerHTML = filtered.map(card => `
+                <div class="grammar-preview-card" onclick="showDetailView('${card.id}')">
+                    <div class="card-header-top">
+                        <div>
+                            <span class="type-badge">${typesMap[card.type] || card.type}</span>
+                            <span class="grammar-title">${card.title}</span>
+                        </div>
+                        <span class="level-badge">${card.level}</span>
                     </div>
-                `).join('')}
-            </div>
-        `;
-        window.scrollTo(0,0);
-    }
-</script>
+                    <p class="grammar-meaning">${card.meaning}</p>
+                </div>
+            `).join('');
+        }
+
+        function showDetailView(id) {
+            const card = grammarData.find(item => item.id === id);
+            if (!card) return;
+
+            document.getElementById('list-view').style.display = 'none';
+            document.getElementById('detail-view').style.display = 'block';
+
+            const headerBox = document.getElementById('header-container');
+            headerBox.innerHTML = `<button id="back-btn" onclick="showListView()">← Retour à la liste</button>`;
+
+            // Génération DYNAMIQUE du tableau de construction (pour tout type)
+            let constructionRows = Object.entries(card.construction)
+                .filter(([key, value]) => value && value.trim() !== "")
+                .map(([key, value]) => `<tr><td>${key}</td><td>${value}</td></tr>`)
+                .join('');
+
+            const container = document.getElementById('detail-view');
+            container.innerHTML = `
+                <div class="detail-page">
+                    <div class="detail-header">
+                        <div class="card-header-top">
+                            <span class="grammar-title">${card.title}</span>
+                            <span class="level-badge">${card.level}</span>
+                        </div>
+                        <p class="grammar-meaning">${card.meaning}</p>
+                    </div>
+                    
+                    <h4>Nuance</h4>
+                    <p class="nuance-text">${card.nuance}</p>
+                    
+                    ${constructionRows ? `<h4>Construction</h4><table class="construction-table">${constructionRows}</table>` : ''}
+                    
+                    ${card.warnings?.length ? `<div class="warning-box"><ul>${card.warnings.map(w => `<li>${w}</li>`).join('')}</ul></div>` : ''}
+                    
+                    <h4>Exemples</h4>
+                    <div>${card.examples.map(ex => `
+                        <div style="margin-bottom: 18px; border-bottom: 1px solid var(--card-border); padding-bottom: 12px;">
+                            <div class="jp-sentence">${ex.japanese}</div>
+                            <p style="color:var(--text-muted); margin: 4px 0 0 0;">${ex.translation}</p>
+                        </div>
+                    `).join('')}</div>
+
+                    ${renderConnections(card)}
+                    
+                    <div class="tags-container" style="margin-top:20px;">
+                        ${card.tags.map(tag => `<span class="tag">#${tag}</span>`).join('')}
+                    </div>
+                </div>
+            `;
+            window.scrollTo(0, 0);
+        }
+
+        function renderConnections(card) {
+            if (!card.connections) return '';
+            let html = '<div style="margin-top:24px; border-top:1px dashed var(--card-border); padding-top:10px;"><h4>Liens</h4>';
+            
+            if (card.connections.confusions?.length) {
+                html += `<div style="margin-bottom:12px;"><div style="font-size:12px; font-weight:700; color:var(--text-muted);">Confusions :</div>
+                ${card.connections.confusions.map(c => `
+                    <button class="connection-link" onclick="showDetailView('${c.target_id}')">${getTitleById(c.target_id)}</button>
+                    <p style="font-size:13px; margin: 4px 0 8px 4px;">${c.explanation}</p>
+                `).join('')}</div>`;
+            }
+            
+            if (card.connections.synonyms?.length) {
+                html += `<div><div style="font-size:12px; font-weight:700; color:var(--text-muted);">Synonymes :</div>
+                ${card.connections.synonyms.map(s => `
+                    <button class="connection-link" onclick="showDetailView('${s.target_id}')">${getTitleById(s.target_id)}</button>
+                    <p style="font-size:13px; margin: 4px 0 8px 4px;">${s.explanation}</p>
+                `).join('')}</div>`;
+            }
+            return html + '</div>';
+        }
+    </script>
 </body>
 </html>
