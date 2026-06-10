@@ -5237,5 +5237,215 @@
             "pouvoir",
             "formel"
         ]
+    },
+    {
+        "id": "pattern-toori",
+        "romaji": "toori doori",
+        "title": "～とおりだ ・ ～とおり（に） ・ ～どおりだ ・ ～どおり（に）",
+        "type": "pattern",
+        "level": "N3",
+        "meaning": "Selon / Suivant / De la même manière que",
+        "construction": {
+            "動詞": "[辞書形]{じしょけい} / [た形]{たけい} / [ている形]{ているけい} / [てある形]{てあるけい} + とおり",
+            "名詞": "[名詞]{めいし} + の + とおり / [名詞]{めいし} + どおり (sans の)"
+        },
+        "nuance": "Indique qu'une action ou un état se déroule exactement de la même manière qu'un modèle, une instruction ou une pensée préalable.",
+        "warnings": [
+            "Quand on attache directement un nom sans 「の」, 「とおり」 devient 「どおり」 (ex: [期待]{きたい}どおり).",
+            "Sert à exprimer la conformité à une règle ou une prévision."
+        ],
+        "examples": [
+            {
+                "japanese": "[交番]{こうばん}で[教]{おそ}えてもらったとおりに[歩]{ある}いていったので、[迷]{まよ}わず[会場]{かいじょう}に[着]{つ}いた。",
+                "translation": "J'ai marché exactement comme on m'avait expliqué au poste de police, je suis donc arrivé au lieu de rendez-vous sans me perdre."
+            },
+            {
+                "japanese": "[初]{はじ}めて[作]{つく}る[料理]{りょうり}だから、この[本]{ほん}に[書]{か}いてあるとおりのやり[方]{かた}で[作]{つく}ってみよう。",
+                "translation": "Comme c'est un plat que je fais pour la première fois, je vais essayer de le préparer suivant la méthode écrite dans ce livre."
+            },
+            {
+                "japanese": "サッカーの[試合]{しあい}の[結果]{けっか}はわたしたちの[期待]{きたい}どおりだった。",
+                "translation": "Le résultat du match de foot a été conforme à nos attentes."
+            }
+        ],
+        "connections": {
+            "confusions": [],
+            "synonyms": []
+        },
+        "tags": [
+            "manière",
+            "instruction",
+            "conformité"
+        ]
+    },
+    {
+        "id": "pattern-ni-yotte-depends",
+        "romaji": "ni yotte ni yotte wa",
+        "title": "～によって ・ ～によっては",
+        "type": "pattern",
+        "level": "N3",
+        "meaning": "Selon / Suivant / Dépend de",
+        "construction": {
+            "名詞": "[名詞]{めいし} + によって / によっては"
+        },
+        "nuance": "Indique que la situation change ou diffère en fonction de l'élément mentionné. 「によっては」 est utilisé pour isoler un cas spécifique parmi plusieurs possibilités.",
+        "warnings": [
+            "Souvent associé à des mots exprimant la diversité comme 「さまざまだ」 ou 「[変]{か}える」.",
+            "Ne pas confondre avec le 「によって」 exprimant la cause ou l'agent du passif."
+        ],
+        "examples": [
+            {
+                "japanese": "[国]{くに}によって[習慣]{しゅうかん}が[違]{ちが}う。",
+                "translation": "Les coutumes diffèrent selon les pays."
+            },
+            {
+                "japanese": "[感]{かん}じ[方]{かた}は[人]{ひと}によってさまざまだ。",
+                "translation": "La façon de ressentir les choses varie d'une personne à l'autre."
+            },
+            {
+                "japanese": "[場合]{ばあい}によっては[今年]{ことし}の[文化祭]{ぶんかさい}は[中止]{ちゅうし}になるかもしれない。",
+                "translation": "Suivant les cas, il se peut que le festival culturel de cette année soit annulé."
+            }
+        ],
+        "connections": {
+            "confusions": [
+                {
+                    "target_id": "pattern-ni-yotte-causalite",
+                    "explanation": "Ici on exprime la dépendance/variété, tandis que l'autre fiche traite de la cause ou de la méthode."
+                }
+            ],
+            "synonyms": []
+        },
+        "tags": [
+            "différence",
+            "dépendance",
+            "ni-yotte"
+        ]
+    },
+    {
+        "id": "pattern-tabi-ni",
+        "romaji": "tabi ni",
+        "title": "～たびに",
+        "type": "pattern",
+        "level": "N3",
+        "meaning": "À chaque fois que",
+        "construction": {
+            "動詞": "[辞書形]{じしょけい} + たびに",
+            "名詞": "[名詞]{めいし} + の + たびに"
+        },
+        "nuance": "Indique que chaque fois qu'une action se produit, une autre action ou un changement se produit systématiquement. On souligne la répétition constante.",
+        "warnings": [
+            "On ne l'utilise pas pour des faits quotidiens ou évidents de la vie de tous les jours (ex: se brosser les dents).",
+            "La proposition finale ne peut pas exprimer un état (adjectif)."
+        ],
+        "examples": [
+            {
+                "japanese": "この[地方]{ちほう}は[台風]{たいふう}が[来]{く}るたびに[大水]{おおみず}の[害]{がい}が[起]{お}こる。",
+                "translation": "Dans cette région, chaque fois qu'un typhon arrive, il y a des dommages causés par des inondations."
+            },
+            {
+                "japanese": "[母]{はは}はわたしが[電話]{でんわ}をかけるたびに、ちゃんとご[飯]{はん}を[食]{た}べているかと[聞]{き}く。",
+                "translation": "Ma mère, à chaque fois que je l'appelle, me demande si je mange correctement."
+            },
+            {
+                "japanese": "このチームは[試合]{しあい}のたびに[強]{つよ}くなっていく。",
+                "translation": "Cette équipe devient plus forte à chaque match."
+            }
+        ],
+        "connections": {
+            "confusions": [],
+            "synonyms": []
+        },
+        "tags": [
+            "temps",
+            "répétition",
+            "systématique"
+        ]
+    },
+    {
+        "id": "pattern-ba-hodo",
+        "romaji": "ba hodo nara hodo hodo",
+        "title": "（～ば）～ほど ・ （～なら）～ほど ・ ～ほど",
+        "type": "pattern",
+        "level": "N3",
+        "meaning": "Plus... plus...",
+        "construction": {
+            "動詞": "[ば形]{ばけい} + [辞書形]{じしょけい} + ほど",
+            "い形容詞": "[い形]{いけい}ければ + [い形]{いけい}い + ほど",
+            "な形容詞": "[な形]{なけい}なら + [な形]{なけい}な + ほど",
+            "名詞": "[名詞]{めいし} + ほど"
+        },
+        "nuance": "Exprime une progression proportionnelle : plus le degré de la première partie augmente, plus celui de la seconde partie augmente également.",
+        "warnings": [
+            "On répète souvent le même verbe ou adjectif deux fois.",
+            "La forme courte 「Nom + ほど」 ou 「Verbe + ほど」 est très fréquente."
+        ],
+        "examples": [
+            {
+                "japanese": "[物]{もの}が[増]{ふ}えれば[増]{ふ}えるほど[整理]{せいり}が[大変]{たいへん}になる。",
+                "translation": "Plus on a d'objets, plus le rangement devient difficile."
+            },
+            {
+                "japanese": "本当にいい[家具]{かぐ}は[時間]{じかん}がたつほど[価値]{かち}が[上]{あ}がる。",
+                "translation": "Pour les meubles de qualité, plus le temps passe, plus leur valeur augmente."
+            },
+            {
+                "japanese": "[休]{やす}みの[日]{ひ}は[多]{おお}ければ[多]{おお}いほど[嬉]{うれ}しい。",
+                "translation": "Plus il y a de jours de congés, plus je suis content."
+            },
+            {
+                "japanese": "[忙]{いそが}しい[人]{ひと}ほど[時間]{じかん}の[使]{つか}い[方]{かた}が[上手]{じょうず}だ。",
+                "translation": "Plus les gens sont occupés, plus ils sont doués pour gérer leur temps."
+            }
+        ],
+        "connections": {
+            "confusions": [],
+            "synonyms": []
+        },
+        "tags": [
+            "proportion",
+            "progression",
+            "comparaison"
+        ]
+    },
+    {
+        "id": "pattern-tsuide-ni",
+        "romaji": "tsuide ni",
+        "title": "～ついでに",
+        "type": "pattern",
+        "level": "N3",
+        "meaning": "Tant qu'à faire / Profitant de l'occasion",
+        "construction": {
+            "動詞": "[辞書形]{じしょけい} / [た形]{たけい} + ついでに",
+            "名詞": "[名詞]{めいし} + の + ついでに"
+        },
+        "nuance": "Indique que l'on profite de réaliser une action principale (déjà prévue) pour effectuer une seconde action secondaire qui se trouve sur le chemin ou qui est liée.",
+        "warnings": [
+            "La première action est l'action principale, la seconde est l'action ajoutée.",
+            "On ne l'utilise pas pour des actions qui demandent un effort majeur séparé."
+        ],
+        "examples": [
+            {
+                "japanese": "[散歩]{さんぽ}のついでにこのはがきをポストに[出]{だ}してきて。",
+                "translation": "Tant que tu vas te promener, profite-en pour poster cette carte."
+            },
+            {
+                "japanese": "[玄関]{げんかん}の[掃除]{そうじ}をするついでに[靴]{くつ}の[整理]{せいり}をしよう。",
+                "translation": "Puisqu'on nettoie l'entrée, profitons-en pour ranger les chaussures."
+            },
+            {
+                "japanese": "インターネットで[本]{ほん}を[注文]{ちゅうもん}したついでに[新]{あたら}しく[出]{で}たDVDも[調]{しら}べた。",
+                "translation": "En commandant des livres sur internet, j'en ai profité pour regarder les nouveaux DVD qui sont sortis."
+            }
+        ],
+        "connections": {
+            "confusions": [],
+            "synonyms": []
+        },
+        "tags": [
+            "opportunité",
+            "temps",
+            "double-action"
+        ]
     }
 ]
