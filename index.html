@@ -86,24 +86,9 @@
         .link-btn { background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-main); padding: 5px 10px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; margin: 0 5px 5px 0; }
 
         /* --- STYLES FURIGANA --- */
-        ruby {
-            ruby-align: center;
-            cursor: pointer;
-            border-bottom: 1px dashed rgba(128, 128, 128, 0.2);
-        }
-        rt {
-            user-select: none;
-            opacity: 0;
-            transition: opacity 0.2s ease;
-            font-size: 0.55em;
-            color: var(--color-pattern);
-            line-height: 1.1;
-        }
-        /* Desktop: Affiche au survol */
-        @media (hover: hover) {
-            ruby:hover rt { opacity: 1; }
-        }
-        /* Mobile & Tablette: Affiche au clic (classe .active) */
+        ruby { ruby-align: center; cursor: pointer; border-bottom: 1px dashed rgba(128, 128, 128, 0.2); }
+        rt { user-select: none; opacity: 0; transition: opacity 0.2s ease; font-size: 0.55em; color: var(--color-pattern); line-height: 1.1; }
+        @media (hover: hover) { ruby:hover rt { opacity: 1; } }
         ruby.active rt { opacity: 1; }
     </style>
 </head>
@@ -139,7 +124,12 @@
     fetch('grammar.json')
         .then(r => r.json())
         .then(data => {
-            grammarData = data.sort((a, b) => a.title.localeCompare(b.title, 'ja'));
+            // TRI JAPONAIS (A-I-U-E-O) ignorant le tilde (～ ou ~)
+            grammarData = data.sort((a, b) => {
+                const titleA = (a.title || "").replace(/[~～]/g, "");
+                const titleB = (b.title || "").replace(/[~～]/g, "");
+                return titleA.localeCompare(titleB, 'ja');
+            });
             renderHeader();
             renderList();
         });
@@ -238,7 +228,7 @@
                 
                 ${rows ? `<table class="construction-table">${rows}</table>` : ''}
                 
-                ${item.warnings?.length ? `<div class="warn-box"><strong>Attention :</strong><ul style="margin: 5px 0 0 15px; padding:0;">${item.warnings.map(w => `<li>${w}</li>`).join('')}</ul></div>` : ''}
+                ${item.warnings?.length ? `<div class="warn-box"><strong>Attention :</strong><ul style="margin: 5px 0 0 15px; padding:0;">${item.warnings.map(w => `<li>${formatFurigana(w)}</li>`).join('')}</ul></div>` : ''}
                 
                 <h4 style="margin: 25px 0 10px 0; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">Exemples</h4>
                 ${(item.examples || []).map(ex => `
