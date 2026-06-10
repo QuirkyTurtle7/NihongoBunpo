@@ -3670,5 +3670,808 @@
     ],
     "tags": ["donner", "animaux", "plantes"],
     "connections": { "confusions": [], "synonyms": [] }
+  },
+  {
+    "id": "youni-metaphore",
+    "romaji": "youni youda kano youni",
+    "title": "～（かの）ようだ ・ ～（かの）ように",
+    "type": "pattern",
+    "level": "N3",
+    "meaning": "Comme si / On dirait que (Métaphore)",
+    "construction": {
+      "名詞": "[名詞]{めいし} + の + ようだ / ように",
+      "動詞": "[普通形]{ふつきけい} + （かの） + ようだ / ように"
+    },
+    "nuance": "Utilisé pour faire une métaphore ou une comparaison imagée. On compare une situation à quelque chose qu'elle n'est pas réellement, mais à quoi elle ressemble fortement.",
+    "warnings": [
+      "Le mot 「[丸]{まる}で」 est très souvent utilisé en début de phrase pour renforcer la métaphore.",
+      "「かの」 renforce l'aspect 'comme si', rendant la comparaison plus littéraire ou dramatique."
+    ],
+    "examples": [
+      {
+        "japanese": "[今日]{きょう}は[暖]{あたた}かくて、[丸]{まる}で[春]{はる}が[来]{き}たかのようだ。",
+        "translation": "Il fait si doux aujourd'tui qu'on dirait que le printemps est (déjà) arrivé."
+      },
+      {
+        "japanese": "[朝]{あさ}から[晩]{ばん}までロボットのように[働]{はたら}いた。",
+        "translation": "J'ai travaillé comme un robot du matin au soir."
+      },
+      {
+        "japanese": "バケツをひっくり[返]{かえ}したような[雨]{あめ}だった。",
+        "translation": "C'était une pluie comme si on avait renversé un seau (Il pleuvait à seaux)."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": [
+        {
+          "target_id": "mitai-da",
+          "explanation": "「みたいだ」 est l'équivalent moins formel et plus oral pour la ressemblance."
+        }
+      ]
+    },
+    "tags": ["comparaison", "métaphore", "youni"]
+  },
+  {
+    "id": "youni-exemple",
+    "title": "～ように (Comparaison / Exemple)",
+    "type": "pattern",
+    "level": "N3",
+    "meaning": "Comme / De la même manière que",
+    "construction": {
+      "名詞": "[名詞]{めいし} + の + ように",
+      "動詞": "[普通形]{ふつきけい} (ナ[形]{けい}な / [名]{めい}である) + ように"
+    },
+    "nuance": "A) Indique que deux choses sont identiques ou similaires. B) Introduit un exemple représentatif pour illustrer un propos.",
+    "warnings": [
+      "Dans le sens de l'exemple, il est souvent suivi de 「ような + Nom」."
+    ],
+    "examples": [
+      {
+        "japanese": "[人間]{にんげん}のように、[植物]{しょくぶつ}にも[栄養]{えいよう}が[必要]{ひつよう}だ。",
+        "translation": "Tout comme les humains, les plantes aussi ont besoin de nutriments."
+      },
+      {
+        "japanese": "[日本語]{にほんご}のように、[使]{つか}う[文字]{もじ}が3[種類]{しゅるい}もある[言語]{げんご}は[珍]{めずら}しい。",
+        "translation": "Les langues qui possèdent trois types d'écritures, comme le japonais, sont rares."
+      },
+      {
+        "japanese": "[林]{はやし}さんのような[人]{ひと}とつき[合]{あ}いたい。",
+        "translation": "J'aimerais sortir avec quelqu'un comme M. Hayashi."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["exemple", "comparaison", "youni"]
+  },
+  {
+    "id": "youni-but-espoir",
+    "title": "～ように (But / Espoir)",
+    "type": "pattern",
+    "level": "N3",
+    "meaning": "Afin de / Pour que / Pourvu que",
+    "construction": {
+      "Introduction": "[動詞]{どうし} (辞書形 / た形 / ている) + ように",
+      "But / Espoir": "[辞書形]{じしょけい} / [ない形]{ないけい} + ように"
+    },
+    "nuance": "A) Introduit un fait déjà connu en guise d'introduction (Comme je vous l'ai dit...). B) Exprime un but ou un souhait (Afin que...).",
+    "warnings": [
+      "Pour le but, on utilise généralement des verbes non-volontaires (potentiel, état) ou la forme négative.",
+      "Ne pas confondre avec 「ために」 qui s'utilise pour une volonté directe et contrôlée."
+    ],
+    "examples": [
+      {
+        "japanese": "[前]{まえ}にも[話]{はな}したように、[来週]{らいしゅう}はわたしは[日本]{にほん}にいません。",
+        "translation": "Comme je vous l'ai déjà dit, je ne serai pas au Japon la semaine prochaine."
+      },
+      {
+        "japanese": "[忘]{わす}れないように、メモしてください。",
+        "translation": "Prenez des notes pour ne pas oublier (but)."
+      },
+      {
+        "japanese": "[試験]{しけん}に[合格]{ごうかく}できますように。",
+        "translation": "Pourvu que je réussisse l'examen (souhait/prière)."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "tameni",
+          "explanation": "「ために」 est pour un objectif actif avec un verbe d'action, 「ように」 est pour atteindre un état ou un résultat passif."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["but", "espoir", "youni"]
+  },
+  {
+    "id": "youni-requete",
+    "romaji": "youni to tanomu chui",
+    "title": "～ように（と） / ～よう",
+    "type": "pattern",
+    "level": "N3",
+    "meaning": "Demander de / Dire de faire",
+    "construction": {
+      "Requête": "[辞書形]{じしょけい} / [ない形]{ないけい} + ように（と） + [頼]{たの}む / [言]{い}う"
+    },
+    "nuance": "Utilisé pour rapporter indirectement un ordre, une demande, une consigne ou un conseil. C'est le style indirect de 「～てください」.",
+    "warnings": [
+      "La particule 「と」 est optionnelle après 「ように」.",
+      "Souvent utilisé avec des verbes comme 「[頼]{たの}む」(demander), 「[注意]{ちゅうい}する」(avertir), 「[伝]{つた}える」(transmettre)."
+    ],
+    "examples": [
+      {
+        "japanese": "[雑誌]{ざっし}を[買]{か}ってくるように[頼]{たの}まれた。",
+        "translation": "On m'a demandé d'aller acheter un magazine."
+      },
+      {
+        "japanese": "[電車]{でんしゃ}の[中]{なか}では[携帯電話]{けいたいでんわ}で[話]{はな}さないようにと[注意]{ちゅうい}された。",
+        "translation": "On m'a fait la remarque de ne pas parler au téléphone dans le train."
+      },
+      {
+        "japanese": "[今週中]{こんしゅうちゅう}にご[返信]{へんしん}くださいますよう、お[願]{ねが}い[申]{もう}し[上]{あ}げます。",
+        "translation": "Je vous prie de bien vouloir nous répondre d'ici la fin de la semaine (très formel)."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": [
+        {
+          "target_id": "te-kudasai",
+          "explanation": "「～ように」 est la version rapportée ou indirecte de l'impératif poli 「～てください」."
+        }
+      ]
+    },
+    "tags": ["requête", "ordre-indirect", "youni"]
+  },
+  {
+    "id": "wake-da",
+    "romaji": "wake da toiu wake da",
+    "title": "～わけだ ・ ～というわけだ",
+    "level": "N3",
+    "meaning": "C'est donc que / Cela explique pourquoi",
+    "construction": {
+      "動詞": "[普通形]{ふつうけい} + わけだ / というわけだ",
+      "い形容詞": "[普通形]{ふつうけい} + わけだ / というわけだ",
+      "な形容詞": "[普通形]{ふつうけい} (だ -> な / である) + わけだ / (だ) + というわけだ",
+      "名詞": "[普通形]{ふつうけい} (だ -> の / な / である) + わけだ / (だ) + というわけだ"
+    },
+    "nuance": "Indique une conclusion logique ou une évidence découlant de circonstances données. On l'utilise pour exprimer que l'on comprend enfin la raison d'un fait (Ah, c'est pour ça que...).",
+    "warnings": [
+      "Indique un résultat naturel ou une conclusion logique, pas une simple opinion.",
+      "« ～というわけだ » est souvent utilisé pour reformuler une explication de manière plus claire."
+    ],
+    "examples": [
+      {
+        "japanese": "[東京駅]{とうきょうえき}まで1[時間半]{じかんはん}か。じゃ、[今]{いま}から[出]{で}れば9[時]{じ}には[着]{つ}くわけだ。",
+        "translation": "Il faut une heure et demie jusqu'à la gare de Tokyo ? Alors, si je pars maintenant, j'arriverai donc à 9 heures."
+      },
+      {
+        "japanese": "[金曜日]{きんようび}は[授業]{じゅぎょう}が[休]{やす}み、[月曜日]{げつようび}は[祝日]{しゅくじつ}だ。つまり、4[連休]{れんきゅう}というわけだ。",
+        "translation": "Il n'y a pas cours vendredi et lundi est un jour férié. Autrement dit, ça nous fait un pont de 4 jours."
+      },
+      {
+        "japanese": "[夜中]{よなか}に[雪]{ゆき}が[降]{ふ}ったんですね。それで、[昨日]{きのう}の[夜]{よ}あんなに[寒]{さむ}かったわけですね。",
+        "translation": "Il a donc neigé au milieu de la nuit. Cela explique pourquoi il a fait si froid hier soir."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "wake-de-wa-nai",
+          "explanation": "« Wake da » affirme une conclusion logique, alors que « Wake de wa nai » est une négation partielle (ce n'est pas forcément que...)."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["conclusion", "logique", "compréhension", "wake"]
+  },
+  {
+    "id": "wake-ni-wa-ikanai",
+    "romaji": "wake ni wa ikanai",
+    "title": "～わけにはいかない",
+    "level": "N3",
+    "meaning": "Je ne peux pas (pour des raisons morales ou sociales)",
+    "construction": {
+      "動詞": "[辞書形]{じしょけい} + わけにはいかない",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": ""
+    },
+    "nuance": "Exprime une impossibilité psychologique, sociale ou morale. Le locuteur a envie de faire l'action mais se l'interdit par sens du devoir, par respect des règles sociales ou par conscience personnelle.",
+    "warnings": [
+      "Le sujet est généralement la première personne (je).",
+      "Il ne s'agit pas d'un manque de capacité physique, mais d'un blocage lié au contexte ou à la morale."
+    ],
+    "examples": [
+      {
+        "japanese": "[親友]{しんゆう}が[金]{かね}を[貸]{か}してほしいと[言]{い}っている。[親友]{しんゆう}の[頼]{たの}みを[断]{ことわ}るわけにはいかない。",
+        "translation": "Mon meilleur ami me demande de lui prêter de l'argent. Je ne peux pas rejeter sa demande (par loyauté)."
+      },
+      {
+        "japanese": "[今日]{きょう}は[車]{くるま}で[来]{き}たんです。お[酒]{さけ}を[飲]{の}むわけにはいきません。",
+        "translation": "Je suis venu en voiture aujourd'hui. Je ne peux pas boire d'alcool (pour respecter la loi/sécurité)."
+      },
+      {
+        "japanese": "[大事]{だいじ}な[会議]{かいぎ}があるから、[会社]{かいしゃ}を[休]{やす}むわけにはいかない。",
+        "translation": "Il y a une réunion importante, je ne peux pas me permettre de m'absenter du travail."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "kanou-kei",
+          "explanation": "La forme potentielle exprime une capacité physique, « Wake ni wa ikanai » exprime une impossibilité dictée par la situation sociale."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["obligation-sociale", "morale", "impossibilité", "wake"]
+  },
+  {
+    "id": "nai-wake-ni-wa-ikanai",
+    "romaji": "nai wake ni wa ikanai",
+    "title": "～ないわけにはいかない",
+    "level": "N3",
+    "meaning": "Je suis obligé de / Je ne peux pas ne pas...",
+    "construction": {
+      "動詞": "[ない形]{ないけい} + わけにはいかない",
+      "い形容詞": "",
+      "な形容詞": "",
+      "名詞": ""
+    },
+    "nuance": "Double négation exprimant une obligation forte mais souvent subie. On ne veut pas forcément faire l'action, mais on se sent obligé de la faire à cause de pressions extérieures ou de sa propre conscience.",
+    "warnings": [
+      "Exprime une obligation plus nuancée et personnelle que « ～なければならない » (qui est une règle stricte).",
+      "Souvent utilisé quand l'action est faite à contrecœur pour rester en accord avec les normes sociales."
+    ],
+    "examples": [
+      {
+        "japanese": "この[町]{まち}では[自転車]{じてんしゃ}がないとやはり[困]{こま}る。[買]{か}わないわけにはいかない。",
+        "translation": "Dans cette ville, c'est vraiment problématique sans vélo. Je suis donc bien obligé d'en acheter un."
+      },
+      {
+        "japanese": "本当に[暑]{あつ}いですけど、[何]{なに}も[着]{き}ないわけにはいきませんよね。",
+        "translation": "Il fait vraiment très chaud, mais on ne peut tout de même pas se promener tout nu, n'est-ce pas ?"
+      },
+      {
+        "japanese": "[図書館]{としょかん}の[本]{ほん}だから[返]{かえ}さないわけにはいかない。",
+        "translation": "Comme c'est un livre de la bibliothèque, je suis obligé de le rendre."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": [
+        {
+          "target_id": "nakereba-naranai",
+          "explanation": "« Nakereba naranai » est une obligation factuelle ou réglementaire, alors que « Nai wake ni wa ikanai » souligne la pression psychologique ou sociale."
+        }
+      ]
+    },
+    "tags": ["obligation", "pression-sociale", "double-négation", "wake"]
+  },
+  {
+    "id": "bakari-only",
+    "romaji": "bakari",
+    "title": "～ばかり",
+    "type": "pattern",
+    "level": "N3",
+    "meaning": "Seulement / Rien que / Ne faire que",
+    "construction": {
+      "名詞": "[名詞]{めいし} (+ [助詞]{じょし}) + ばかり",
+      "動詞": "[動詞]{どうし} (て形 / ている) + ばかり"
+    },
+    "nuance": "Indique qu'il n'y a qu'une seule chose ou action, à l'exclusion de tout le reste. Porte souvent une nuance de reproche, de critique ou le sentiment que la situation est excessive.",
+    "warnings": [
+      "S'utilise souvent pour exprimer un mécontentement (ex: il ne mange que des nouilles).",
+      "Peut s'attacher à un nom ou à un verbe au présent continu."
+    ],
+    "examples": [
+      {
+        "japanese": "[弟]{おとうto}は[毎日]{まいにち}あきずにカップラーメンばかり[食]{た}べている。",
+        "translation": "Mon petit frère mange des cup noodles tous les jours sans s'en lasser (rien que ça)."
+      },
+      {
+        "japanese": "[寮]{りょう}では[同]{おな}じ[国]{くに}の[人]{ひと}とばかり[話]{はな}さないで、いろいろな[国]{くに}の[人]{ひと}と[会話]{かいわ}したほうがいい。",
+        "translation": "Au dortoir, ne parle pas qu'avec des gens de ton pays, tu devrais discuter avec des gens de pays différents."
+      },
+      {
+        "japanese": "[子]{こ}どもはただ[泣]{な}いているばかりで、[何]{なに}があったのかわからなかった。",
+        "translation": "L'enfant ne faisait que pleurer, je n'ai pas pu comprendre ce qu'il s'était passé."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "particle-dake",
+          "explanation": "「だけ」 est une limitation neutre. 「ばかり」 implique souvent que la répétition ou la quantité est excessive ou critiquable."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["limitation", "critique", "habitude"]
+  },
+  {
+    "id": "te-bakari-iru",
+    "romaji": "te bakari iru",
+    "title": "～てばかりいる",
+    "type": "pattern",
+    "level": "N3",
+    "meaning": "Ne faire que... (répétition agaçante)",
+    "construction": {
+      "動詞": "[動詞]{どうし} (て形) + ばかりいる"
+    },
+    "nuance": "Indique qu'une personne fait toujours la même action de manière répétée, au point que cela devient un sujet de reproche ou de critique (jugement négatif du locuteur).",
+    "warnings": [
+      "C'est une forme plus insistante que le simple 「～ばかり」.",
+      "Le locuteur exprime presque toujours son agacement."
+    ],
+    "examples": [
+      {
+        "japanese": "[祖父]{そふ}は[最近]{さいきん}[怒]{おこ}ってばかりいる。",
+        "translation": "Mon grand-père ne fait que se mettre en colère ces derniers temps."
+      },
+      {
+        "japanese": "ただ[見]{み}てばかりいないで、[少]{すこ}しは[手伝]{てつだ}ってくださいよ。",
+        "translation": "Ne reste pas là à seulement regarder, aide-moi un peu !"
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["critique", "agacement", "habitude"]
+  },
+  {
+    "id": "bakari-de-naku",
+    "romaji": "bakari de naku",
+    "title": "～ばかりでなく",
+    "type": "pattern",
+    "level": "N3",
+    "meaning": "Pas seulement... mais aussi",
+    "construction": {
+      "名詞": "[名詞]{めいし} + ばかりでなく",
+      "動詞 / 形容詞": "[普通形]{ふつうけい} (ナ[形]{けい}な / [名]{めい}である) + ばかりでなく"
+    },
+    "nuance": "Indique que la situation ne se limite pas au premier élément cité, mais qu'elle englobe également d'autres choses. C'est une structure d'addition.",
+    "warnings": [
+      "Équivalent plus formel de 「～だけでなく」.",
+      "La deuxième partie de la phrase contient souvent la particule 「も」(aussi)."
+    ],
+    "examples": [
+      {
+        "japanese": "[日本人]{にほんじん}ばかりでなく、[世界中]{せかいじゅう}の[人]{ひと}がエネルギー[問題]{もんだい}に[関心]{かんしん}を[持]{も}っている。",
+        "translation": "Pas seulement les Japonais, mais les gens du monde entier s'intéressent aux problèmes d'énergie."
+      },
+      {
+        "japanese": "[彼]{かれ}は[町]{まち}を[案内]{あんない}してくれたばかりでなく、この[地方]{ちほう}の[料理]{りょうり}もごちそうしてくれた。",
+        "translation": "Non seulement il m'a fait visiter la ville, mais il m'a aussi offert la cuisine locale."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": [
+        {
+          "target_id": "dake-de-naku",
+          "explanation": "「だけでなく」 est plus courant à l'oral, 「ばかりでなく」 est un peu plus soutenu."
+        }
+      ]
+    },
+    "tags": ["addition", "énumération"]
+  },
+  {
+    "id": "bakari-da-trend",
+    "romaji": "bakari da",
+    "title": "～ばかりだ (Tendance)",
+    "type": "pattern",
+    "level": "N3",
+    "meaning": "Ne faire que... (continuer d'empirer)",
+    "construction": {
+      "動詞": "[動詞]{どうし} (辞書形) + ばかりだ"
+    },
+    "nuance": "Indique qu'un changement (généralement négatif) se poursuit sans arrêt dans une seule direction. On a le sentiment que rien ne peut stopper cette évolution.",
+    "warnings": [
+      "S'utilise avec des verbes de changement comme 「[悪]{わる}くなる」(empirer), 「[減]{へ}る」(diminuer).",
+      "Porte presque toujours sur une évolution défavorable."
+    ],
+    "examples": [
+      {
+        "japanese": "[一度]{いちど}けんかしてから、[彼女]{かのじょ}との[関係]{かんけい}は[悪]{わる}くなるばかりだ。",
+        "translation": "Depuis notre dispute, ma relation avec elle ne fait que se dégrader."
+      },
+      {
+        "japanese": "[最近]{さいきん}、[祖母]{そぼ}は[気]{き}が[弱]{よわ}くなるばかりで[心配]{しんぱい}です。",
+        "translation": "Ces derniers temps, ma grand-mère ne fait que s'affaiblir, je suis inquiet."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": [
+        {
+          "target_id": "bakari-da-ready",
+          "explanation": "Même structure, mais le sens est 'être prêt à'. La différence se fait par le contexte et le type de verbe."
+        },
+        {
+          "target_id": "ippou-da",
+          "explanation": "「[一方]{いっぽう}だ」 est un synonyme direct pour une tendance constante."
+        }
+      ]
+    },
+    "tags": ["changement", "négatif", "progression"]
+  },
+  {
+    "id": "bakari-da-ready",
+    "romaji": "bakari da",
+    "title": "～ばかりだ (Préparation)",
+    "type": "pattern",
+    "level": "N3",
+    "meaning": "Il n'y a plus qu'à / Être prêt à",
+    "construction": {
+      "動詞": "[動詞]{どうし} (辞書形) + ばかりだ"
+    },
+    "nuance": "Indique que toutes les préparations sont terminées et qu'il ne reste plus qu'à effectuer l'action finale. Tout est en place.",
+    "warnings": [
+      "S'utilise quand on attend plus que le signal du départ ou le début de l'action."
+    ],
+    "examples": [
+      {
+        "japanese": "[旅行]{りょこう}の[準備]{じゅんび}はできました。もう[出発]{しゅっぱつ}するばかりです。",
+        "translation": "Les préparatifs de voyage sont finis. Il n'y a plus qu'à partir."
+      },
+      {
+        "japanese": "[食事]{しょくじ}の[準備]{じゅんび}が[終]{お}わって、もう[食]{た}べるばかりになっている。",
+        "translation": "Le repas est prêt, il ne reste plus qu'à manger."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["préparation", "immédiateté"]
+  },
+  {
+    "id": "ta-bakari",
+    "romaji": "ta bakari",
+    "title": "～たばかりだ",
+    "type": "pattern",
+    "level": "N4/N3",
+    "meaning": "Venir tout juste de faire",
+    "construction": {
+      "動詞": "[動詞]{どうし} (た形) + ばかりだ"
+    },
+    "nuance": "Indique qu'une action s'est terminée il y a très peu de temps selon le ressenti subjectif du locuteur. Cela peut être il y a 5 minutes ou il y a un mois, tant que le locuteur a l'impression que c'est récent.",
+    "warnings": [
+      "Diffère de 「～たところ」 car ce dernier exprime un temps écoulé objectivement très court (quelques secondes/minutes).",
+      "「～たばかり」 peut s'utiliser pour un événement datant d'un mois si l'on se sent encore 'nouveau' dans la situation."
+    ],
+    "examples": [
+      {
+        "japanese": "さっきご[飯]{はん}を[食]{た}べたばかりなのに、もうおなかがすいてしまった。",
+        "translation": "Alors que je viens juste de manger, j'ai déjà faim."
+      },
+      {
+        "japanese": "[先月]{せんげつ}[結婚]{けっこん}したばかりなので、まだ[新]{あたら}しい[生活]{せいかつ}に[慣]{な}れていない。",
+        "translation": "Comme je viens juste de me marier le mois dernier, je ne suis pas encore habitué à ma nouvelle vie."
+      },
+      {
+        "japanese": "[買]{か}ったばかりのおもちゃがもうこわれてしまった。",
+        "translation": "Le jouet que je viens d'acheter est déjà cassé."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "tokoro-da",
+          "explanation": "「たところ」 est temporellement immédiat et objectif. 「たばかり」 est basé sur le sentiment subjectif du locuteur."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["temps", "récent", "subjectif"]
+  },
+  {
+    "id": "adverbs-negative-npi",
+    "romaji": "zenzen sukoshimo sanna ni kesshite metta ni",
+    "title": "[全]{まった}く ・ [少]{すこ}しも ・ そんなに ・ 決して ・ めったに",
+    "type": "pattern",
+    "level": "N3",
+    "meaning": "Pas du tout / Jamais / Rarement (Adverbes négatifs)",
+    "construction": {
+      "Structure": "[副詞]{ふくし} + [動詞]{どうし} / [形容詞]{けいようし} ([ない形]{ないけい})"
+    },
+    "nuance": "Ces adverbes exigent obligatoirement une forme négative en fin de phrase. Ils nuancent le degré de la négation.",
+    "warnings": [
+      "「[全]{まった}く」 et 「[少]{すこ}しも」 = Pas du tout.",
+      "「決して」 = Jamais / En aucun cas (volonté ou promesse).",
+      "「めったに」 = Rarement / Presque jamais."
+    ],
+    "examples": [
+      {
+        "japanese": "[母]{はは}は[英語]{えいご}が[全]{まった}くわからない。",
+        "translation": "Ma mère ne comprend absolument rien à l'anglais."
+      },
+      {
+        "japanese": "このことは[決]{けっ}して[人]{ひと}には[言]{い}わないでください。",
+        "translation": "Ne dites jamais cela à personne, s'il vous plaît."
+      },
+      {
+        "japanese": "わたしはめったに[外]{そと}で[食事]{しょくじ}しない。",
+        "translation": "Je ne mange presque jamais à l'extérieur."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["négatif", "adverbe", "degré"]
+  },
+  {
+    "id": "adverbs-progression",
+    "romaji": "sukoshizutsu shidai ni masumasu",
+    "title": "[少]{すこ}しずつ ・ [次]{し}第に ・ ますます",
+    "type": "vocabulary",
+    "level": "N3",
+    "meaning": "Petit à petit / Graduellement / De plus en plus",
+    "construction": {
+      "Structure": "Adverbe + [動詞]{どうし} (exprimant un changement : ～なる / 増える)"
+    },
+    "nuance": "Indique une progression ou un changement d'état continu.",
+    "warnings": [
+      "「[次]{し}第に」 est plus formel que 「[少]{すこ}しずつ」."
+    ],
+    "examples": [
+      {
+        "japanese": "[庭]{にわ}に[植]{う}えた[木]{き}が[少]{すこ}しずつ[大]{おお}きくなってきた。",
+        "translation": "L'arbre planté dans le jardin a grandi petit à petit."
+      },
+      {
+        "japanese": "[秋]{あき}になると、[木]{き}の[葉]{は}が[次]{し}第に[色]{いろ}づく。",
+        "translation": "À l'automne, les feuilles des arbres changent graduellement de couleur."
+      }
+    ],
+    "tags": ["changement", "progression", "adverbe"]
+  },
+  {
+    "id": "adverbs-probability",
+    "romaji": "moshikashitara osoraku",
+    "title": "もしかしたら ・ おそらく",
+    "type": "pattern",
+    "level": "N3",
+    "meaning": "Peut-être / Probablement",
+    "construction": {
+      "もしかしたら": "もしかしたら + ～かもしれない / ～のではないか",
+      "おそらく": "おそらく + ～だろう / ～と思う"
+    },
+    "nuance": "Ces adverbes introduisent une supposition. 「おそらく」 exprime une probabilité plus forte (haute certitude) que 「もしかしたら」.",
+    "examples": [
+      {
+        "japanese": "もしかしたら[今晩]{こんばん}は[雪]{ゆき}になるかもしれない。",
+        "translation": "Il se pourrait bien qu'il neige ce soir."
+      },
+      {
+        "japanese": "この[仕事]{しごと}はおそらく[今日中]{きょうじゅう}にできないだろう。",
+        "translation": "Ce travail ne sera probablement pas fini aujourd'hui."
+      }
+    ],
+    "tags": ["probabilité", "conjecture", "supposition"]
+  },
+  {
+    "id": "adverbs-appearance",
+    "romaji": "doumo imanimo",
+    "title": "どうも ・ [今]{いま}にも",
+    "type": "pattern",
+    "level": "N3",
+    "meaning": "On dirait que / À tout moment",
+    "construction": {
+      "どうmo": "どうも + ～ようだ / ～らしい",
+      "今nimo": "[今]{いま}にも + ～そうだ (Imminence)"
+    },
+    "nuance": "「どうも」 indique une impression basée sur une sensation vague. 「[今]{いま}にも」 indique une action qui va se produire d'un instant à l'autre.",
+    "examples": [
+      {
+        "japanese": "どうも[計算]{けいさん}が[間違]{まちが}っているようだ。",
+        "translation": "On dirait bien qu'il y a une erreur de calcul."
+      },
+      {
+        "japanese": "[空]{そら}が[暗]{くら}くなって、[今]{いま}にも[雨]{あめ}が[降]{ふ}り[出]{だ}しそうだ。",
+        "translation": "Le ciel s'est assombri, on dirait qu'il va pleuvoir d'un instant à l'autre."
+      }
+    ],
+    "tags": ["apparence", "imminence", "impression"]
+  },
+  {
+    "id": "adverbs-request-desire",
+    "romaji": "zehi nantokashite douka",
+    "title": "ぜひ ・ なんとかして ・ どうか",
+    "type": "pattern",
+    "level": "N3",
+    "meaning": "Absolument / Par tous les moyens / S'il vous plaît",
+    "construction": {
+      "ぜひ / なんとかして": "～たい / ～てほしい (Désir)",
+      "ぜひ / どうか": "～てください / お願いします (Requête)"
+    },
+    "nuance": "Renforce l'expression du désir ou de la demande.",
+    "examples": [
+      {
+        "japanese": "ぜひ[先生]{せんせい}のお[話]{はなし}をお[聞]{き}きしたいです。",
+        "translation": "Je voudrais absolument écouter ce que le professeur a à dire."
+      },
+      {
+        "japanese": "どうかわたしの[失敗]{しっぱい}を[許]{ゆる}してください。",
+        "translation": "Je vous en prie, pardonnez mon erreur."
+      }
+    ],
+    "tags": ["désir", "requête", "emphase"]
+  },
+  {
+    "id": "adverbs-conditional",
+    "romaji": "moshimo manichi",
+    "title": "もしも ・ [万一]{まんいち}",
+    "type": "pattern",
+    "level": "N3",
+    "meaning": "Si jamais / Au cas où (improbable)",
+    "construction": {
+      "Structure": "もしも / [万一]{まんいち} + [ば形 / たら形 / なら / 場合は / ても]"
+    },
+    "nuance": "Renforce l'hypothèse. 「[万一]{まんいち}」 s'utilise pour une situation très improbable mais aux conséquences graves.",
+    "examples": [
+      {
+        "japanese": "もしも[熱]{ねつ}が[下]{さ}がらなければ、この[薬]{くすり}を[飲]{の}む。",
+        "translation": "Si jamais la fièvre ne tombe pas, je prendrai ce médicament."
+      },
+      {
+        "japanese": "[万一]{まんいち}[問題]{もんだい}がある[場合]{ばあい}は、[相談]{そうだん}してください。",
+        "translation": "Au cas où il y aurait un problème (même si c'est peu probable), consultez-moi."
+      }
+    ],
+    "tags": ["conditionnel", "hypothèse"]
+  },
+  {
+    "id": "adverbs-sekkaku",
+    "romaji": "sekkaku",
+    "title": "せっかく",
+    "type": "pattern",
+    "level": "N3",
+    "meaning": "Tant qu'à faire / Après tant d'efforts",
+    "construction": {
+      "Regret": "せっかく + ～のに / ～ても",
+      "Profiter": "せっかく + ～のだから / ～のだ"
+    },
+    "nuance": "Indique que l'on a fait un effort spécial ou qu'une opportunité rare se présente. S'utilise soit pour exprimer un regret (effort gâché), soit pour justifier d'en profiter.",
+    "examples": [
+      {
+        "japanese": "せっかく[宿題]{しゅくだい}を[やった]{やった}のに、[家]{いえ}に[忘]{わす}れてきた。",
+        "translation": "Alors que j'avais fait mes devoirs avec tant d'efforts, je les ai oubliés à la maison."
+      },
+      {
+        "japanese": "せっかく[温泉]{おんせん}に[来]{き}たのだから、のんびりしたい。",
+        "translation": "Puisqu'on a fait tout le chemin jusqu'à cette source thermale, je veux me relaxer."
+      }
+    ],
+    "tags": ["opportunité", "regret", "effort"]
+  },
+  {
+    "id": "masu-form",
+    "romaji": "masu kei",
+    "title": "ます[形]{けい}",
+    "type": "conjugation",
+    "level": "N5",
+    "meaning": "Forme polie (Présent / Futur)",
+    "construction": {
+      "Groupe 1 (u -> i)": "[辞書形]{じしょけい} [-u] -> [-i] + ます (ex: [書]{か}く -> [書]{か}きます)",
+      "Groupe 2 (base)": "[辞書形]{じしょけい} [-ru] -> + ます (ex: [食]{た}べる -> [食]{た}べます)",
+      "Groupe 3 (Irréguliers)": "する -> します / [来]{く}る -> [来]{き}ます"
+    },
+    "nuance": "C'est la forme standard de la politesse courante (desu/masu). Elle est utilisée pour parler à des inconnus, des supérieurs ou des collègues de manière respectueuse mais non excessive.",
+    "warnings": [
+      "Le présent en japonais exprime aussi le futur (action habituelle ou action à venir).",
+      "La forme négative est 「～ません」 et le passé est 「～ました」."
+    ],
+    "examples": [
+      {
+        "japanese": "[毎日]{まいにち}日本語を[勉強]{べんきょう}します。",
+        "translation": "J'étudie le japonais tous les jours / J'étudierai le japonais tous les jours."
+      },
+      {
+        "japanese": "あした[友達]{ともだち}に[会]{あ}います。",
+        "translation": "Je verrai (rencontrerai) un ami demain."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": []
+    },
+    "tags": ["politesse", "présent", "futur", "conjugaison"]
+  },
+  {
+    "id": "te-form",
+    "romaji": "te kei",
+    "title": "て[形]{けい}",
+    "type": "conjugation",
+    "level": "N5",
+    "meaning": "Forme en -te (Liaison / Requête)",
+    "construction": {
+      "Gr. 1 (u, tsu, ru)": "～って (ex: [買]{か}う -> [買]{か}って)",
+      "Gr. 1 (mu, bu, nu)": "～んで (ex: [飲]{の}む -> [飲]{n}んで)",
+      "Gr. 1 (ku / gu)": "～いて / ～いで (ex: [書]{か}く -> [書]{か}いて)",
+      "Gr. 2 (ru)": "～て (ex: [食]{た}べる -> [食]{た}べて)",
+      "Gr. 3 (Irréguliers)": "して / [来]{き}て (きて)",
+      "Exception": "[行]{い}く -> [行]{い}って"
+    },
+    "nuance": "La forme en -te est multi-usage. Elle sert principalement à : 1) Connecter deux phrases. 2) Faire une demande (avec kudasai). 3) Exprimer une action en cours (avec iru).",
+    "warnings": [
+      "Attention aux changements phonétiques du Groupe 1 (tsu, ku, gu, etc.).",
+      "Ne pas oublier l'exception du verbe 'aller' ([行]{い}く) qui devient [行]{い}って."
+    ],
+    "examples": [
+      {
+        "japanese": "ちょっと[待]{ま}ってください。",
+        "translation": "Attendez un petit instant, s'il vous plaît."
+      },
+      {
+        "japanese": "[朝]{あさ}起きて、コーヒーを[飲]{の}みました。",
+        "translation": "Je me suis levé, puis j'ai bu un café (liaison d'actions)."
+      },
+      {
+        "japanese": "今、本を[読]{よ}んでいます。",
+        "translation": "Je suis en train de lire un livre."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "ta-form",
+          "explanation": "Les règles de transformation sont identiques, seule la fin change (-te/-de devient -ta/-da)."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["liaison", "requête", "continu", "conjugaison"]
+  },
+  {
+    "id": "ta-form",
+    "romaji": "ta kei",
+    "title": "た[形]{けい}",
+    "type": "conjugation",
+    "level": "N5",
+    "meaning": "Forme en -ta (Passé neutre)",
+    "construction": {
+      "Règle générale": "Mêmes transformations que la forme en [て]{て}, mais on remplace [て]{て} par [た]{た} et [で]{で} par [だ]{だ}.",
+      "Groupe 1 (exemples)": "[買]{か}った, [飲]{の}んだ, [書]{か}いた, [泳]{およ}いだ",
+      "Groupe 2 (exemple)": "[食]{た}べた",
+      "Groupe 3 (Irréguliers)": "した / [来]{き}た (きた)"
+    },
+    "nuance": "C'est la forme passée du style neutre (familier). Elle s'utilise entre amis, en famille, ou dans certaines structures grammaticales plus complexes.",
+    "warnings": [
+      "Le passé de [行]{い}く est [行]{い}った.",
+      "Ne pas confondre avec la forme polie en [ました]{ました}."
+    ],
+    "examples": [
+      {
+        "japanese": "昨日、お[酒]{さけ}を[飲]{の}んだ。",
+        "translation": "Hier, j'ai bu de l'alcool (style neutre)."
+      },
+      {
+        "japanese": "もう[宿題]{しゅくだい}を[終]{お}わった？",
+        "translation": "Tu as déjà fini tes devoirs ?"
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "te-form",
+          "explanation": "Même base de conjugaison."
+        }
+      ],
+      "synonyms": [
+        {
+          "target_id": "masu-form",
+          "explanation": "Le passé poli de 'masu' est 'mashita'."
+        }
+      ]
+    },
+    "tags": ["passé", "neutre", "familier", "conjugaison"]
   }
 ]
