@@ -1535,79 +1535,82 @@
         ]
     },
     {
-        "id": "wo-tsuujite-a",
-        "title": "～を通じて・～を通して (A)",
-        "type": "pattern",
-        "level": "N2",
-        "meaning": "Tout au long de / Pendant tout le temps de",
-        "construction": {
-            "動詞": "",
-            "い形容詞": "",
-            "な形容詞": "",
-            "名詞": "名詞 + を通じて / を通して"
-        },
-        "nuance": "Indique qu'une situation reste identique ou continue durant toute une période de temps relativement longue.",
-        "warnings": [
-            "S'attache à des mots exprimant une durée (ex: les quatre saisons, 10 ans, période d'emploi).",
-            "La proposition qui suit décrit un état ou une action qui dure."
-        ],
-        "examples": [
-            {
-                "japanese": "この町には四季を通じて観光客が訪れる。",
-                "translation": "Des touristes visitent cette ville tout au long de l'année (à travers les quatre saisons)."
-            },
-            {
-                "japanese": "この10年間を通し、彼はいつも新しいことに挑戦していた。",
-                "translation": "Durant ces dix dernières années, il a toujours relevé de nouveaux défis."
-            }
-        ],
-        "connections": {
-            "confusions": [],
-            "synonyms": []
-        },
-        "tags": [
-            "temps",
-            "durée",
-            "continuité"
-        ]
+    "id": "wo-tsuujite-a",
+    "romaji": "wo tsuujite wo tooshite",
+    "type": "pattern",
+    "level": "N2",
+    "title": "～を[通]{つう}じて ・ ～を[通]{とお}して (A)",
+    "meaning": "Tout au long de / Pendant tout le temps de",
+    "construction": {
+      "名詞": "[名詞]{めいし} + を[通]{つう}じて / を[通]{とお}して"
     },
-    {
-        "id": "wo-tsuujite-b",
-        "title": "～を通じて・～を通して (B)",
-        "type": "pattern",
-        "level": "N2",
-        "meaning": "Par l'intermédiaire de / Via",
-        "construction": {
-            "動詞": "",
-            "い形容詞": "",
-            "な形容詞": "",
-            "名詞": "名詞 + を通じて / を通して"
-        },
-        "nuance": "Indique le moyen ou l'intermédiaire par lequel on réalise quelque chose. Il ne s'agit pas d'un outil physique direct, mais d'un canal ou d'une médiation.",
-        "warnings": [
-            "Ne s'utilise pas pour des outils concrets et directs (ex: on n'utilise pas cette forme pour dire 'manger avec des baguettes').",
-            "S'applique à des médias, des activités ou des personnes servant de relais."
-        ],
-        "examples": [
-            {
-                "japanese": "今日では、インターネットを通じて世界中の情報が手に入る。",
-                "translation": "De nos jours, on peut obtenir des informations du monde entier via Internet."
-            },
-            {
-                "japanese": "わたしたちは、ボランティア活動を通して、いろいろな国の人たちと交流を深めている。",
-                "translation": "À travers nos activités de bénévolat, nous approfondissons nos échanges avec des personnes de divers pays."
-            }
-        ],
-        "connections": {
-            "confusions": [],
-            "synonyms": []
-        },
-        "tags": [
-            "moyen",
-            "intermédiaire",
-            "méthode"
-        ]
+    "nuance": "Indique qu'une situation reste identique ou continue durant toute une période de temps relativement longue (saisons, années, vie entière).",
+    "warnings": [
+      "S'attache à des mots exprimant une durée déterminée.",
+      "L'accent est mis sur la continuité ininterrompue de l'état."
+    ],
+    "examples": [
+      {
+        "japanese": "この[町]{まち}には[四季]{しき}を[通]{つう}じて[観光客]{かんこうきゃく}が[訪]{おとず}れる。",
+        "translation": "Des touristes visitent cette ville tout au long de l'année (à travers les quatre saisons)."
+      },
+      {
+        "japanese": "この10[年間]{ねんかん}を[通]{とお}し、[彼]{かれ}はいつも[新]{あたら}しいことに[挑戦]{ちょうせん}していた。",
+        "translation": "Durant ces dix dernières années, il a toujours relevé de nouveaux défis."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "wo-tsuujite-b",
+          "explanation": "Bien que l'écriture soit identique, la nuance (A) concerne le temps/la durée, alors que la nuance (B) concerne le moyen/l'intermédiaire."
+        }
+      ],
+      "synonyms": []
     },
+    "tags": ["temps", "durée", "continuité"]
+  },
+  {
+    "id": "wo-tsuujite-b",
+    "romaji": "wo tsuujite wo tooshite",
+    "type": "pattern",
+    "level": "N2",
+    "title": "～を[通]{つう}じて ・ ～を[通]{とお}して (B)",
+    "meaning": "Par l'intermédiaire de / Via",
+    "construction": {
+      "名詞": "[名詞]{めいし} + を[通]{つう}じて / を[通]{とお}して"
+    },
+    "nuance": "Indique le canal, le média ou l'intervenant par lequel on réalise quelque chose ou par lequel une information circule.",
+    "warnings": [
+      "Ne s'utilise pas pour des outils physiques directs et concrets (ex: ne pas utiliser pour 'manger avec des baguettes').",
+      "S'applique à des entités abstraites servant de relais (Internet, amis, activités)."
+    ],
+    "examples": [
+      {
+        "japanese": "[今日]{こんにち}では、インターネットを[通]{つう}じて[世界中]{せかいじゅう}の[情報]{じょうほう}が[手]{て}に[入]{はい}る。",
+        "translation": "De nos jours, on peut obtenir des informations du monde entier via Internet."
+      },
+      {
+        "japanese": "わたしたちは、ボランティア[活動]{かつどう}を[通]{とお}して、いろいろな[国]{くに}の[人]{ひと}たちと[交流]{こうりゅう}を[深]{ふか}めている。",
+        "translation": "À travers nos activités de bénévolat, nous approfondissons nos échanges avec des personnes de divers pays."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "wo-tsuujite-a",
+          "explanation": "La nuance (B) exprime le moyen ou l'intermédiaire, alors que la nuance (A) exprime une durée temporelle."
+        }
+      ],
+      "synonyms": [
+        {
+          "target_id": "ni-yotte-causalite",
+          "explanation": "« Ni yotte » insiste plus sur la méthode ou l'agent, tandis que « Wo tsuujite » souligne le rôle de médiateur du canal utilisé."
+        }
+      ]
+    },
+    "tags": ["moyen", "intermédiaire", "méthode"]
+  },
     {
         "id": "kagiri",
         "title": "～限り",
