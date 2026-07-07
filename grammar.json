@@ -1612,79 +1612,86 @@
     "tags": ["moyen", "intermédiaire", "méthode"]
   },
     {
-        "id": "kagiri",
-        "title": "～限り",
-        "type": "pattern",
-        "level": "N2",
-        "meaning": "Autant que / Dans la limite de",
-        "construction": {
-            "動詞": "辞書形 / ている形 + 限り",
-            "い形容詞": "",
-            "な形容詞": "",
-            "名詞": "名詞 + の + 限り"
-        },
-        "nuance": "Signifie faire tout ce qui est possible dans les limites de ses capacités, de ses connaissances ou d'une situation donnée.",
-        "warnings": [
-            "S'utilise souvent avec des verbes au potentiel (できる) ou exprimant un état continu (ている).",
-            "Indique l'utilisation totale d'une ressource (ex: 力の限り = de toutes ses forces)."
-        ],
-        "examples": [
-            {
-                "japanese": "環境を守るためにわたしもできる限りのことをしたい。",
-                "translation": "Je veux faire tout mon possible (dans la limite de ce que je peux faire) pour protéger l'environnement."
-            },
-            {
-                "japanese": "あしたはいよいよ試合だ。力の限り頑張ろう。",
-                "translation": "C'est enfin le match demain. Donnons-nous à fond, de toutes nos forces."
-            }
-        ],
-        "connections": {
-            "confusions": [],
-            "synonyms": []
-        },
-        "tags": [
-            "limite",
-            "effort",
-            "capacité"
-        ]
+    "id": "kagiri",
+    "romaji": "kagiri",
+    "type": "pattern",
+    "level": "N2",
+    "title": "～[限]{かぎ}り",
+    "meaning": "Autant que / Dans la limite de",
+    "construction": {
+      "動詞": "[辞書形]{じしょけい} / [ている形]{ているけい} + 限り",
+      "名詞": "[名詞]{めいし} + の + 限り"
     },
-    {
-        "id": "dake",
-        "title": "～だけ",
-        "type": "pattern",
-        "level": "N2",
-        "meaning": "Autant que / Tout son saoul",
-        "construction": {
-            "動詞": "辞書形 + だけ",
-            "い形容詞": "",
-            "な形容詞": "",
-            "名詞": ""
-        },
-        "nuance": "Indique la limite maximale d'une action, souvent liée au désir ou à la capacité. On fait l'action jusqu'à ce qu'on ne puisse plus ou qu'on n'en ait plus envie.",
-        "warnings": [
-            "S'utilise fréquemment avec des verbes au potentiel ou des expressions de désir (～たい, 欲しい, 好きな).",
-            "On répète souvent le même verbe avant et après (ex: 食べるだけ食べる)."
-        ],
-        "examples": [
-            {
-                "japanese": "ここにあるダンボールを、車に積めるだけ積んで持って帰ってください。",
-                "translation": "Chargez autant de cartons qu'il est possible d'en mettre dans la voiture et emportez-les."
-            },
-            {
-                "japanese": "今日は部長に言いたいだけの不満を全部言って、すっきりした。",
-                "translation": "Aujourd'hui, j'ai déballé au directeur tous les griefs que j'avais sur le cœur, ça m'a soulagé."
-            }
-        ],
-        "connections": {
-            "confusions": [],
-            "synonyms": []
-        },
-        "tags": [
-            "limite",
-            "désir",
-            "capacité"
-        ]
+    "nuance": "Signifie faire tout ce qui est possible dans les limites d'une situation. Par rapport à 「～だけ」, cette forme est plus formelle (かたい) et s'utilise souvent dans des expressions idiomatiques (慣用表現).",
+    "warnings": [
+      "Plus littéraire que 「～だけ」.",
+      "Indique l'utilisation totale d'une ressource (ex: [力]{ちから}の限り = de toutes ses forces).",
+      "Peut s'attacher directement à un nom avec 「の」, contrairement au 「だけ」 de même sens."
+    ],
+    "examples": [
+      {
+        "japanese": "[環境]{かんきょう}を[守]{まも}るためにわたしもできる[限]{かぎ}りのことをしたい。",
+        "translation": "Je veux faire tout mon possible (dans la limite de mes capacités) pour protéger l'environnement."
+      },
+      {
+        "japanese": "[命]{いのち}ある[限]{かぎ}り、君を[愛]{あい}し[続]{つづ}ける。",
+        "translation": "Tant qu'il me restera un souffle de vie, je continuerai à t'aimer."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "dake",
+          "explanation": "「だけ」 est utilisé dans la conversation quotidienne, tandis que 「限り」 est plus soutenu."
+        }
+      ],
+      "synonyms": []
     },
+    "tags": ["limite", "effort", "formel"]
+  },
+  {
+    "id": "dake",
+    "romaji": "dake",
+    "type": "pattern",
+    "level": "N2",
+    "title": "～だけ",
+    "meaning": "Autant que / Tout son saoul",
+    "construction": {
+      "動詞": "[辞書形]{じしょけい} / [たい形]{たいけい} + だけ",
+      "な形容詞": "[な形]{なけい} + な + だけ",
+      "欲しい/必要": "[欲]{ほ}しい / [必要]{ひつよう} + な + だけ"
+    },
+    "nuance": "Exprime la limite maximale. Très courant dans la conversation quotidienne. \n1. V-potentiel + だけ : Jusqu'au maximum de la capacité physique.\n2. V-dictionnaire + だけ : Faire l'action et s'arrêter là, ou faire juste ce qu'il faut.",
+    "warnings": [
+      "Dans ce sens de 'limite maximale', on ne l'utilise pas après un Nom (pas de N+だけ).",
+      "Très fréquent avec : 好きなだけ, 必要なだけ, 欲しいだけ.",
+      "La répétition du verbe (VだけV) renforce l'idée de 'faire tout ce qu'on peut'."
+    ],
+    "examples": [
+      {
+        "japanese": "[飲]{の}めるだけ[飲]{の}んで、[帰]{かえ}った。",
+        "translation": "J'ai bu autant que je pouvais (ma limite physique), puis je suis rentré."
+      },
+      {
+        "japanese": "[飲]{の}むだけ[飲]{の}んで、[帰]{かえ}った。",
+        "translation": "J'ai juste bu ce qu'il y avait à boire, puis je suis rentré (nuance : la soirée était ennuyeuse, j'ai fait l'acte de boire et c'est tout)."
+      },
+      {
+        "japanese": "[好]{す}きなだけ[食]{た}べていいですよ。",
+        "translation": "Mange autant que tu veux."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "kagiri",
+          "explanation": "「だけ」 est la version orale de 「限り」."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["limite", "désir", "quotidien"]
+  },
     {
         "id": "ni-kagiri",
         "title": "～に限り",
@@ -5450,5 +5457,192 @@
             "temps",
             "double-action"
         ]
-    }
+    },
+    {
+    "id": "pattern-ni-kagirazu",
+    "romaji": "ni kagirazu",
+    "type": "pattern",
+    "level": "N2",
+    "title": "～に[限]{かぎ}らず",
+    "meaning": "Pas seulement... mais (une gamme plus large)",
+    "construction": {
+      "名詞": "[名詞]{めいし} + に[限]{かぎ}らず"
+    },
+    "nuance": "Indique que la situation ne se limite pas à un seul élément spécifique, mais s'étend à un domaine plus vaste (ex: pas seulement le week-end, mais toute l'année ; pas seulement les enfants, mais tout le monde).",
+    "warnings": [
+      "La proposition finale contient souvent des mots d'étendue comme 「みんな」(tous), 「さまざま」(divers) ou 「いつも」(toujours)."
+    ],
+    "examples": [
+      {
+        "japanese": "この[記念館]{きねんかん}は、[休日]{きゅうじつ}に[限]{かぎ}らず一年中[入館者]{にゅうかんしゃ}が[多]{おお}い。",
+        "translation": "Ce musée commémoratif reçoit beaucoup de visiteurs toute l'année, pas seulement pendant les jours fériés."
+      },
+      {
+        "japanese": "うちの[近所]{きんじょ}の[住民]{じゅうみん}はみんな[夜中]{よなか}のバイクの[音]{おと}に[悩]{なや}まされている。",
+        "translation": "Pas seulement nous, tous les habitants du quartier sont importunés par le bruit des motos au milieu de la nuit."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": [
+        {
+          "target_id": "pattern-nominarazu",
+          "explanation": "～のみならず est plus formel et s'utilise pour des éléments de même niveau."
+        }
+      ]
+    },
+    "tags": ["addition", "étendue"]
+  },
+  {
+    "id": "pattern-nominarazu",
+    "romaji": "nominarazu",
+    "type": "pattern",
+    "level": "N2",
+    "title": "～のみならず",
+    "meaning": "Non seulement... mais aussi (Formel)",
+    "construction": {
+      "名詞": "[名詞]{めいし} (である) + のみならず",
+      "動詞 / 形容詞": "[普通形]{ふつうけい} (ナ[形]{けい} : である / [名]{めい} : である) + のみならず"
+    },
+    "nuance": "Expression formelle (style écrit ou discours) signifiant que l'action ou l'état ne s'arrête pas à A, mais inclut aussi B. A et B sont souvent de même nature.",
+    "warnings": [
+      "Plus formel que 「～だけでなく」.",
+      "La proposition finale est souvent accompagnée de 「も」(aussi)."
+    ],
+    "examples": [
+      {
+        "japanese": "[電気代]{でんきだい}のみならず、ガス[代]{だい}や[水道代]{すいどうだい}も[値上]{ねあ}がりするようだ。",
+        "translation": "Il semble que non seulement l'électricité, mais aussi le gaz et l'eau vont augmenter."
+      },
+      {
+        "japanese": "[与党]{よとう}のみならず、[野党]{やとう}も[党首]{とうしゅ}の[選出]{せんしゅつ}には[慎重]{しんちょう}だ。",
+        "translation": "Non seulement le parti au pouvoir, mais aussi l'opposition sont prudents quant à l'élection de leur chef."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": [
+        {
+          "target_id": "pattern-ni-kagirazu",
+          "explanation": "～に限らず insiste sur l'élargissement du domaine, ～のみならず sur l'addition d'éléments."
+        }
+      ]
+    },
+    "tags": ["addition", "formel"]
+  },
+  {
+    "id": "pattern-bakari-ka",
+    "romaji": "bakari ka",
+    "type": "pattern",
+    "level": "N2",
+    "title": "～ばかりか",
+    "meaning": "Non seulement... mais en plus (Surprise)",
+    "construction": {
+      "名詞": "[名詞]{めいし} (である) + ばかりか",
+      "動詞 / 形容詞": "[普通形]{ふつうけい} (ナ[形]{けい} : な / である) + ばかりか"
+    },
+    "nuance": "Indique que A est déjà une situation suffisante ou marquante en soi, mais que B vient s'ajouter, créant souvent un sentiment de surprise, d'excès ou d'aggravation.",
+    "warnings": [
+      "La proposition finale contient souvent une information inattendue ou plus grave/importante que la première.",
+      "Ne s'utilise pas pour des requêtes ou des incitations à l'action."
+    ],
+    "examples": [
+      {
+        "japanese": "[発見]{はっけん}が[遅]{おく}れたばかりか[対策]{たいさく}にも[手間取]{てまど}ったので、[牛]{うし}の[病気]{びょうき}が[広]{ひろ}がってしまった。",
+        "translation": "Non seulement la découverte a été tardive, mais en plus les mesures de lutte ont pris du temps, si bien que la maladie des vaches s'est propagée."
+      },
+      {
+        "japanese": "[友達]{ともだち}ばかりか[親兄弟]{おやきょうだい}も[彼]{かれ}の[居場所]{いばしょ}を[知]{し}らない。",
+        "translation": "Non seulement ses amis, mais même ses parents et ses frères ignorent où il se trouve."
+      }
+    ],
+    "connections": {
+      "confusions": [
+        {
+          "target_id": "bakari-only",
+          "explanation": "Ici, ce n'est pas 'seulement' (limitation), c'est une structure d'addition emphatique."
+        }
+      ],
+      "synonyms": []
+    },
+    "tags": ["addition", "surprise", "excès"]
+  },
+  {
+    "id": "pattern-wa-motoyori",
+    "romaji": "wa motoyori",
+    "type": "pattern",
+    "level": "N2",
+    "title": "～はもとより",
+    "meaning": "Bien sûr A, mais aussi B (Évidence)",
+    "construction": {
+      "名詞": "[名詞]{めいし} (+ [助詞]{じょし}) + はもとより"
+    },
+    "nuance": "Signifie que A est une évidence (il va sans dire), mais que l'élément B (auquel on ne pense pas forcément de prime abord) est aussi concerné. C'est une tournure très formelle.",
+    "warnings": [
+      "Équivalent formel de 「～はもちろん」.",
+      "A est considéré comme l'exemple le plus évident ou fondamental par le locuteur."
+    ],
+    "examples": [
+      {
+        "japanese": "たばこは[本人]{ほんにん}はもとより、[周]{まわ}りの[人]{ひと}にも[害]{がい}を[及]{およ}ぼす。",
+        "translation": "Le tabac est nocif pour le fumeur lui-même, bien sûr, mais aussi pour son entourage."
+      },
+      {
+        "japanese": "[地元]{じもと}の[住民]{じゅうみん}はもとより、[周辺]{しゅうへん}の[地域]{ちいき}に[住]{す}む[人]{ひと}たちも[不安]{ふあん}を[感]{かん}じている。",
+        "translation": "Les habitants locaux, c'est évident, mais aussi ceux des régions avoisinantes ressentent de l'inquiétude."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": [
+        {
+          "target_id": "pattern-ni-kagirazu",
+          "explanation": "～はもとより insiste sur l'évidence du premier terme, ～に限らず sur l'étendue globale."
+        }
+      ]
+    },
+    "tags": ["addition", "évidence", "formel"]
+  },
+  {
+    "id": "pattern-ue-ni",
+    "romaji": "ue ni",
+    "type": "pattern",
+    "level": "N2",
+    "title": "～[上]{うえ}に",
+    "meaning": "En plus de / De surcroît",
+    "construction": {
+      "動詞 / 形容詞": "[普通形]{ふつうけい} + 上に",
+      "な形容詞": "[な形]{なけい} + な / である + 上に",
+      "名詞": "[名詞]{めいし} + の / である + 上eに"
+    },
+    "nuance": "Ajoute une information supplémentaire qui va dans le même sens que la première (Positif + Positif ou Négatif + Négatif). On accumule les caractéristiques de même valeur.",
+    "warnings": [
+      "On ne peut pas utiliser 「上に」 pour relier des choses opposées (ex: C'est beau mais cher -> interdit).",
+      "La proposition finale ne contient généralement pas d'incitation à l'action (ordre, conseil)."
+    ],
+    "examples": [
+      {
+        "japanese": "[田中]{たなか}さんには[仕事]{しごと}を[手伝]{てつだ}ってもらった[上]{うえ}に、[仕事]{しごと}の[後]{あと}、ごちそうになった。",
+        "translation": "M. Tanaka m'a aidé pour mon travail et, en plus, il m'a invité au restaurant après."
+      },
+      {
+        "japanese": "このテキストは[用語]{ようご}が[難]{むずか}しい[上]{うえ}に、[内容]{ないよう}も[良]{よ}くない。",
+        "translation": "Ce manuel utilise des termes difficiles et, de surcroît, son contenu n'est pas bon."
+      },
+      {
+        "japanese": "[今日]{きょう}は[寝不足]{ねぶそく}の[上]{うえ}に、[少]{すこ}し[熱]{ねつ}がある。",
+        "translation": "Aujourd'hui, en plus de manquer de sommeil, j'ai un peu de fièvre."
+      }
+    ],
+    "connections": {
+      "confusions": [],
+      "synonyms": [
+        {
+          "target_id": "pattern-okage",
+          "explanation": "Si l'accumulation produit un résultat global dont on est reconnaissant, on peut utiliser ～おかげで."
+        }
+      ]
+    },
+    "tags": ["addition", "accumulation"]
+  }
 ]
